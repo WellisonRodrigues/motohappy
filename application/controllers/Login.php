@@ -22,6 +22,13 @@ class Login extends CI_Controller
 
     public function sign_in()
     {
+
+        if($this->input->post('entrar') == 'ENTRAR'){
+                echo 'ok';
+            redirect('Home');
+
+        }
+
 //        $this->load->library('Restfull');
 //        $endpoint = 'admin/sign_in';
 //        $metodo = 'POST';

@@ -6,16 +6,15 @@
  * Time: 23:49
  */
 ?>
-<br>
 <!---->
 <div class="container">
     <!--    <div class="col-md-12">-->
-    <div class="row justify-content-md-center" style="margin-top: 10%">
-        <div class="col-md-5">
-
-
-            <form>
-                <p class="h4 text-center mb-4"><img src="<?php APPPATH ?>imgs\logo.png"></p>
+    <div class="row justify-content-md-center" style="margin-top: 5%">
+        <div class="col-md-4">
+                    <?php
+                    echo form_open('Login/sign_in', ['role' => 'form']);
+                    ?>
+                <p class="h4 text-center mb-4"><img src="<?php echo base_url() ?>imgs\logo.png"></p>
 
                 <!-- Material input email -->
                 <div class="md-form">
@@ -33,11 +32,13 @@
                 </div>
 
                 <div class="text-center mt-3">
-                    &ensp;  <button class="btn btn-default btn-lg" type="submit"
-                            style="border-radius: 10px; padding-left: 100px;padding-right: 100px"> ENTRAR
-                    </button>
+                    &ensp;  <button type="submit" class="btn btn-default"  name="entrar"
+                            style="border-radius: 10px; padding-left: 100px;padding-right: 100px" value="ENTRAR"> ENTRAR </button>
+                    
                 </div>
-            </form>
+                <?php
+                    echo form_close();
+                    ?>
         </div>
     </div>
 </div>
