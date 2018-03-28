@@ -12,7 +12,7 @@
     <div class="row justify-content-md-center" style="margin-top: 5%">
         <div class="col-md-4">
                     <?php
-                    echo form_open('login/sign_in', ['role' => 'form']);
+                    echo form_open(base_url().'/login/sign_in', ['role' => 'form']);
                     ?>
                 <p class="h4 text-center mb-4"><img src="<?php echo base_url() ?>imgs\logo.png"></p>
 
