@@ -6,6 +6,9 @@
  * Time: 23:49
  */
 ?>
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+?>
 <!---->
 <div class="container">
     <!--    <div class="col-md-12">-->
