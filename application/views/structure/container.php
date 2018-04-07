@@ -10,7 +10,7 @@ if ($menu == true) {
     $this->load->view('structure/header');
 }
 ?>
-<article>
+<article style="margin-top: 100px">
     <?php $this->load->view($view) ?>
 </article>
 

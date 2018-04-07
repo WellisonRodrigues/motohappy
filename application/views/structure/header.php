@@ -7,6 +7,7 @@
  */
 ?>
 <body>
+
 <header style="position: fixed;width: 100%;top: 0; z-index: 1000">
     <div class="pos-f-t">
 
@@ -19,18 +20,47 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>&ensp;
                 <a class="navbar-brand" href="#">
-                    <img src="<?php APPPATH ?>imgs\logobrand.png" height="30" class="d-inline-block align-left">
+                    <img src="<?php echo base_url() ?>imgs\logobrand.png" height="30" class="d-inline-block align-left">
                 </a>
             </div>
         </nav>
     </div>
 
 </header>
+<style>
+    li:hover {
+        background-color: gray;
+        opacity: 0.20;
+        text-decoration: none;
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+    }
+
+</style>
 <div class="collapse" id="navbarToggleExternalContent"
      style="position: fixed; width: 15%; height: 100%;top: 6.7%; z-index: 1000">
     <div class="p-4" style="background-color: #FF5D00;">
-        <h4 class="text-white">Collapsed content</h4>
-        <span class="text-muted">Toggleable via the navbar brand.</span>
+        <!--        <div class="tab-content vertical">-->
+        <ul class="nav md-pills pills-primary flex-column">
+            <li class="nav-item">
+                <a class="nav-link" href="<?php echo base_url() ?>Users">Usuarios</a></li>
+            <li class="nav-item">
+                <a class="nav-link" href="<?php echo base_url() ?>Categories">Categorias</a></li>
+            <li class="nav-item">
+                <a class="nav-link" href="<?php echo base_url() ?>Establishments">Estabelecimentos</a></li>
+            <li class="nav-item">
+                <a class="nav-link" href="<?php echo base_url() ?>Hot">Hot</a></li>
+            <li class="nav-item">
+                <a class="nav-link" href="<?php echo base_url() ?>Parceiros">Parceiros</a></li>
+            <li class="nav-item">
+                <a class="nav-link" href="<?php echo base_url() ?>Users/admins">Administradores</a></li>
+            <li class="nav-item">
+                <a class="nav-link" href="<?php echo base_url() ?>Fuel">Combustivel</a></li>
+            <li class="nav-item">
+                <a class="nav-link" href="<?php echo base_url() ?>Combos">Combos</a></li>
+            <!--        </div>-->
     </div>
-
 </div>

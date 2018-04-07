@@ -23,20 +23,23 @@ class Login extends CI_Controller
     public function sign_in()
     {
 
-        if($this->input->post('entrar') == 'ENTRAR'){
-                echo 'ok';
+        if ($this->input->post('entrar') == 'ENTRAR') {
+
+
+            $this->load->library('Restfull');
+            $endpoint = 'auth/sign_in';
+            $metodo = 'POST';
+            $params = array('email' => $this->input->post('email'), 'password' => $this->input->post('password'));
+
+            $response = $this->restfull->cUrl($params, $endpoint, $metodo);
+//            print_r($response);
+//            die;
+            $userAPI = array('id' => $response['data']['id'], 'name' => $response['data']['name'],
+                'uid' => $response['data']['uid']);
+            $this->session->set_userdata('user', $userAPI);
             redirect('Home');
 
         }
-
-//        $this->load->library('Restfull');
-//        $endpoint = 'admin/sign_in';
-//        $metodo = 'POST';
-//        $params = array('email' => $this->input->post('email'), 'password' => $this->input->post('password'));
-//
-//        $this->restfull->cUrl($params, $endpoint, $metodo);
-
-
     }
 
     public function sign_up()

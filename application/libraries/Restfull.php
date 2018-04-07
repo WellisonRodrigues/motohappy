@@ -12,7 +12,7 @@ class Restfull
     function cUrl($params, $endpoint, $metodo)
     {
         $curl = curl_init();
-        $base_url = 'https://bfx-api.herokuapp.com';
+        $base_url = 'https://motohappy.herokuapp.com';
         $array_fields = json_encode($params);
 
         curl_setopt_array($curl, array(
@@ -28,8 +28,8 @@ class Restfull
             CURLOPT_POSTFIELDS => "$array_fields",
             CURLOPT_HTTPHEADER => array(
                 "cache-control: no-cache",
-                "content-type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW",
-                "postman-token: ab5801a5-b9a9-ac6d-2e43-298476a9ade1"
+                "content-type: application/json",
+                "postman-token: b516d027-a2ad-5220-baeb-8a050af56995"
             ),
         ));
 
@@ -59,7 +59,30 @@ class Restfull
         $resp['response'] = $response;
         $resp['headers'] = $headers;
         $resp['err'] = $err;
-        return $resp;
+        $return = $this->arrayCastRecursive(json_decode($response));
+        return $return;
+
+
+    }
+
+
+    function arrayCastRecursive($array)
+    {
+        if (is_array($array)) {
+            foreach ($array as $key => $value) {
+                if (is_array($value)) {
+                    $array[$key] = $this->arrayCastRecursive($value);
+                }
+                if ($value instanceof stdClass) {
+                    $array[$key] = $this->arrayCastRecursive((array)$value);
+                }
+            }
+        }
+        if ($array instanceof stdClass) {
+            return $this->arrayCastRecursive((array)$array);
+        }
+        return $array;
+
 
     }
 
