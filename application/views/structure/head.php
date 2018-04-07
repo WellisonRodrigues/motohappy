@@ -33,7 +33,7 @@
     <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
     <script src="https://cdn.datatables.net/responsive/2.2.1/js/dataTables.responsive.min.js"></script>
     <script src="https://cdn.datatables.net/responsive/2.2.1/js/responsive.bootstrap4.min.js"></script>
-
+    <script type="text/javascript" src="<?php echo base_url() ?>MDB/js/mdb.min.js"></script>
 </head>
 
 

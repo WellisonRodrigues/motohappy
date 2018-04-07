@@ -26,6 +26,6 @@
 <!-- Bootstrap core JavaScript -->
 <script type="text/javascript" src="<?php echo base_url() ?>MDB/js/bootstrap.min.js"></script>
 <!-- MDB core JavaScript -->
-<script type="text/javascript" src="<?php echo base_url() ?>MDB/js/mdb.min.js"></script>
+
 
 </body>

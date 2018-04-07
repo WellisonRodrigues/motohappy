@@ -109,9 +109,11 @@
                         <hr style="margin-top:20px;margin-bottom:35px">
 
                         <div class="text-center">
-                            <button class="btn btn-default btn-sm" type="submit"
-                                    style="border-radius: 5px; "> VER GRÁFICOS
-                            </button>
+                            <a href="<?php echo base_url()?>Charts">
+                                <button class="btn btn-default btn-sm" type="submit"
+                                        style="border-radius: 5px; "> VER GRÁFICOS
+                                </button>
+                            </a>
                         </div>
                         <br>
                     </div>
