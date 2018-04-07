@@ -11,11 +11,12 @@ class Users extends CI_Controller
     public function index()
     {
         $this->load->library('Restfull');
-        $endpoint = 'auth/sign_in';
+        $endpoint = 'api/v1/admin/users';
         $metodo = 'GET';
         $params = '';
 
         $response = $this->restfull->cUrl($params, $endpoint, $metodo);
+        $data['response'] = $response;
 
         $data['menu'] = true;  // Menu true significa que a pagina tera o menu principal, false deixa a pagina sem menu(menu = header + navbar)
         $data['view'] = 'pages_examples/users_table';

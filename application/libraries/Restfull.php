@@ -28,6 +28,9 @@ class Restfull
             CURLOPT_POSTFIELDS => "$array_fields",
             CURLOPT_HTTPHEADER => array(
                 "cache-control: no-cache",
+                "client :4SoC_JT9ItM3jfIyxDF1kw",
+                "uid : ewerton.backend@aplicativosminerva.com",
+                "access-token: NgCQBraELloGo7FiRZXe8w",
                 "content-type: application/json",
                 "postman-token: b516d027-a2ad-5220-baeb-8a050af56995"
             ),

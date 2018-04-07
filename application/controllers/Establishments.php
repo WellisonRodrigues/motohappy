@@ -11,19 +11,33 @@ class Establishments extends CI_Controller
     public function index()
     {
         $this->load->library('Restfull');
-        $endpoint = 'auth/sign_in';
+        $endpoint = 'api/v1/admin/establishments';
         $metodo = 'GET';
         $params = '';
 
         $response = $this->restfull->cUrl($params, $endpoint, $metodo);
-
+        $data['response'] = $response;
+//        print_r($response);
+//        die;
         $data['menu'] = true;  // Menu true significa que a pagina tera o menu principal, false deixa a pagina sem menu(menu = header + navbar)
         $data['view'] = 'pages_examples/establishments_table';
         $this->load->view('structure/container', $data);
     }
 
-    public function new_establishments()
+    public function new_establishments($id = null)
     {
+        if ($id) {
+            $this->load->library('Restfull');
+            $endpoint = 'api/v1/admin/establishments/' . $id;
+            $metodo = 'GET';
+            $params = '';
+
+            $response = $this->restfull->cUrl($params, $endpoint, $metodo);
+            $data['response'] = $response;
+            $data['id'] = $id;
+
+        }
+
         $data['menu'] = true;  // Menu true significa que a pagina tera o menu principal, false deixa a pagina sem menu(menu = header + navbar)
         $data['view'] = 'pages_examples/establishments_form';
         $this->load->view('structure/container', $data);
