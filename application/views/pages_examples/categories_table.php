@@ -11,7 +11,7 @@
 ?>
 
 <div class="container">
-    <h2>Estabelecimentos</h2>
+    <h2>Categorias</h2>
     <div class="row">
         <div class="col-md-3">
             <div class="card">
@@ -20,8 +20,8 @@
                         <!--                        </div>-->
                         <div class="col-md-12">
                             <b class="card-title">Special title treatment</b>
-<!--                            <p class="card-text">With supporting text below as a natural lead-in to additional-->
-<!--                                content.</p>-->
+                            <!--                            <p class="card-text">With supporting text below as a natural lead-in to additional-->
+                            <!--                                content.</p>-->
                         </div>
                         <!--                        <div class="col-md-1">-->
                         <!--                            <a href="-->
