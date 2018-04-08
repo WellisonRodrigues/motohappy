@@ -16,7 +16,7 @@ class Establishments extends CI_Controller
         $params = '';
 
         $response = $this->restfull->cUrl($params, $endpoint, $metodo);
-        $data['response'] = $response;
+        $data['response'] = $response['response'];
 //        print_r($response);
 //        die;
         $data['menu'] = true;  // Menu true significa que a pagina tera o menu principal, false deixa a pagina sem menu(menu = header + navbar)
@@ -31,9 +31,12 @@ class Establishments extends CI_Controller
             $endpoint = 'api/v1/admin/establishments/' . $id;
             $metodo = 'GET';
             $params = '';
-
             $response = $this->restfull->cUrl($params, $endpoint, $metodo);
-            $data['response'] = $response;
+            $endpoint2 = 'api/v1/admin/categories';
+            $metodo2 = 'GET';
+            $response2 = $this->restfull->cUrl($params, $endpoint2, $metodo2);
+            $data['response'] = $response['response'];
+            $data['categories'] = $response2['response'];
             $data['id'] = $id;
 
         }

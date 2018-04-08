@@ -14,6 +14,13 @@
 <div class="container">
     <h2>Usuários</h2>
     <div class="row">
+        <div class="col-md-12" align="right">
+            <a href="<?php echo base_url()?>Users/new_user">
+                <button type="button" class="btn btn-default btn-sm"><i class="fas fa-plus"></i></button>
+            </a>
+        </div>
+    </div>
+    <div class="row">
         <?php foreach ($response as $row) { ?>
             <div class="col-md-4" style="margin-top: 20px">
                 <div class="card">
@@ -44,3 +51,6 @@
         <?php } ?>
     </div>
 </div>
+<script>
+    $(".card").filter("john");
+</script>

@@ -10,7 +10,12 @@
 
 <div class="container">
     <h2>Usuários</h2>
-    <form>
+    <?php
+    if (isset($response['data']['id'])) {
+        echo form_open('Users/new_user/' . $response['id'], ['role' => 'form']);
+    } else {
+        echo form_open('Users/new_user', ['role' => 'form']);
+    } ?>
         <div class="row">
             <!-- Default input -->
             <div class="col-md-12">
@@ -26,30 +31,31 @@
                     <input type="email" class="form-control" name="email" id="email" placeholder="example@mail.com">
                 </div>
             </div>
-            <div class="form-group">
-                <div class="col-md-12">
-                    <!-- Default input -->
+
+            <div class="col-md-12">
+                <!-- Default input -->
+                <div class="form-group">
                     <div class="row">
 
                         <div class="col-md-3">
-                            <label for="email">Data de Nascimento:</label>
-                            <input type="email" class="form-control" name="email" id="email"
-                                   placeholder="example@mail.com">
+                            <label for="date">Data de Nascimento:</label>
+                            <input type="date" class="form-control" name="date" id="date"
+                            >
                         </div>
                         <div class="col-md-3">
-                            <label for="email">Telefone:</label>
-                            <input type="email" class="form-control" name="email" id="email"
-                                   placeholder="example@mail.com">
+                            <label for="phone">Telefone:</label>
+                            <input type="number" class="form-control" name="email" id="phone"
+                            >
                         </div>
                         <div class="col-md-3">
-                            <label for="email">Cidade:</label>
-                            <input type="email" class="form-control" name="email" id="email"
-                                   placeholder="example@mail.com">
+                            <label for="city">Cidade:</label>
+                            <input type="text" class="form-control" name="city" id="city"
+                            >
                         </div>
                         <div class="col-md-3">
-                            <label for="email">Estado:</label>
-                            <input type="email" class="form-control" name="email" id="email"
-                                   placeholder="example@mail.com">
+                            <label for="state">Estado:</label>
+                            <input type="text" class="form-control" name="state" id="state"
+                            >
                         </div>
                     </div>
                 </div>
@@ -57,21 +63,21 @@
             <div class="col-md-12">
                 <!-- Default input -->
                 <div class="form-group">
-                    <label for="email">Endereço:</label>
-                    <input type="email" class="form-control" name="email" id="email" placeholder="example@mail.com">
+                    <label for="address">Endereço:</label>
+                    <input type="text" class="form-control" name="address" id="address">
                 </div>
             </div>
             <div class="col-md-12">
                 <!-- Default input -->
                 <div class="form-group">
-                    <label for="email">Imagem:</label>
-                    <input type="file" class="form-control" name="email" id="email" placeholder="example@mail.com">
+                    <label for="image">Imagem:</label>
+                    <input type="file" class="form-control" name="image" id="image">
                 </div>
             </div>
             <!--            <div class="form-group">-->
             <div class="col-md-12" align="right">
 
-                <button type="button" class="btn btn-default"> Salvar</button>
+                <button type="submit" class="btn btn-default"> Salvar</button>
 
             </div>
             <!--            </div>-->

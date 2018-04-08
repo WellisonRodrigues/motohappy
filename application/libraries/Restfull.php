@@ -8,12 +8,20 @@
  */
 class Restfull
 {
+    public function __construct()
+    {
+        $this->CI =& get_instance();
+//		$this->CI->load->library('session');
+    }
 
     function cUrl($params, $endpoint, $metodo)
     {
         $curl = curl_init();
         $base_url = 'https://motohappy.herokuapp.com';
         $array_fields = json_encode($params);
+        $uid = $this->CI->session->userdata('user')['uid'][0];
+        $access = $this->CI->session->userdata('user')['auth_token'][0];
+        $client = $this->CI->session->userdata('user')['client'][0];
 
         curl_setopt_array($curl, array(
             CURLOPT_URL => "$base_url/$endpoint",
@@ -28,9 +36,9 @@ class Restfull
             CURLOPT_POSTFIELDS => "$array_fields",
             CURLOPT_HTTPHEADER => array(
                 "cache-control: no-cache",
-                "client :4SoC_JT9ItM3jfIyxDF1kw",
-                "uid : ewerton.backend@aplicativosminerva.com",
-                "access-token: NgCQBraELloGo7FiRZXe8w",
+                "client :$client",
+                "uid : $uid",
+                "access-token: $access",
                 "content-type: application/json",
                 "postman-token: b516d027-a2ad-5220-baeb-8a050af56995"
             ),
@@ -62,7 +70,8 @@ class Restfull
         $resp['response'] = $response;
         $resp['headers'] = $headers;
         $resp['err'] = $err;
-        $return = $this->arrayCastRecursive(json_decode($response));
+        $return['response'] = $this->arrayCastRecursive(json_decode($resp['response']));
+        $return['header'] = $this->arrayCastRecursive($resp['headers']);
         return $return;
 
 

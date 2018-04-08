@@ -5,6 +5,7 @@
  * Date: 27/03/2018
  * Time: 16:00
  */
+//print_r($this->session->userdata('user')['uid'][0])
 ?>
 <div class="row" style="margin-top: 5%"></div>
 
@@ -109,7 +110,7 @@
                         <hr style="margin-top:20px;margin-bottom:35px">
 
                         <div class="text-center">
-                            <a href="<?php echo base_url()?>Charts">
+                            <a href="<?php echo base_url() ?>Charts">
                                 <button class="btn btn-default btn-sm" type="submit"
                                         style="border-radius: 5px; "> VER GRÁFICOS
                                 </button>

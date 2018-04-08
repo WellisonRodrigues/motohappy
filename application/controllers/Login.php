@@ -32,10 +32,11 @@ class Login extends CI_Controller
             $params = array('email' => $this->input->post('email'), 'password' => $this->input->post('password'));
 
             $response = $this->restfull->cUrl($params, $endpoint, $metodo);
+//            echo '<pre>';
 //            print_r($response);
 //            die;
-            $userAPI = array('id' => $response['data']['id'], 'name' => $response['data']['name'],
-                'uid' => $response['data']['uid']);
+            $userAPI = array('id' => $response['response']['data']['id'], 'name' => $response['response']['data']['name'],
+                'uid' => $response['header']['uid'], 'auth_token' => $response['header']['access-token'], 'client' => $response['header']['client']);
             $this->session->set_userdata('user', $userAPI);
             redirect('Home');
 
