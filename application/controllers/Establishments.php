@@ -38,20 +38,68 @@ class Establishments extends CI_Controller
 
     public function new_establishments($id = null)
     {
-        if ($id) {
+        if ($this->input->post('name') and $id != null) {
+
+            $this->load->library('Restfull');
+            $endpoint = 'api/v1/admin/establishments/' . $id;
+            $metodo = 'PATCH';
+            $params = array(
+
+
+                "name" => $this->input->post('name'),
+                "address" => $this->input->post('address'),
+                "city" => $this->input->post('city'),
+                "state" => $this->input->post('state'),
+                "establishment_cod" => $this->input->post('establishment_cod'),
+                "category" => "",
+                "partner_id" => [],
+                "image" => $this->input->post('image'),
+                "attendance" => $this->input->post('attendance'),
+
+            );
+            $response = $this->restfull->cUrl($params, $endpoint, $metodo);
+//       print_r($response);
+//       die;
+        }
+        if ($this->input->post('name') and $id == null) {
+
+            $this->load->library('Restfull');
+            $endpoint = 'api/v1/admin/establishments';
+            $metodo = 'POST';
+            $params = array(
+
+
+                "name" => $this->input->post('name'),
+                "address" => $this->input->post('address'),
+                "city" => $this->input->post('city'),
+                "state" => $this->input->post('state'),
+                "establishment_cod" => $this->input->post('establishment_cod'),
+                "category" => "",
+                "partner_id" => [],
+                "image" => $this->input->post('image'),
+                "attendance" => $this->input->post('attendance'),
+
+            );
+            $response = $this->restfull->cUrl($params, $endpoint, $metodo);
+            $data['message'] = $response;
+            //       print_r($response);
+//       die;
+        }
+        if ($id != null) {
             $this->load->library('Restfull');
             $endpoint = 'api/v1/admin/establishments/' . $id;
             $metodo = 'GET';
             $params = '';
             $response = $this->restfull->cUrl($params, $endpoint, $metodo);
-            $endpoint2 = 'api/v1/admin/categories';
-            $metodo2 = 'GET';
-            $response2 = $this->restfull->cUrl($params, $endpoint2, $metodo2);
             $data['response'] = $response['response'];
-            $data['categories'] = $response2['response'];
             $data['id'] = $id;
 
         }
+        $params2 = '';
+        $endpoint2 = 'api/v1/admin/categories';
+        $metodo2 = 'GET';
+        $response2 = $this->restfull->cUrl($params2, $endpoint2, $metodo2);
+        $data['categories'] = $response2['response'];
 
         $data['menu'] = true;  // Menu true significa que a pagina tera o menu principal, false deixa a pagina sem menu(menu = header + navbar)
         $data['view'] = 'pages_examples/establishments_form';
