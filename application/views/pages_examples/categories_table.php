@@ -73,9 +73,14 @@
         <?php } ?>
         <!--        </ul>-->
     </div>
+    <br>
     <!--    <nav aria-label="Page navigation example">-->
-    <ul id="pagin" class="pagination justify-content-end">
-    </ul>
+    <div class="row">
+        <div class="col-md-12">
+            <ul id="pagin" class="pagination justify-content-center">
+            </ul>
+        </div>
+    </div>
     <!--    </nav>-->
 </div>
 <script>
@@ -92,15 +97,28 @@
             });
 
         });
-        pageSize = 16;
+        pageSize = 1;
 
         var pageCount = $(".contem").length / pageSize;
 
-        for (var i = 0; i < pageCount; i++) {
+
+        if (pageCount > 4) {
+            var contagem = 4;
+
+        } else {
+            contagem = pageCount;
+        }
+
+        $("#pagin").append('<li class="page-item"><a class="page-link" href="#">Anterior</a></li> ');
+        for (var i = 0; i < contagem; i++) {
+
 
             $("#pagin").append('<li class="page-item"><a class="page-link" href="#">' + (i + 1) + '</a></li> ');
+
         }
-        $("#pagin li").first().addClass("active")
+        $("#pagin").append('<li class="page-item"><a class="page-link" href="#">Proxima</a></li> ');
+        $("#pagin li").eq(1).addClass("active");
+
         showPage = function (page) {
             $(".contem").hide();
             $(".contem").each(function (n) {

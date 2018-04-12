@@ -8,6 +8,18 @@
 
 class Establishments extends CI_Controller
 {
+    public function __construct()
+    {
+        parent::__construct();
+        if (!$this->session->userdata("user")) {
+            redirect('sair');
+        }
+
+//        $this->load->library('table');
+        $this->load->library('Restfull');
+//        $this->load->library('PerfectTable');
+    }
+
     public function index()
     {
         $this->load->library('Restfull');
