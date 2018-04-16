@@ -6,7 +6,7 @@
  * Time: 13:33
  */
 
-class Users extends CI_Controller
+class Subadmins extends CI_Controller
 {
     public function __construct()
     {
@@ -22,7 +22,7 @@ class Users extends CI_Controller
     public function index()
     {
         $this->load->library('Restfull');
-        $endpoint = 'api/v1/admin/users';
+        $endpoint = 'api/v1/admin/subadmins';
         $metodo = 'GET';
         $params = '';
 
@@ -30,7 +30,7 @@ class Users extends CI_Controller
         $data['response'] = $response['response'];
 
         $data['menu'] = true;  // Menu true significa que a pagina tera o menu principal, false deixa a pagina sem menu(menu = header + navbar)
-        $data['view'] = 'pages_examples/users_table';
+        $data['view'] = 'pages_examples/subadmins_table';
         $this->load->view('structure/container', $data);
     }
 

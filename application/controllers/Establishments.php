@@ -80,12 +80,14 @@ class Establishments extends CI_Controller
                 "attendance" => $this->input->post('attendance'),
 
             );
+//            print_r($this->input->post());
+//            die;
             $response = $this->restfull->cUrl($params, $endpoint, $metodo);
             $data['message'] = $response;
-            //       print_r($response);
+//                   print_r($response);
 //       die;
         }
-        if ($id != null) {
+        if ($id != null and $this->input->post('name') == '') {
             $this->load->library('Restfull');
             $endpoint = 'api/v1/admin/establishments/' . $id;
             $metodo = 'GET';
@@ -106,4 +108,15 @@ class Establishments extends CI_Controller
         $this->load->view('structure/container', $data);
     }
 
+    public
+    function delete($id)
+    {
+        if ($id != null or $id != '') {
+            $endpoint = 'api/v1/admin/establishments/' . $id;
+            $metodo = 'DELETE';
+            $params = '';
+            $response = $this->restfull->cUrl($params, $endpoint, $metodo);
+            redirect('Establishments');
+        }
+    }
 }

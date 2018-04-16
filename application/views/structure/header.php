@@ -54,9 +54,9 @@
             <li class="nav-item">
                 <a class="nav-link" href="<?php echo base_url() ?>Hot">Hot</a></li>
             <li class="nav-item">
-                <a class="nav-link" href="<?php echo base_url() ?>Parceiros">Parceiros</a></li>
+                <a class="nav-link" href="<?php echo base_url() ?>Partners">Parceiros</a></li>
             <li class="nav-item">
-                <a class="nav-link" href="<?php echo base_url() ?>Users/admins">Administradores</a></li>
+                <a class="nav-link" href="<?php echo base_url() ?>Subadmins">Administradores</a></li>
             <li class="nav-item">
                 <a class="nav-link" href="<?php echo base_url() ?>Fuel">Combustivel</a></li>
             <li class="nav-item">

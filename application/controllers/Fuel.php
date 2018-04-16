@@ -6,7 +6,7 @@
  * Time: 13:33
  */
 
-class Users extends CI_Controller
+class Fuel extends CI_Controller
 {
     public function __construct()
     {
@@ -19,60 +19,59 @@ class Users extends CI_Controller
         $this->load->library('Restfull');
 //        $this->load->library('PerfectTable');
     }
+
     public function index()
     {
         $this->load->library('Restfull');
-        $endpoint = 'api/v1/admin/users';
+        $endpoint = 'api/v1/admin/fuels';
         $metodo = 'GET';
         $params = '';
 
         $response = $this->restfull->cUrl($params, $endpoint, $metodo);
+//        print_r($response);
+//        die;
         $data['response'] = $response['response'];
 
         $data['menu'] = true;  // Menu true significa que a pagina tera o menu principal, false deixa a pagina sem menu(menu = header + navbar)
-        $data['view'] = 'pages_examples/users_table';
+        $data['view'] = 'pages_examples/fuel_table';
         $this->load->view('structure/container', $data);
     }
 
+
     public function new_user($id = null)
     {
-        $this->load->library('Restfull');
-
-        if ($this->input->post('name') and $id != null) {
+        if ($this->input->post('title') and $id != null) {
 
             $this->load->library('Restfull');
-            $endpoint = 'api/v1/admin/users/' . $id;
+            $endpoint = 'api/v1/admin/fuels/' . $id;
             $metodo = 'PATCH';
             $params = array(
-                'name' => $this->input->post('name'),
-                'city' => $this->input->post('city'),
-                'address' => $this->input->post('address'),
-                'state' => $this->input->post('state'),
-                'phone' => $this->input->post('phone'),
-                'password' => $this->input->post('phone'),
-                'password_confirmation' => $this->input->post('phone'),
-//                'phone'=> $this->input->post('phone'),
+
+
+                "title" => $this->input->post('title'),
+                "measure" => $this->input->post('measure'),
+                "debit" => $this->input->post('debit'),
+                "credit" => $this->input->post('credit'),
+                "establishment_id" => $this->input->post('establishment_id'),
+                "value" => $this->input->post('valor'),
 
             );
             $response = $this->restfull->cUrl($params, $endpoint, $metodo);
 //       print_r($response);
 //       die;
         }
-        if ($this->input->post('name') and $id == null) {
+        if ($this->input->post('title') and $id == null) {
 
             $this->load->library('Restfull');
-            $endpoint = 'api/v1/admin/users';
+            $endpoint = 'api/v1/admin/fuels';
             $metodo = 'POST';
             $params = array(
-                'name' => $this->input->post('name'),
-                'city' => $this->input->post('city'),
-                'address' => $this->input->post('address'),
-                'state' => $this->input->post('state'),
-                'phone' => $this->input->post('phone'),
-                'password' => $this->input->post('phone'),
-                'password_confirmation' => $this->input->post('phone'),
-//                'phone'=> $this->input->post('phone'),
-
+                "title" => $this->input->post('title'),
+                "measure" => $this->input->post('measure'),
+                "debit" => $this->input->post('debit'),
+                "credit" => $this->input->post('credit'),
+                "establishment_id" => $this->input->post('establishment_id'),
+                "value" => $this->input->post('valor'),
             );
 //            print_r($this->input->post());
 //            die;
@@ -81,27 +80,24 @@ class Users extends CI_Controller
 //                   print_r($response);
 //       die;
         }
-        if ($id != null and $this->input->post('name') == '') {
+        if ($id != null and $this->input->post('title') == '') {
             $this->load->library('Restfull');
-            $endpoint = 'api/v1/admin/users/' . $id;
+            $endpoint = 'api/v1/admin/fuels/' . $id;
             $metodo = 'GET';
             $params = '';
             $response = $this->restfull->cUrl($params, $endpoint, $metodo);
             $data['response'] = $response['response'];
             $data['id'] = $id;
 
-//            print_r($response);
-//            die;
-
         }
 //        $params2 = '';
-//        $endpoint2 = 'api/v1/admin/users';
+//        $endpoint2 = 'api/v1/admin/categories';
 //        $metodo2 = 'GET';
 //        $response2 = $this->restfull->cUrl($params2, $endpoint2, $metodo2);
 //        $data['categories'] = $response2['response'];
 
         $data['menu'] = true;  // Menu true significa que a pagina tera o menu principal, false deixa a pagina sem menu(menu = header + navbar)
-        $data['view'] = 'pages_examples/users_form';
+        $data['view'] = 'pages_examples/fuel_form';
         $this->load->view('structure/container', $data);
     }
 
@@ -109,12 +105,13 @@ class Users extends CI_Controller
     function delete($id)
     {
         if ($id != null or $id != '') {
-            $endpoint = 'api/v1/admin/users/' . $id;
+            $endpoint = 'api/v1/admin/fuels/' . $id;
             $metodo = 'DELETE';
             $params = '';
             $response = $this->restfull->cUrl($params, $endpoint, $metodo);
-            redirect('Users');
+            redirect('Fuel');
         }
     }
+
 
 }

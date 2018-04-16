@@ -5,7 +5,11 @@
  * Date: 07/04/2018
  * Time: 13:36
  */
-//print_r($response);
+
+    //foreach ($response['category'] as $new) {
+    //    print_r($new);
+    //}
+//print_r($response['category']);
 //print_r($this->session->userdata("user"));
 
 ?>
@@ -40,7 +44,7 @@
     <!--    <input type="button" id="search" class="btn btn-default" value="buscar"/>-->
     <div class="row">
         <!--        <ul style="list-style: none">-->
-        <?php foreach ($response as $row) { ?>
+        <?php foreach ($response['category'] as $row) { ?>
 
             <div class="col-md-3 contem" style="margin-top: 30px">
                 <div class="card">
@@ -49,7 +53,7 @@
 
                             <!--                        </div>-->
                             <div class="col-md-12">
-                                <b class="card-title"><?php echo $row['name'] ?></b>
+                                <b class="card-title"><?php echo $row ?></b>
                                 <!--                            <p class="card-text">With supporting text below as a natural lead-in to additional-->
                                 <!--                                content.</p>-->
                             </div>
@@ -97,7 +101,7 @@
             });
 
         });
-        pageSize = 1;
+        pageSize = 6;
 
         var pageCount = $(".contem").length / pageSize;
 

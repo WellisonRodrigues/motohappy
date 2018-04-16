@@ -12,7 +12,7 @@
 ?>
 
 <div class="container">
-    <h2>Usuários</h2>
+    <h2>Parceiros</h2>
     <div class="row">
         <div class="col-md-12" align="right">
             <a href="<?php echo base_url() ?>Users/new_user">
@@ -31,13 +31,13 @@
                             </div>
                             <div class="col-md-7">
                                 <b class="card-title"><?php echo $row['name'] ?></b>
-                                <p class="card-text">With supporting text below as a natural lead-in to additional
-                                    content.</p>
+                                <p class="card-text">
+                                    <?php echo $row['email'] ?>
+                                </p>
                             </div>
                             <div class="col-md-1">
-                                <a href="<?php echo base_url() ?>Users/new_user/<?php echo $row['id'] ?>"><i
-                                            class="fas fa-pencil-alt"
-                                            style="color: gray"></i></a>
+                                <a href="<?php echo base_url() ?>Partners/new_user"><i class="fas fa-pencil-alt"
+                                                                                    style="color: gray"></i></a>
                             </div>
                             <div class="col-md-1">
                                 <i class="fas fa-times" style="color: gray"></i>

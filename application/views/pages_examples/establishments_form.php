@@ -11,20 +11,20 @@
 ?>
     <div class="container">
         <h2>Estabelecimento</h2>
-                <div class="row">
-        <!-- Default input -->
-        <div class="col-md-12">
-            <?php if (isset($message)) {
-                if ($message['response']['id'] != null) {
-                    ?>
-                    <div class="alert alert-success alert-dismissible fade show" role="alert">Salvo com sucesso!
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
-                                    aria-hidden="true">&times;</span></button>
-                    </div>
-                    <?php
-                }
-            } ?>
+        <div class="row">
+            <!-- Default input -->
+            <div class="col-md-12">
+                <?php if (isset($message)) {
+                    if ($message['response']['id'] != null) {
+                        ?>
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">Salvo com sucesso!
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                                        aria-hidden="true">&times;</span></button>
                         </div>
+                        <?php
+                    }
+                } ?>
+            </div>
         </div>
 
         <?php
@@ -139,13 +139,19 @@
         $(document).ready(function () {
             $('#novo').click(function () {
                 var valor = $('.tm-input option:selected').val();
-                $('#selects').append('<div class="col-md-1"><input type="text" class="form-control clearable"  value="' + valor + '" readonly></div>')
-            });
+                $('#selects').append('<div class="input-group mb-2 col-md-2 remover" id="' + valor + '" style="margin-bottom: 10px"><input type="text" class="form-control clearable"  value="' + valor + '" readonly> <div class="input-group-prepend"><a href="#" onclick="excluir(\'' + valor + '\')" class="input-group-text">' +
+                    '<i class=" fas fa-times"></i> </a></d</div>')
 
+            });
+            $(".alert").alert('close');
 
         });
 
-        $(".alert").alert('close')
+        function excluir(id) {
+            $('#' + id).remove();
+        }
+
+
     </script>
 
 

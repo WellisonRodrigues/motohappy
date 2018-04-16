@@ -12,10 +12,10 @@
 ?>
 
 <div class="container">
-    <h2>Usuários</h2>
+    <h2>Combos</h2>
     <div class="row">
         <div class="col-md-12" align="right">
-            <a href="<?php echo base_url() ?>Users/new_user">
+            <a href="<?php echo base_url() ?>Combos/new_user">
                 <button type="button" class="btn btn-default btn-sm"><i class="fas fa-plus"></i></button>
             </a>
         </div>
@@ -26,21 +26,21 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="row">
-                            <div class="col-md-2">
-                                <img src="<?php echo base_url() ?>imgs/Elemento6.png" class="rounded-circle">
-                            </div>
-                            <div class="col-md-7">
-                                <b class="card-title"><?php echo $row['name'] ?></b>
-                                <p class="card-text">With supporting text below as a natural lead-in to additional
-                                    content.</p>
-                            </div>
-                            <div class="col-md-1">
-                                <a href="<?php echo base_url() ?>Users/new_user/<?php echo $row['id'] ?>"><i
-                                            class="fas fa-pencil-alt"
-                                            style="color: gray"></i></a>
+                            <div class="col-md-9">
+                                <b class="card-title"><?php echo $row['establishment_id'] ?></b>
+                                <p class="card-text">
+                                    <?php echo $row['description'] ?><br>
+                                    &nbsp;R$ <?php echo $row['value'] ?>
+
+                                </p>
                             </div>
                             <div class="col-md-1">
-                                <i class="fas fa-times" style="color: gray"></i>
+                                <a href="<?php echo base_url() ?>Combos/new_user/<?php echo $row['id']?>"><i class="fas fa-pencil-alt"
+                                                                                   style="color: gray"></i></a>
+                            </div>
+                            <div class="col-md-1">
+                                <a href="<?php echo base_url() ?>Combos/delete/<?php echo $row['id']?>"> <i class="fas fa-times"
+                                                                                  style="color: gray"></i></a>
                             </div>
                         </div>
                         <!--

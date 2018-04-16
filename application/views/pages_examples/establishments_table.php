@@ -29,7 +29,8 @@
                             <i class="fas fa-search"></i>
                         </button>
                         <a href="<?php echo base_url() ?>Establishments/new_establishments">
-                            <button type="button" class="btn btn-default mt-sm-auto"><i class="fas fa-plus"></i></button>
+                            <button type="button" class="btn btn-default mt-sm-auto"><i class="fas fa-plus"></i>
+                            </button>
                         </a>
                     </div>
 
@@ -70,7 +71,9 @@
                                             style="color: gray"></i></a>
                             </div>
                             <div class="col-md-1">
-                                <i class="fas fa-times" style="color: gray"></i>
+                                <a class="delete"
+                                   href="<?php base_url() ?>Establishments/delete/<?php echo $row['id'] ?>">
+                                    <i class="fas fa-times" style="color: gray"></i></a>
                             </div>
                         </div>
                         <!--
@@ -141,6 +144,13 @@
             $("#pagin li").removeClass("active");
             $(this).addClass("active");
             showPage(parseInt($(this).text()))
+        });
+        $('.delete').bind('click', function () {
+            var comf = confirm('Deseja mesmo excluir?');
+            if (comf == true) {
+            } else {
+                event.preventDefault();
+            }
         });
     });
 
