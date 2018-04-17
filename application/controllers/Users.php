@@ -19,6 +19,7 @@ class Users extends CI_Controller
         $this->load->library('Restfull');
 //        $this->load->library('PerfectTable');
     }
+
     public function index()
     {
         $this->load->library('Restfull');
@@ -49,14 +50,17 @@ class Users extends CI_Controller
                 'address' => $this->input->post('address'),
                 'state' => $this->input->post('state'),
                 'phone' => $this->input->post('phone'),
-                'password' => $this->input->post('phone'),
-                'password_confirmation' => $this->input->post('phone'),
-//                'phone'=> $this->input->post('phone'),
+                'birthday' => $this->input->post('birthday'),
+                'email' => $this->input->post('email'),
+                'image'=> $this->input->post('image'),
 
             );
             $response = $this->restfull->cUrl($params, $endpoint, $metodo);
-//       print_r($response);
-//       die;
+
+//            print_r($response);
+//            echo '<br>';
+//            print_r(json_encode($this->input->post()));
+//            die;
         }
         if ($this->input->post('name') and $id == null) {
 
@@ -69,14 +73,18 @@ class Users extends CI_Controller
                 'address' => $this->input->post('address'),
                 'state' => $this->input->post('state'),
                 'phone' => $this->input->post('phone'),
-                'password' => $this->input->post('phone'),
-                'password_confirmation' => $this->input->post('phone'),
-//                'phone'=> $this->input->post('phone'),
+                'birthday' => $this->input->post('birthday'),
+                'email' => $this->input->post('email'),
+//                'password' => $this->input->post('phone'),
+//                'password_confirmation' => $this->input->post('phone'),
+////                'phone'=> $this->input->post('phone'),
 
             );
 //            print_r($this->input->post());
 //            die;
             $response = $this->restfull->cUrl($params, $endpoint, $metodo);
+            print_r($response);
+            die;
             $data['message'] = $response;
 //                   print_r($response);
 //       die;

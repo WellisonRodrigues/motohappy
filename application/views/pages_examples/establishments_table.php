@@ -39,7 +39,9 @@
         </div>
     </div>
     <div class="row">
-        <?php foreach ($response as $row) { ?>
+        <?php foreach ($response
+
+                       as $row) { ?>
             <div class="col-md-4 contem">
                 <div class="card" style="margin-top: 30px;">
                     <div class="card-body">
@@ -49,21 +51,28 @@
 
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <img src="<?php echo base_url() ?>imgs/Elemento6.png" class="rounded-circle">
+                                        <?php if ($row['image']['url'] != null) { ?>
+                                            <img src="<?php echo $row['image']['url'] ?>"
+                                                 class="rounded-circle" width="50px" height="50px">
+                                        <?php } else { ?>
+                                            <img src="<?php echo base_url() ?>imgs/Elemento6.png"
+                                                 class="rounded-circle" width="50px" height="50px">
+
+                                        <?php } ?>
                                     </div>
                                 </div>
                                 <br>
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <p class="text-muted">Codigo</p>
+                                        <p class="text-muted"><?php echo @$row['establishment_cod'] ?></p>
                                     </div>
                                 </div>
                             </div>
                             <!--                        </div>-->
                             <div class="col-md-6">
-                                <b class="card-title"><?php echo $row['name'] ?></b>
-                                <p class="card-text"><?php echo $row['address'] ?>,<?php echo $row['number'] ?>
-                                    <?php echo $row['state'] ?>,<?php echo $row['city'] ?></p>
+                                <b class="card-title"><?php echo @$row['name'] ?></b>
+                                <p class="card-text"><?php echo @$row['address'] ?>,<?php echo @$row['number'] ?>
+                                    <?php echo @$row['state'] ?>,<?php echo @$row['city'] ?></p>
                             </div>
                             <div class="col-md-1">
                                 <a href="<?php echo base_url() ?>Establishments/new_establishments/<?php echo $row['id'] ?>"><i
