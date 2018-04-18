@@ -12,8 +12,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <!---->
 <div class="container">
     <!--    <div class="col-md-12">-->
+
     <div class="row justify-content-md-center" style="margin-top: 5%">
         <div class="col-md-4">
+            <?php if (isset($message)) {
+
+                echo "<div class='alert alert-danger' role='alert'>
+                $message
+               </div>";
+
+            } ?>
             <?php
             echo form_open('login/sign_in', ['role' => 'form']);
             ?>

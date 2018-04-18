@@ -63,15 +63,15 @@
                                 </div>
                                 <br>
                                 <div class="row">
-                                    <div class="col-md-12">
-                                        <p class="text-muted"><?php echo @$row['establishment_cod'] ?></p>
+                                    <div class="col-md-12 h-25 d-inline-block">
+                                        <p class="card-text h-25 d-inline-block"> <?php echo @$row['establishment_cod'] ?></p>
                                     </div>
                                 </div>
                             </div>
                             <!--                        </div>-->
                             <div class="col-md-6">
-                                <b class="card-title"><?php echo @$row['name'] ?></b>
-                                <p class="card-text"><?php echo @$row['address'] ?>,<?php echo @$row['number'] ?>
+                                <b class="card-title h-25 d-inline-block"><?php echo @$row['name'] ?></b><br>
+                                <p class="card-text h-25 d-inline-block"><?php echo @$row['address'] ?>,<?php echo @$row['number'] ?>
                                     <?php echo @$row['state'] ?>,<?php echo @$row['city'] ?></p>
                             </div>
                             <div class="col-md-1">

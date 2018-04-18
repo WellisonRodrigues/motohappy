@@ -51,12 +51,12 @@
                                 <?php } ?>
                             </div>
                             <div class="col-md-7">
-                                <b class="card-title"><?php echo @$row['name'] ?></b>
-                                <p class="card-text"><?php echo @$row['email'] ?></p><br>
-                                <p class="card-text"><?php echo @$row['birthday'] ?>,<?php echo @$row['phone'] ?></p>
+                                <b class="card-title h-25 d-inline-block"><?php echo @$row['name'] ?></b>
+                                <p class="card-text h-25 d-inline-block"><?php echo @$row['email'] ?></p><br>
+                                <p class="card-text h-25 d-inline-block"><?php echo @$row['birthday'] ?>,<?php echo @$row['phone'] ?></p>
                                 <br>
-                                <p class="card-text"><?php echo @$row['address'] ?></p><br>
-                                <p class="card-text"><?php echo @$row['city'] ?></p>
+                                <p class="card-text h-25 d-inline-block"><?php echo @$row['address'] ?></p><br>
+                                <p class="card-text h-25 d-inline-block"><?php echo @$row['city'] ?></p>
                             </div>
                             <div class="col-md-1">
                                 <a href="<?php echo base_url() ?>Users/new_user/<?php echo $row['id'] ?>"><i
