@@ -71,12 +71,12 @@
 
                         <div class="col-md-3">
                             <label for="email">Código do Estabelecimento:</label>
-                            <input type="number" class="form-control" name="email" id="email"
+                            <input type="number" class="form-control" name="establishment_cod" id="establishment_cod"
                                    value="<?php echo @$response['establishment_cod'] ?>">
                         </div>
                         <div class="col-md-3">
                             <label for="email">Atendimento:</label>
-                            <input type="text" class="form-control" name="email" id="email"
+                            <input type="text" class="form-control" name="attendance" id="attendance"
                                    value="<?php echo @$response['attendance'] ?>">
                         </div>
                         <div class="col-md-3">

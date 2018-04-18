@@ -62,17 +62,20 @@
                             <div class="col-md-7">
                                 <b class="card-title"><?php echo $row['name'] ?></b>
                                 <p class="card-text">
+                                    <?php echo @$row['nickname'] ?><br>
                                     <?php echo @$row['email'] ?><br>
                                     <?php echo @$row['establishments_ids']['establishments_id'] ?><br>
 
                                 </p>
                             </div>
                             <div class="col-md-1">
-                                <a href="<?php echo base_url() ?>Partners/new_user"><i class="fas fa-pencil-alt"
-                                                                                       style="color: gray"></i></a>
+                                <a href="<?php echo base_url() ?>Partners/new_user/<?php echo $row['id'] ?>"><i
+                                            class="fas fa-pencil-alt"
+                                            style="color: gray"></i></a>
                             </div>
                             <div class="col-md-1">
-                                <i class="fas fa-times" style="color: gray"></i>
+                                <a class="delete" href="<?php echo base_url() ?>Partners/delete/<?php echo $row['id'] ?>""> <i class="fas fa-times"
+                                                                                       style="color: gray"></i></a>
                             </div>
                         </div>
                         <!--

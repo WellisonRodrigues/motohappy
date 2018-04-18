@@ -23,7 +23,7 @@ class Hot extends CI_Controller
     public function index()
     {
         $this->load->library('Restfull');
-        $endpoint = 'api/v1/admin/partners';
+        $endpoint = 'api/v1/admin/products';
         $metodo = 'GET';
         $params = '';
 

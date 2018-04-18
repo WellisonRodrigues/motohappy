@@ -57,6 +57,8 @@ class Establishments extends CI_Controller
                 "attendance" => $this->input->post('attendance'),
 
             );
+
+//            print_r($this->input->post() );
             $response = $this->restfull->cUrl($params, $endpoint, $metodo);
 //       print_r($response);
 //       die;

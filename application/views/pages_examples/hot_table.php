@@ -7,8 +7,8 @@
  */
 
 //print_r($this->session->userdata("user"));
-//echo '<pre>';
-//print_r($response);
+echo '<pre>';
+print_r($response);
 ?>
 
 <div class="container">
