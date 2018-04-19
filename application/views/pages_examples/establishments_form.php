@@ -7,7 +7,9 @@
  * Date: 07/04/2018
  * Time: 14:14
  */
-//print_r($message);
+//print_r($categories['response']);
+//echo '<pre>';
+//print_r($response);
 ?>
     <div class="container">
         <h2>Estabelecimento</h2>
@@ -15,7 +17,7 @@
             <!-- Default input -->
             <div class="col-md-12">
                 <?php if (isset($message)) {
-                    if ($message['response']['id'] != null) {
+                    if ($message['id'] != null) {
                         ?>
                         <div class="alert alert-success alert-dismissible fade show" role="alert">Salvo com sucesso!
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
@@ -24,12 +26,19 @@
                         <?php
                     }
                 } ?>
+                <?php if (isset($message['errors'][0])) {
+                    $texto = $message['errors'][0];
+                    echo "<div class='alert alert-danger' role='alert'>
+                $texto
+               </div>";
+
+                } ?>
             </div>
         </div>
 
         <?php
-        if (isset($id)) {
-            echo form_open('Establishments/new_establishments/' . $id, ['role' => 'form']);
+        if (isset($response['id'])) {
+            echo form_open('Establishments/new_establishments/' . $response['id'], ['role' => 'form']);
         } else {
             echo form_open('Establishments/new_establishments', ['role' => 'form']);
         } ?>
@@ -82,13 +91,14 @@
                         <div class="col-md-3">
                             <label for="categories">Categoria:</label>
                             <select class="form-control tm-input" name="categories" id="categories">
-                                <?php foreach ($categories as $line) {
-                                    $idoption = $line['id'];
-                                    $nameoption = $line['name'];
-                                    echo "<option value='$nameoption'>$nameoption</option>";
+                                <?php foreach ($categories['response']['category'] as $line) {
+//                                    $idoption = $line['id'];
+//                                    $nameoption = $line['name'];
+                                    echo "<option value='$line'>$line</option>";
                                 } ?>
                             </select>
                         </div>
+                        <input type="hidden" value="" id="salvar" name="categorys">
                         <div class="col-md-3">
                             <br/>
                             <button type="button" id="novo" class="btn btn-default" data-toggle="modal"
@@ -125,7 +135,8 @@
                 <div class="row">
                     <div class="col-md-12" align="right">
 
-                        <button type="submit" class="btn btn-default"> Salvar</button>
+                        <button type="submit" class="btn btn-default salvar" name="salvar" value="salvar"> Salvar
+                        </button>
 
                     </div>
                 </div>
@@ -143,7 +154,10 @@
                     '<i class=" fas fa-times"></i> </a></d</div>')
 
             });
-            $(".alert").alert('close');
+            $('.close').click(function () {
+                $(".alert").alert('close');
+            });
+
 
         });
 
@@ -151,6 +165,19 @@
             $('#' + id).remove();
         }
 
+        var valores = [];
+        $('.salvar').click(function () {
+            $(".clearable").each(function (index) {
+
+                valores.push($(this).val());
+                $('#salvar').val(valores)
+                // console.log(valores);
+
+            });
+
+            //
+
+        });
 
     </script>
 

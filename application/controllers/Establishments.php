@@ -38,32 +38,8 @@ class Establishments extends CI_Controller
 
     public function new_establishments($id = null)
     {
-        if ($this->input->post('name') and $id != null) {
 
-            $this->load->library('Restfull');
-            $endpoint = 'api/v1/admin/establishments/' . $id;
-            $metodo = 'PATCH';
-            $params = array(
-
-
-                "name" => $this->input->post('name'),
-                "address" => $this->input->post('address'),
-                "city" => $this->input->post('city'),
-                "state" => $this->input->post('state'),
-                "establishment_cod" => $this->input->post('establishment_cod'),
-                "category" => "",
-                "partner_id" => [],
-                "image" => $this->input->post('image'),
-                "attendance" => $this->input->post('attendance'),
-
-            );
-
-//            print_r($this->input->post() );
-            $response = $this->restfull->cUrl($params, $endpoint, $metodo);
-//       print_r($response);
-//       die;
-        }
-        if ($this->input->post('name') and $id == null) {
+        if ($this->input->post('salvar') == 'salvar' and $id == null) {
 
             $this->load->library('Restfull');
             $endpoint = 'api/v1/admin/establishments';
@@ -85,25 +61,64 @@ class Establishments extends CI_Controller
 //            print_r($this->input->post());
 //            die;
             $response = $this->restfull->cUrl($params, $endpoint, $metodo);
-            $data['message'] = $response;
+            $data['message'] = $response['response'];
+            $data['response'] = $response['response'];
+
+//            $data['id'] = $response['response']['id'];
 //                   print_r($response);
 //       die;
         }
-        if ($id != null and $this->input->post('name') == '') {
+        if ($id != '') {
             $this->load->library('Restfull');
             $endpoint = 'api/v1/admin/establishments/' . $id;
             $metodo = 'GET';
             $params = '';
             $response = $this->restfull->cUrl($params, $endpoint, $metodo);
             $data['response'] = $response['response'];
-            $data['id'] = $id;
+//            print_r($response);
+//            die;
+//            $data['message'] = $response['response'];
+//            $data['id'] = $id;
+
 
         }
+        if ($this->input->post('salvar') == 'salvar' and $id != null) {
+
+
+            $this->load->library('Restfull');
+            $endpoint = 'api/v1/admin/establishments/' . $id;
+            $metodo = 'PATCH';
+            $params = array(
+
+
+                "name" => $this->input->post('name'),
+                "address" => $this->input->post('address'),
+                "city" => $this->input->post('city'),
+                "state" => $this->input->post('state'),
+                "establishment_cod" => $this->input->post('establishment_cod'),
+                "category" => [$this->input->post('categorys')],
+                "partner_id" => [],
+                "image" => $this->input->post('image'),
+                "attendance" => $this->input->post('attendance'),
+
+            );
+
+//            print_r($this->input->post() );
+//            die;
+            $response = $this->restfull->cUrl($params, $endpoint, $metodo);
+            $data['message'] = $response['response'];
+            $data['response'] = $response['response'];
+//            $data['id'] = $id;
+
+//       print_r($response);
+//       die;
+        }
+
         $params2 = '';
         $endpoint2 = 'api/v1/admin/categories';
         $metodo2 = 'GET';
         $response2 = $this->restfull->cUrl($params2, $endpoint2, $metodo2);
-        $data['categories'] = $response2['response'];
+        $data['categories'] = $response2;
 
         $data['menu'] = true;  // Menu true significa que a pagina tera o menu principal, false deixa a pagina sem menu(menu = header + navbar)
         $data['view'] = 'pages_examples/establishments_form';
