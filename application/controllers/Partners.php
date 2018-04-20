@@ -28,7 +28,7 @@ class Partners extends CI_Controller
         $params = '';
 
         $response = $this->restfull->cUrl($params, $endpoint, $metodo);
-//        print_r($response);
+//        print_r($response['response']);
 //        die;
         $data['response'] = $response['response'];
 

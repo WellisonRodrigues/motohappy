@@ -9,133 +9,149 @@
  */
 //print_r($categories['response']);
 //echo '<pre>';
+//print_r($response);
 //print_r($partners['response']);
 ?>
-    <div class="container">
-        <h2>Estabelecimento</h2>
-        <div class="row">
-            <!-- Default input -->
-            <div class="col-md-12">
-                <?php if (isset($message)) {
-                    if ($message['id'] != null) {
-                        ?>
-                        <div class="alert alert-success alert-dismissible fade show" role="alert">Salvo com sucesso!
-                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
-                                        aria-hidden="true">&times;</span></button>
-                        </div>
-                        <?php
-                    }
-                } ?>
-                <?php if (isset($message['errors'][0])) {
-                    $texto = $message['errors'][0];
-                    echo "<div class='alert alert-danger' role='alert'>
+<div class="container">
+    <h2>Estabelecimento</h2>
+    <div class="row">
+        <!-- Default input -->
+        <div class="col-md-12">
+            <?php if (isset($message)) {
+                if ($message['id'] != null) {
+                    ?>
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">Salvo com sucesso!
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                                    aria-hidden="true">&times;</span></button>
+                    </div>
+                    <?php
+                }
+            } ?>
+            <?php if (isset($message['errors'][0])) {
+                $texto = $message['errors'][0];
+                echo "<div class='alert alert-danger' role='alert'>
                 $texto
                </div>";
 
-                } ?>
+            } ?>
+        </div>
+    </div>
+
+    <?php
+    if (isset($response['id'])) {
+        echo form_open('Establishments/new_establishments/' . $response['id'], ['role' => 'form']);
+    } else {
+        echo form_open('Establishments/new_establishments', ['role' => 'form']);
+    } ?>
+    <div class="row">
+        <!-- Default input -->
+        <div class="col-md-12">
+            <div class="form-group">
+                <label for="name">Nome:</label>
+                <input type="text" name="name" class="form-control" value="<?php echo @$response['name'] ?>"
+                       id="name" placeholder="Nome">
             </div>
         </div>
-
-        <?php
-        if (isset($response['id'])) {
-            echo form_open('Establishments/new_establishments/' . $response['id'], ['role' => 'form']);
-        } else {
-            echo form_open('Establishments/new_establishments', ['role' => 'form']);
-        } ?>
-        <div class="row">
+        <div class="col-md-12">
             <!-- Default input -->
-            <div class="col-md-12">
-                <div class="form-group">
-                    <label for="name">Nome:</label>
-                    <input type="text" name="name" class="form-control" value="<?php echo @$response['name'] ?>"
-                           id="name" placeholder="Nome">
+            <div class="form-group">
+                <div class="row">
+
+                    <div class="col-md-6">
+                        <label for="address">Endereço:</label>
+                        <input type="text" class="form-control" name="address" id="address"
+                               value="<?php echo @$response['address'] ?>">
+                    </div>
+
+                    <div class="col-md-3">
+                        <label for="city">Cidade:</label>
+                        <input type="text" class="form-control" name="city" value="<?php echo @$response['city'] ?>"
+                               id="city">
+                    </div>
+                    <div class="col-md-3">
+                        <label for="state">Estado:</label>
+                        <input type="text" class="form-control" name="state" id="state"
+                               value="<?php echo @$response['state'] ?>">
+                    </div>
+
                 </div>
             </div>
-            <div class="col-md-12">
-                <!-- Default input -->
-                <div class="form-group">
-                    <div class="row">
-
-                        <div class="col-md-6">
-                            <label for="address">Endereço:</label>
-                            <input type="text" class="form-control" name="address" id="address"
-                                   value="<?php echo @$response['address'] ?>">
-                        </div>
-
-                        <div class="col-md-3">
-                            <label for="city">Cidade:</label>
-                            <input type="text" class="form-control" name="city" value="<?php echo @$response['city'] ?>"
-                                   id="city">
-                        </div>
-                        <div class="col-md-3">
-                            <label for="state">Estado:</label>
-                            <input type="text" class="form-control" name="state" id="state"
-                                   value="<?php echo @$response['state'] ?>">
-                        </div>
-
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="row">
-
-                        <div class="col-md-3">
-                            <label for="email">Código do Estabelecimento:</label>
-                            <input type="number" class="form-control" name="establishment_cod" id="establishment_cod"
-                                   value="<?php echo @$response['establishment_cod'] ?>">
-                        </div>
-                        <div class="col-md-3">
-                            <label for="email">Atendimento:</label>
-                            <input type="text" class="form-control" name="attendance" id="attendance"
-                                   value="<?php echo @$response['attendance'] ?>">
-                        </div>
-                        <div class="col-md-3">
-                            <label for="categories">Categoria:</label>
-                            <select class="form-control tm-input" name="categories" id="categories">
-                                <?php foreach ($categories['response']['category'] as $line) {
-                                    echo "<option value='$line'>$line</option>";
-                                } ?>
-                            </select>
-                        </div>
-                        <input type="hidden" value="" id="salvar" name="categorys">
-                        <div class="col-md-3">
-                            <br/>
-                            <button type="button" id="novo" class="btn btn-default" data-toggle="modal"
-                                    data-target="#modal"> Nova
-                                Categoria
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group row" id="selects">
-                </div>
-                <div class="form-group">
-                    <!-- Default input -->
-                    <div class="row">
-
-                        <div class="col-md-3">
-                            <label for="email">Parceiro:</label>
-                            <input type="email" class="form-control" name="email" id="email">
-                        </div>
-                        <div class="col-md-3">
-                            <br/>
-                            <button type="button" class="btn btn-default"> Novo Parceiro</button>
-                        </div>
-                        <div class="col-md-6">
-                            <label for="email">Imagem:</label>
-                            <input type="file" onchange="readURL3(this);" class="form-control" name="file" id="file">
-                        </div>
-                        <input type="hidden" name="image" id="new_image3" value="">
-                    </div>
-
-                </div>
+            <div class="form-group">
                 <div class="row">
-                    <div class="col-md-12" align="right">
 
-                        <button type="submit" class="btn btn-default salvar" name="salvar" value="salvar"> Salvar
+                    <div class="col-md-3">
+                        <label for="email">Código do Estabelecimento:</label>
+                        <input type="number" class="form-control" name="establishment_cod" id="establishment_cod"
+                               value="<?php echo @$response['establishment_cod'] ?>">
+                    </div>
+                    <div class="col-md-3">
+                        <label for="email">Atendimento:</label>
+                        <input type="text" class="form-control" name="attendance" id="attendance"
+                               value="<?php echo @$response['attendance'] ?>">
+                    </div>
+                    <div class="col-md-3">
+                        <label for="categories">Categoria:</label>
+                        <select class="form-control tm-input" name="categories" id="categories">
+                            <?php foreach ($categories['response']['category'] as $line) {
+                                echo "<option value='$line'>$line</option>";
+                            } ?>
+                        </select>
+                    </div>
+                    <input type="hidden" value="" id="salvar" name="categorys">
+                    <div class="col-md-3">
+                        <br/>
+                        <button type="button" id="novo" class="btn btn-default" data-toggle="modal"
+                                data-target="#modal"> Nova
+                            Categoria
                         </button>
-
                     </div>
                 </div>
+            </div>
+            <div class="form-group row" id="selects">
+<!--                <div class="input-group mb-2 col-md-2 remover" id="" style="margin-bottom: 10px">-->
+<!--                    <input type="text" class="form-control clearable" value="" readonly>-->
+<!--                    <div class="input-group-prepend"><a href="#" onclick="excluir()" class="input-group-text">-->
+<!--                            <i class=" fas fa-times"></i> </a></div>-->
+<!--                </div>-->
+            </div>
+            <div class="form-group">
+                <!-- Default input -->
+                <div class="row">
+                    <div class="col-md-3">
+                        <label for="partners">Parceiro:</label>
+                        <select class="form-control tm-input tm2" name="partners" id="partners">
+                            <?php foreach ($partners['response'] as $line2) {
+                                $text = $line2['name'];
+                                $idpart = $line2['id'];
+                                echo "<option value='$idpart'>$text</option>";
+                            } ?>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <br/>
+                        <button type="button" id="novo_partner" class="btn btn-default" data-toggle="modal"
+                                data-target="#modal"> Novo
+                            Parceiro
+                        </button>
+                    </div>
+                    <input type="hidden" value="" id="partner_id" name="partner_id">
+                    <div class="col-md-6">
+                        <label for="email">Imagem:</label>
+                        <input type="file" onchange="readURL3(this);" class="form-control" name="file" id="file">
+                    </div>
+                    <input type="hidden" name="image" id="new_image3" value="">
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-12" align="right">
+
+                    <button type="submit" class="btn btn-default salvar" name="salvar" value="salvar"> Salvar
+                    </button>
+
+                </div>
+            </div>
+            <div class="form-group row" id="selects2">
             </div>
         </div>
         <?php echo form_close() ?>
@@ -147,13 +163,20 @@
             $('#novo').click(function () {
                 var valor = $('.tm-input option:selected').val();
                 $('#selects').append('<div class="input-group mb-2 col-md-2 remover" id="' + valor + '" style="margin-bottom: 10px"><input type="text" class="form-control clearable"  value="' + valor + '" readonly> <div class="input-group-prepend"><a href="#" onclick="excluir(\'' + valor + '\')" class="input-group-text">' +
-                    '<i class=" fas fa-times"></i> </a></d</div>')
+                    '<i class=" fas fa-times"></i> </a></div></div>')
+
+            });
+
+            $('#novo_partner').click(function () {
+                var valor2 = $('.tm2 option:selected').text();
+                var idpart = $('.tm2 option:selected').val();
+                $('#selects2').append('<div class="input-group mb-2 col-md-2 remover" id="' + valor2 + '" style="margin-bottom: 10px"><input type="text" class="form-control clearable clear2"  value="' + valor2 + '" readonly> <div class="input-group-prepend"><a href="#" onclick="excluir(\'' + valor2 + '\')" class="input-group-text">' +
+                    '<i class=" fas fa-times"></i> </a><input type="hidden" class="id_part" value="' + idpart + '"></div></div>')
 
             });
             $('.close').click(function () {
                 $(".alert").alert('close');
             });
-
 
         });
 
@@ -162,13 +185,21 @@
         }
 
         var valores = [];
+        var valores2 = [];
         $('.salvar').click(function () {
             $(".clearable").each(function (index) {
 
                 valores.push($(this).val());
                 $('#salvar').val(valores)
             });
+            $(".id_part").each(function (index) {
+
+                valores2.push($(this).val());
+                $('#partner_id').val(valores2)
+            });
         });
+
+
         function readURL3(input) {
             if (input.files && input.files[0]) {
                 var reader = new FileReader();
