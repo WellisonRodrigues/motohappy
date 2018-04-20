@@ -6,9 +6,6 @@
  * Time: 13:36
  */
 
-//print_r($this->session->userdata("user"));
-//echo '<pre>';
-//print_r($response);
 ?>
 
 <div class="container">

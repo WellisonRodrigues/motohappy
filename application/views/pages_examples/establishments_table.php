@@ -123,7 +123,7 @@
 
 
         if (pageCount > 4) {
-            var contagem = 4;
+            var contagem = 6;
 
         } else {
             contagem = pageCount;

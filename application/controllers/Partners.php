@@ -26,12 +26,8 @@ class Partners extends CI_Controller
         $endpoint = 'api/v1/admin/partners';
         $metodo = 'GET';
         $params = '';
-
         $response = $this->restfull->cUrl($params, $endpoint, $metodo);
-//        print_r($response['response']);
-//        die;
         $data['response'] = $response['response'];
-
         $data['menu'] = true;  // Menu true significa que a pagina tera o menu principal, false deixa a pagina sem menu(menu = header + navbar)
         $data['view'] = 'pages_examples/partners_table';
         $this->load->view('structure/container', $data);
@@ -39,59 +35,6 @@ class Partners extends CI_Controller
 
     public function new_user($id = null)
     {
-//        $this->load->library('Restfull');
-//
-//        if ($id == null and $this->input->post('name')) {
-//            $endpoint = 'admin/auth/partners';
-//            $metodo = 'POST';
-//            $params = array(
-//                'name' => $this->input->post('name'),
-//                'email' => $this->input->post('email'),
-//                'nickname' => $this->input->post('nickname'),
-////                'state' => $this->input->post('state'),
-////                'phone' => $this->input->post('phone'),
-//                'password' => $this->input->post('password'),
-////                'password_confirmation' => $this->input->post('phone'),
-////                'phone'=> $this->input->post('phone'),
-//
-//            );
-//
-//            $response = $this->restfull->cUrl($params, $endpoint, $metodo);
-//            $data['message'] = $response['response'];
-//            $data['response'] = $response['response'];
-//
-//
-//        }
-//
-//        $data['menu'] = true;  // Menu true significa que a pagina tera o menu principal, false deixa a pagina sem menu(menu = header + navbar)
-//        $data['view'] = 'pages_examples/partners_form';
-//        $this->load->view('structure/container', $data);
-//    }
-//
-//}
-
-        if ($this->input->post('name') and $id != null) {
-
-            $this->load->library('Restfull');
-            $endpoint = 'admin/auth/partners';
-            $metodo = 'POST';
-            $params = array(
-                'name' => $this->input->post('name'),
-                'email' => $this->input->post('email'),
-                'nickname' => $this->input->post('nickname'),
-//                'state' => $this->input->post('state'),
-//                'phone' => $this->input->post('phone'),
-//                'password' => $this->input->post('password'),
-//                'password_confirmation' => $this->input->post('phone'),
-//                'phone'=> $this->input->post('phone'),
-
-            );
-
-//            print_r($this->input->post() );
-            $response = $this->restfull->cUrl($params, $endpoint, $metodo);
-//       print_r($response);
-//       die;
-        }
         if ($this->input->post('name') and $id == null) {
 
             $this->load->library('Restfull');
@@ -101,20 +44,19 @@ class Partners extends CI_Controller
                 'name' => $this->input->post('name'),
                 'email' => $this->input->post('email'),
                 'nickname' => $this->input->post('nickname'),
-//                'state' => $this->input->post('state'),
+                'image' => $this->input->post('image'),
 //                'phone' => $this->input->post('phone'),
                 'password' => $this->input->post('password'),
 //                'password_confirmation' => $this->input->post('phone'),
 //                'phone'=> $this->input->post('phone'),
 
             );
-//            print_r($this->input->post());
-//            die;
+
             $response = $this->restfull->cUrl($params, $endpoint, $metodo);
-            $data['message'] = $response;
-//                   print_r($response);
-//       die;
+            $data['message'] = $response['response'];
+            $data['response'] = $response['response'];
         }
+
         if ($id != null and $this->input->post('name') == '') {
             $this->load->library('Restfull');
             $endpoint = 'api/v1/admin/partners/' . $id;
@@ -122,9 +64,52 @@ class Partners extends CI_Controller
             $params = '';
             $response = $this->restfull->cUrl($params, $endpoint, $metodo);
             $data['response'] = $response['response'];
-            $data['id'] = $id;
+//            $data['id'] = $id;
 
         }
+        if ($this->input->post('name') and $id != null) {
+
+            $this->load->library('Restfull');
+            $endpoint = 'api/v1/admin/partners/' . $id;
+            $metodo = 'PATCH';
+            if ($this->input->post('image')) {
+                $params = array(
+                    'name' => $this->input->post('name'),
+                    'email' => $this->input->post('email'),
+                    'nickname' => $this->input->post('nickname'),
+                    'establishments_ids' => [$this->input->post('establishments_ids')],
+                    'image' => $this->input->post('image'),
+//                'phone' => $this->input->post('phone'),
+//                'password' => $this->input->post('password'),
+//                'password_confirmation' => $this->input->post('phone'),
+//                'phone'=> $this->input->post('phone'),
+
+                );
+            } else {
+                $params = array(
+                    'name' => $this->input->post('name'),
+                    'email' => $this->input->post('email'),
+                    'nickname' => $this->input->post('nickname'),
+                    'establishments_ids' => [$this->input->post('establishments_ids')],
+//                    'image' => $this->input->post('image'),
+//                'phone' => $this->input->post('phone'),
+//                'password' => $this->input->post('password'),
+//                'password_confirmation' => $this->input->post('phone'),
+//                'phone'=> $this->input->post('phone'),
+
+                );
+            }
+            $response = $this->restfull->cUrl($params, $endpoint, $metodo);
+//            print_r($response);
+//            die;
+            $data['message'] = $response['response'];
+            $data['response'] = $response['response'];
+//            print_r($this->input->post());
+//            print_r($response);
+//            die;
+
+        }
+
 //        $params2 = '';
 //        $endpoint2 = 'api/v1/admin/categories';
 //        $metodo2 = 'GET';
