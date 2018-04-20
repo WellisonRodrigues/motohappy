@@ -57,10 +57,10 @@ class Users extends CI_Controller
             );
             $response = $this->restfull->cUrl($params, $endpoint, $metodo);
 
-//            print_r($response);
+            print_r($response);
 //            echo '<br>';
 //            print_r(json_encode($this->input->post()));
-//            die;
+            die;
         }
         if ($this->input->post('name') and $id == null) {
 

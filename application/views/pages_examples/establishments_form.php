@@ -9,7 +9,7 @@
  */
 //print_r($categories['response']);
 //echo '<pre>';
-//print_r($response);
+//print_r($partners['response']);
 ?>
     <div class="container">
         <h2>Estabelecimento</h2>
@@ -92,8 +92,6 @@
                             <label for="categories">Categoria:</label>
                             <select class="form-control tm-input" name="categories" id="categories">
                                 <?php foreach ($categories['response']['category'] as $line) {
-//                                    $idoption = $line['id'];
-//                                    $nameoption = $line['name'];
                                     echo "<option value='$line'>$line</option>";
                                 } ?>
                             </select>
@@ -108,10 +106,7 @@
                         </div>
                     </div>
                 </div>
-                <!--                <div class="form-group">-->
                 <div class="form-group row" id="selects">
-
-                    <!--                    </div>-->
                 </div>
                 <div class="form-group">
                     <!-- Default input -->
@@ -127,8 +122,9 @@
                         </div>
                         <div class="col-md-6">
                             <label for="email">Imagem:</label>
-                            <input type="file" class="form-control" name="email" id="email">
+                            <input type="file" onchange="readURL3(this);" class="form-control" name="file" id="file">
                         </div>
+                        <input type="hidden" name="image" id="new_image3" value="">
                     </div>
 
                 </div>
@@ -171,37 +167,16 @@
 
                 valores.push($(this).val());
                 $('#salvar').val(valores)
-                // console.log(valores);
-
             });
-
-            //
-
         });
-
+        function readURL3(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    $('#falseinput3').attr('src', e.target.result);
+                    $('#new_image3').val(e.target.result);
+                };
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
     </script>
-
-
-<?php //echo form_open('Categories/new_categories', ['role' => 'form']) ?>
-    <!--    <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"-->
-    <!--         aria-hidden="true">-->
-    <!--        <div class="modal-dialog" role="document">-->
-    <!--            <div class="modal-content">-->
-    <!--                <div class="modal-header">-->
-    <!--                    <h5 class="modal-title" id="exampleModalLabel">Nova Categoria</h5>-->
-    <!--                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">-->
-    <!--                        <span aria-hidden="true">&times;</span>-->
-    <!--                    </button>-->
-    <!--                </div>-->
-    <!--                <div class="modal-body">-->
-    <!--                    <label for="categoria_name">Nome:</label>-->
-    <!--                    <input type="text" class="form-control" id="categoria_name" name="categoria_name">-->
-    <!--                </div>-->
-    <!--                <div class="modal-footer">-->
-    <!--                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>-->
-    <!--                    <button type="submit" class="btn btn-primary">Salvar</button>-->
-    <!--                </div>-->
-    <!--            </div>-->
-    <!--        </div>-->
-    <!--    </div>-->
-<?php //echo form_close() ?>

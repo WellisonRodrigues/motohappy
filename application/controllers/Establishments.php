@@ -88,30 +88,39 @@ class Establishments extends CI_Controller
             $this->load->library('Restfull');
             $endpoint = 'api/v1/admin/establishments/' . $id;
             $metodo = 'PATCH';
-            $params = array(
+            if ($this->input->post('image')) {
+                $params = array(
 
 
-                "name" => $this->input->post('name'),
-                "address" => $this->input->post('address'),
-                "city" => $this->input->post('city'),
-                "state" => $this->input->post('state'),
-                "establishment_cod" => $this->input->post('establishment_cod'),
-                "category" => [$this->input->post('categorys')],
-                "partner_id" => [],
-                "image" => $this->input->post('image'),
-                "attendance" => $this->input->post('attendance'),
+                    "name" => $this->input->post('name'),
+                    "address" => $this->input->post('address'),
+                    "city" => $this->input->post('city'),
+                    "state" => $this->input->post('state'),
+                    "establishment_cod" => $this->input->post('establishment_cod'),
+                    "category" => [$this->input->post('categorys')],
+                    "partner_id" => [],
+                    "image" => $this->input->post('image'),
+                    "attendance" => $this->input->post('attendance'),
 
-            );
+                );
+            } else {
+                $params = array(
 
-//            print_r($this->input->post() );
-//            die;
+
+                    "name" => $this->input->post('name'),
+                    "address" => $this->input->post('address'),
+                    "city" => $this->input->post('city'),
+                    "state" => $this->input->post('state'),
+                    "establishment_cod" => $this->input->post('establishment_cod'),
+                    "category" => [$this->input->post('categorys')],
+                    "partner_id" => [],
+                    "attendance" => $this->input->post('attendance'),
+
+                );
+            }
             $response = $this->restfull->cUrl($params, $endpoint, $metodo);
             $data['message'] = $response['response'];
             $data['response'] = $response['response'];
-//            $data['id'] = $id;
-
-//       print_r($response);
-//       die;
         }
 
         $params2 = '';
@@ -119,6 +128,11 @@ class Establishments extends CI_Controller
         $metodo2 = 'GET';
         $response2 = $this->restfull->cUrl($params2, $endpoint2, $metodo2);
         $data['categories'] = $response2;
+        $params3 = '';
+        $endpoint3 = 'api/v1/admin/partners';
+        $metodo3 = 'GET';
+        $response3 = $this->restfull->cUrl($params3, $endpoint3, $metodo3);
+        $data['partners'] = $response3;
 
         $data['menu'] = true;  // Menu true significa que a pagina tera o menu principal, false deixa a pagina sem menu(menu = header + navbar)
         $data['view'] = 'pages_examples/establishments_form';
