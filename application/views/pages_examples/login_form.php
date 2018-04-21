@@ -30,7 +30,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <!-- Material input email -->
             <div class="md-form">
                 <i class="fa fa-user prefix " style="color: #FF5D00"></i>
-                <input type="email" name="email" id="materialFormLoginEmailEx" class="form-control"
+                <input type="email" name="email" id="materialFormLoginEmailEx"
+                       class="form-control"
                        style="color: #FF5D00">
                 <!--                    <label for="materialFormLoginEmailEx">Your email</label>-->
             </div>
@@ -41,6 +42,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <input type="password" name="password" id="materialFormLoginPasswordEx" class="form-control" style="color:
                     #FF5D00">
                 <!--                    <label for="materialFormLoginPasswordEx">Your password</label>-->
+            </div>
+            <div class="md-form">
+                <select name="user" id="materialFormLoginEmailEx" class="form-control">
+                    <option value="admin">Master</option>
+                    <option value="subadmin">Sub Master</option>
+                    <option value="partners">Parceiro</option>
+                </select>
             </div>
 
             <div class="text-center mt-3">
