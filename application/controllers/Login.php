@@ -33,7 +33,8 @@ class Login extends CI_Controller
 
             $response = $this->restfull->cUrl($params, $endpoint, $metodo);
 //            echo '<pre>';
-
+//            print_r($response);
+//            die;
             if (isset($response['response']['errors'][0])) {
                 $data['message'] = $response['response']['errors'][0];
                 $data['menu'] = false;  // Menu true significa que a pagina tera o menu principal, false deixa a pagina sem menu(menu = header + navbar)

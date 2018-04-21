@@ -19,6 +19,7 @@ class Subadmins extends CI_Controller
         $this->load->library('Restfull');
 //        $this->load->library('PerfectTable');
     }
+
     public function index()
     {
         $this->load->library('Restfull');
@@ -41,37 +42,39 @@ class Subadmins extends CI_Controller
         if ($this->input->post('name') and $id != null) {
 
             $this->load->library('Restfull');
-            $endpoint = 'api/v1/admin/users/' . $id;
+            $endpoint = 'api/v1/admin/subadmins/' . $id;
             $metodo = 'PATCH';
-            $params = array(
-                'name' => $this->input->post('name'),
-                'city' => $this->input->post('city'),
-                'address' => $this->input->post('address'),
-                'state' => $this->input->post('state'),
-                'phone' => $this->input->post('phone'),
-                'password' => $this->input->post('phone'),
-                'password_confirmation' => $this->input->post('phone'),
-//                'phone'=> $this->input->post('phone'),
+            if ($this->input->post('image')) {
+                $params = array(
+                    'name' => $this->input->post('name'),
+                    'email' => $this->input->post('email'),
+                    'nickname' => $this->input->post('nickname'),
+                    'image' => $this->input->post('image'),
 
-            );
+
+                );
+            } else {
+                $params = array(
+                    'name' => $this->input->post('name'),
+                    'email' => $this->input->post('email'),
+                    'nickname' => $this->input->post('nickname'),
+
+                );
+            }
             $response = $this->restfull->cUrl($params, $endpoint, $metodo);
-//       print_r($response);
-//       die;
         }
+
         if ($this->input->post('name') and $id == null) {
 
             $this->load->library('Restfull');
-            $endpoint = 'api/v1/admin/users';
+            $endpoint = 'api/v1/admin/subadmins';
             $metodo = 'POST';
             $params = array(
                 'name' => $this->input->post('name'),
-                'city' => $this->input->post('city'),
-                'address' => $this->input->post('address'),
-                'state' => $this->input->post('state'),
-                'phone' => $this->input->post('phone'),
-                'password' => $this->input->post('phone'),
-                'password_confirmation' => $this->input->post('phone'),
-//                'phone'=> $this->input->post('phone'),
+                'email' => $this->input->post('email'),
+                'nickname' => $this->input->post('nickname'),
+                'image' => $this->input->post('image'),
+
 
             );
 //            print_r($this->input->post());
@@ -101,7 +104,7 @@ class Subadmins extends CI_Controller
 //        $data['categories'] = $response2['response'];
 
         $data['menu'] = true;  // Menu true significa que a pagina tera o menu principal, false deixa a pagina sem menu(menu = header + navbar)
-        $data['view'] = 'pages_examples/users_form';
+        $data['view'] = 'pages_examples/subadmin_form';
         $this->load->view('structure/container', $data);
     }
 
@@ -109,11 +112,11 @@ class Subadmins extends CI_Controller
     function delete($id)
     {
         if ($id != null or $id != '') {
-            $endpoint = 'api/v1/admin/users/' . $id;
+            $endpoint = 'api/v1/admin/subadmins/' . $id;
             $metodo = 'DELETE';
             $params = '';
             $response = $this->restfull->cUrl($params, $endpoint, $metodo);
-            redirect('Users');
+            redirect('Subadmins');
         }
     }
 

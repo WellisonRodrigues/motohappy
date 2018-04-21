@@ -15,7 +15,7 @@
     <h2>Administradores</h2>
     <div class="row">
         <div class="col-md-12" align="right">
-            <a href="<?php echo base_url() ?>Users/new_user">
+            <a href="<?php echo base_url() ?>Subadmins/new_user">
                 <button type="button" class="btn btn-default btn-sm"><i class="fas fa-plus"></i></button>
             </a>
         </div>
@@ -36,11 +36,11 @@
                                 </p>
                             </div>
                             <div class="col-md-1">
-                                <a href="<?php echo base_url() ?>Partners/new_user"><i class="fas fa-pencil-alt"
+                                <a href="<?php echo base_url() ?>Subadmins/new_user/<?php echo $row['id']?>"><i class="fas fa-pencil-alt"
                                                                                     style="color: gray"></i></a>
                             </div>
                             <div class="col-md-1">
-                                <i class="fas fa-times" style="color: gray"></i>
+                                <a href="<?php echo base_url() ?>Subadmins/delete/"<?php echo $row['id']?>>  <i class="fas fa-times" style="color: gray"></i></a>
                             </div>
                         </div>
                         <!--
