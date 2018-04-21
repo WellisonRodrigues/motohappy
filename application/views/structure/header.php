@@ -23,6 +23,24 @@
                     <img src="<?php echo base_url() ?>imgs\logobrand.png" height="30" class="d-inline-block align-left">
                 </a>
             </div>
+            <a class="navbar-brand" href="#">
+                <div class="dropdown">
+                    <a class="dropdown-toggle" style="margin-left: 70px" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                       aria-expanded="false"><img src="<?php echo base_url() ?>imgs/Elemento6.png"
+                                                  class="rounded-circle">
+                    </a>
+                    <ul class='dropdown-menu' aria-labelledby="dropdownMenuButton"
+                        style="margin-top:12px">
+                        <li><a href='<?php echo base_url() ?>/Myprofile'
+                               style='color: gray'>
+                                <i
+                                        class='fas fa-user'> </i>&nbsp;&nbsp; Meus Dados</a></li>
+                        <li>
+                            <a href='<?php echo base_url() ?>/Sair' style='color: gray'> <i
+                                        class='fas fa-sign-out-alt'> </i>&nbsp;&nbsp; Logout</a></li>
+                    </ul>
+                </div>
+            </a>
         </nav>
     </div>
 
