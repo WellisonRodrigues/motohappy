@@ -38,7 +38,7 @@
         </div>
     </div>
     <div class="row">
-        <?php foreach ($response as $row) { ?>
+        <?php foreach ($response['fuel'] as $row) { ?>
             <div class="col-md-4 contem" style="margin-top: 20px">
                 <div class="card">
                     <div class="card-body">

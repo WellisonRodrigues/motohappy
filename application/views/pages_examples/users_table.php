@@ -7,8 +7,8 @@
  */
 
 //print_r($this->session->userdata("user"));
-//echo '<pre>';
-//print_r($response);
+//    echo '<pre>';
+//    print_r($response);
 ?>
 
 <div class="container">
@@ -51,12 +51,11 @@
                                 <?php } ?>
                             </div>
                             <div class="col-md-7">
-                                <b class="card-title h-25 d-inline-block"><?php echo @$row['name'] ?></b>
-                                <p class="card-text h-25 d-inline-block"><?php echo @$row['email'] ?></p><br>
-                                <p class="card-text h-25 d-inline-block"><?php echo @$row['birthday'] ?>,<?php echo @$row['phone'] ?></p>
-                                <br>
-                                <p class="card-text h-25 d-inline-block"><?php echo @$row['address'] ?></p><br>
-                                <p class="card-text h-25 d-inline-block"><?php echo @$row['city'] ?></p>
+                                <b class="card-title h-25"><?php echo @$row['name'] ?></b>
+                                <p class="card-text h-25"><?php echo @$row['email'] ?><br>
+                                <?php echo @$row['birthday'] ?>,<?php echo @$row['phone'] ?>
+                                <?php echo @$row['address'] ?>
+                                <?php echo @$row['city'] ?></p>
                             </div>
                             <div class="col-md-1">
                                 <a href="<?php echo base_url() ?>Users/new_user/<?php echo $row['id'] ?>"><i
