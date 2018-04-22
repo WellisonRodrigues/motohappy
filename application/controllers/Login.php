@@ -34,7 +34,7 @@ class Login extends CI_Controller
                     $usertype = 'admin';
                     break;
                 case 'subadmin':
-                    $endpoint = 'auth/sign_in';
+                    $endpoint = 'admin/auth/subadmins/sign_in';
                     $usertype = 'subadmin';
                     break;
                 case 'partners':

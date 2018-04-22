@@ -6,6 +6,8 @@
  * Time: 16:00
  */
 //print_r($this->session->userdata('user')['uid'][0])
+//echo '<pre>';
+//print_r($response);
 ?>
 <div class="row" style="margin-top: 5%"></div>
 
@@ -26,10 +28,9 @@
                                     </div>
                                     <div class="col-md-5" style="margin-left:3%; margin-top:2%; margin-bottom:2px">
 
-                                        <strong style=""> 326 ususarios cadastrados</strong><br>
-                                        <br> 326 ususarios cadastrados<br>
-                                        326 ususarios cadastrados<br>
-                                        326 ususarios cadastrados<br>
+                                        <strong style=""> <?php echo $response['users_count']?> usuarios cadastrados</strong><br>
+                                        <br>Ultimo cadastro:  <?php echo $response['last_user']?><br>
+                                        <?php echo $response['last_month_users']?> Novos usuarios nos ultimos 30 dias<br>
                                     </div>
 
                                 </div>
@@ -49,10 +50,9 @@
                                     </div>
                                     <div class="col-md-5" style="margin-left:3%; margin-top:2%; margin-bottom:2px">
 
-                                        <strong style=""> 326 ususarios cadastrados</strong><br>
-                                        <br> 326 ususarios cadastrados<br>
-                                        326 ususarios cadastrados<br>
-                                        326 ususarios cadastrados<br>
+                                        <strong style=""> <?php echo $response['establishment_count']?>  Estabelecimenos cadastrados</strong><br>
+                                        <br>Ultimo cadastro:  <?php echo $response['last_establishment']?><br>
+                                        <?php echo $response['last_month_establishments']?> Novos estabelecimentos nos ultimos 30 dias<br>
                                     </div>
 
                                 </div>
@@ -72,10 +72,9 @@
                                     </div>
                                     <div class="col-md-5" style="margin-left:3%; margin-top:2%; margin-bottom:2px">
 
-                                        <strong style=""> 326 ususarios cadastrados</strong><br>
-                                        <br> 326 ususarios cadastrados<br>
-                                        326 ususarios cadastrados<br>
-                                        326 ususarios cadastrados<br>
+                                        <strong style=""> <?php echo $response['partners_count']?>  Parceiros cadastrados</strong><br>
+                                        <br>Ultimo cadastro:  <?php echo $response['last_partner']?><br>
+                                        <?php echo $response['last_month_partners']?> Novos parceiros nos ultimos 30 dias<br>
                                     </div>
 
                                 </div>
@@ -90,25 +89,21 @@
                     <div class="card-body">
                         Ultimos 07 dias
                         <hr style="margin-top:20px">
-                        <img src="<?php echo base_url() ?>imgs\user.png" width="25px" height="25px"
-                             class="img-responsive"> 326 ususarios cadastrados
+                        <img src="<?php echo base_url() ?>imgs\icon1.png" width="25px" height="25px"
+                             class="img-responsive"> Usuarios 326 ususarios cadastrados
                         <hr style="margin-top:20px">
-                        <img src="<?php echo base_url() ?>imgs\user.png" width="25px" height="25px"
-                             class="img-responsive"> 326 ususarios cadastrados
+                        <img src="<?php echo base_url() ?>imgs\icon2.png" width="25px" height="25px"
+                             class="img-responsive">Estabelecimento 326 ususarios cadastrados
                         <hr style="margin-top:20px">
-                        <img src="<?php echo base_url() ?>imgs\user.png" width="25px" height="25px"
-                             class="img-responsive"> 326 ususarios cadastrados
+                        <img src="<?php echo base_url() ?>imgs\icon3.png" width="25px" height="25px"
+                             class="img-responsive">Parceiros 326 ususarios cadastrados
                         <hr style="margin-top:20px">
-                        <img src="<?php echo base_url() ?>imgs\user.png" width="25px" height="25px"
-                             class="img-responsive"> 326 ususarios cadastrados
+                        <img src="<?php echo base_url() ?>imgs\icon4.png" width="25px" height="25px"
+                             class="img-responsive">Hot 326 ususarios cadastrados
                         <hr style="margin-top:20px">
-                        <img src="<?php echo base_url() ?>imgs\user.png" width="25px" height="25px"
-                             class="img-responsive"> 326 ususarios cadastrados
+                        <img src="<?php echo base_url() ?>imgs\icon5.png" width="25px" height="25px"
+                             class="img-responsive">Combos 326 ususarios cadastrados
                         <hr style="margin-top:20px;">
-                        <img src="<?php echo base_url() ?>imgs\user.png" width="25px" height="25px"
-                             class="img-responsive"> 326 ususarios cadastrados
-                        <hr style="margin-top:20px;margin-bottom:35px">
-
                         <div class="text-center">
                             <a href="<?php echo base_url() ?>Charts">
                                 <button class="btn btn-default btn-sm" type="submit"
