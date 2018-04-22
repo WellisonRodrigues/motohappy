@@ -90,19 +90,19 @@
                         Ultimos 07 dias
                         <hr style="margin-top:20px">
                         <img src="<?php echo base_url() ?>imgs\icon1.png" width="25px" height="25px"
-                             class="img-responsive"> Usuarios 326 ususarios cadastrados
+                             class="img-responsive"> Usuarios
                         <hr style="margin-top:20px">
                         <img src="<?php echo base_url() ?>imgs\icon2.png" width="25px" height="25px"
-                             class="img-responsive">Estabelecimento 326 ususarios cadastrados
+                             class="img-responsive">Estabelecimento
                         <hr style="margin-top:20px">
                         <img src="<?php echo base_url() ?>imgs\icon3.png" width="25px" height="25px"
-                             class="img-responsive">Parceiros 326 ususarios cadastrados
+                             class="img-responsive">Parceiros
                         <hr style="margin-top:20px">
                         <img src="<?php echo base_url() ?>imgs\icon4.png" width="25px" height="25px"
-                             class="img-responsive">Hot 326 ususarios cadastrados
+                             class="img-responsive">Hot
                         <hr style="margin-top:20px">
                         <img src="<?php echo base_url() ?>imgs\icon5.png" width="25px" height="25px"
-                             class="img-responsive">Combos 326 ususarios cadastrados
+                             class="img-responsive">Combos 
                         <hr style="margin-top:20px;">
                         <div class="text-center">
                             <a href="<?php echo base_url() ?>Charts">

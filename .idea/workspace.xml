@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="935b7b62-3b28-4833-9e93-ef4dc909d715" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/application/controllers/Home.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Home.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Login.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/session/ci_sessionmpbvk2ctrs5o111qr7usr3qf1ki9bk4p" beforeDir="false" afterPath="$PROJECT_DIR$/application/session/ci_sessionmpbvk2ctrs5o111qr7usr3qf1ki9bk4p" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_sessionvsobne4vslf7n93f039uope026lp0tb4" beforeDir="false" afterPath="$PROJECT_DIR$/application/session/ci_sessionvsobne4vslf7n93f039uope026lp0tb4" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/pages_examples/home_form.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pages_examples/home_form.php" afterDir="false" />
     </list>
     <ignored path="motolegal.iws" />
@@ -75,8 +73,8 @@
       <file leaf-file-name="home_form.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/pages_examples/home_form.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="8" column="15" lean-forward="true" selection-start-line="8" selection-start-column="15" selection-end-line="9" selection-end-column="21" />
+            <state relative-caret-position="490">
+              <caret line="104" column="59" selection-start-line="104" selection-start-column="59" selection-end-line="104" selection-end-column="59" />
             </state>
           </provider>
         </entry>
@@ -273,12 +271,12 @@
       <option name="presentableId" value="Default" />
       <updated>1522176101429</updated>
       <workItem from="1522812844269" duration="47596000" />
-      <workItem from="1523406040684" duration="71393000" />
+      <workItem from="1523406040684" duration="71449000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="118989000" />
+    <option name="totallyTimeSpent" value="119045000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1386" height="788" extended-state="0" />
@@ -703,8 +701,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/pages_examples/home_form.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="8" column="15" lean-forward="true" selection-start-line="8" selection-start-column="15" selection-end-line="9" selection-end-column="21" />
+        <state relative-caret-position="490">
+          <caret line="104" column="59" selection-start-line="104" selection-start-column="59" selection-end-line="104" selection-end-column="59" />
         </state>
       </provider>
     </entry>
