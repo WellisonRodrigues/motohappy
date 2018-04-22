@@ -27,7 +27,25 @@ class Login extends CI_Controller
 
 
             $this->load->library('Restfull');
-            $endpoint = 'auth/sign_in';
+
+            switch ($this->input->post('user')) {
+                case 'admin':
+                    $endpoint = 'auth/sign_in';
+                    $usertype = 'admin';
+                    break;
+                case 'subadmin':
+                    $endpoint = 'auth/sign_in';
+                    $usertype = 'subadmin';
+                    break;
+                case 'partners':
+                    $endpoint = 'admin/auth/partners/sign_in';
+                    $usertype = 'partners';
+                    break;
+
+
+            }
+
+
             $metodo = 'POST';
             $params = array('email' => $this->input->post('email'), 'password' => $this->input->post('password'));
 
@@ -42,7 +60,7 @@ class Login extends CI_Controller
                 $this->load->view('structure/container', $data);
             } else {
                 $userAPI = array('id' => $response['response']['data']['id'], 'name' => $response['response']['data']['name'],
-                    'uid' => $response['header']['uid'], 'auth_token' => $response['header']['access-token'], 'client' => $response['header']['client']);
+                    'uid' => $response['header']['uid'], 'auth_token' => $response['header']['access-token'], 'typeuser' => $usertype, 'client' => $response['header']['client']);
                 $this->session->set_userdata('user', $userAPI);
                 redirect('Home');
             }

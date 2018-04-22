@@ -25,7 +25,8 @@
             </div>
             <a class="navbar-brand" href="#">
                 <div class="dropdown">
-                    <a class="dropdown-toggle" style="margin-left: 70px" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                    <a class="dropdown-toggle" style="margin-left: 70px" id="dropdownMenuButton" data-toggle="dropdown"
+                       aria-haspopup="true"
                        aria-expanded="false"><img src="<?php echo base_url() ?>imgs/Elemento6.png"
                                                   class="rounded-circle">
                     </a>
@@ -63,22 +64,33 @@
     <div class="p-4" style="background-color: #FF5D00;">
         <!--        <div class="tab-content vertical">-->
         <ul class="nav md-pills pills-primary flex-column">
-            <li class="nav-item">
-                <a class="nav-link" href="<?php echo base_url() ?>Users">Usuarios</a></li>
-            <li class="nav-item">
-                <a class="nav-link" href="<?php echo base_url() ?>Categories">Categorias</a></li>
-            <li class="nav-item">
-                <a class="nav-link" href="<?php echo base_url() ?>Establishments">Estabelecimentos</a></li>
-            <li class="nav-item">
-                <a class="nav-link" href="<?php echo base_url() ?>Hot">Hot</a></li>
-            <li class="nav-item">
-                <a class="nav-link" href="<?php echo base_url() ?>Partners">Parceiros</a></li>
-            <li class="nav-item">
-                <a class="nav-link" href="<?php echo base_url() ?>Subadmins">Administradores</a></li>
-            <li class="nav-item">
-                <a class="nav-link" href="<?php echo base_url() ?>Fuel">Combustivel</a></li>
-            <li class="nav-item">
-                <a class="nav-link" href="<?php echo base_url() ?>Combos">Combos</a></li>
-            <!--        </div>-->
+
+            <?php if ($this->session->userdata("user")['typeuser'] == 'partners') { ?>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?php echo base_url() ?>Establishments">Estabelecimentos</a></li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?php echo base_url() ?>Fuel">Combustivel</a></li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?php echo base_url() ?>Combos">Combos</a></li>
+            <?php } else { ?>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="<?php echo base_url() ?>Users">Usuarios</a></li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?php echo base_url() ?>Categories">Categorias</a></li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?php echo base_url() ?>Establishments">Estabelecimentos</a></li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?php echo base_url() ?>Hot">Hot</a></li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?php echo base_url() ?>Partners">Parceiros</a></li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?php echo base_url() ?>Subadmins">Administradores</a></li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?php echo base_url() ?>Fuel">Combustivel</a></li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?php echo base_url() ?>Combos">Combos</a></li>
+                <!--        </div>-->
+            <?php } ?>
     </div>
 </div>
