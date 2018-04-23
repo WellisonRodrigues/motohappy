@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="935b7b62-3b28-4833-9e93-ef4dc909d715" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/application/views/pages_examples/hot_form.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/controllers/Hot.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Hot.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/pages_examples/hot_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pages_examples/hot_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_sessionl12scd1df02cr3r4hdm18jdd1416669m" beforeDir="false" afterPath="$PROJECT_DIR$/application/session/ci_sessionl12scd1df02cr3r4hdm18jdd1416669m" afterDir="false" />
     </list>
     <ignored path="motolegal.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,15 +42,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Login.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/Login.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23">
-              <caret line="36" column="61" selection-start-line="36" selection-start-column="61" selection-end-line="36" selection-end-column="61" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="categories_table.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/pages_examples/categories_table.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -103,11 +96,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Hot.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Hot.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/Hot.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="492">
-              <caret line="134" column="1" selection-start-line="134" selection-start-column="1" selection-end-line="134" selection-end-column="1" />
+            <state relative-caret-position="340">
+              <caret line="70" column="32" lean-forward="true" selection-start-line="70" selection-start-column="32" selection-end-line="70" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="hot_form.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/views/pages_examples/hot_form.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -124,8 +126,8 @@
       <file leaf-file-name="hot_table.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/pages_examples/hot_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="17" column="48" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
+            <state relative-caret-position="323">
+              <caret line="45" column="34" lean-forward="true" selection-start-line="45" selection-start-column="34" selection-end-line="45" selection-end-column="34" />
               <folding>
                 <element signature="n#style#0;n#i#0;n#a#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#i#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
@@ -191,6 +193,7 @@
         <option value="$PROJECT_DIR$/application/views/pages_examples/combos_table.php" />
         <option value="$PROJECT_DIR$/application/views/pages_examples/hot_table.php" />
         <option value="$PROJECT_DIR$/application/controllers/Hot.php" />
+        <option value="$PROJECT_DIR$/application/views/pages_examples/hot_form.php" />
       </list>
     </option>
   </component>
@@ -318,12 +321,12 @@
       <option name="presentableId" value="Default" />
       <updated>1522176101429</updated>
       <workItem from="1522812844269" duration="47596000" />
-      <workItem from="1523406040684" duration="74442000" />
+      <workItem from="1523406040684" duration="75593000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="122038000" />
+    <option name="totallyTimeSpent" value="123189000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1386" height="788" extended-state="0" />
@@ -384,13 +387,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/views/structure/head.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="35" column="103" selection-start-line="35" selection-start-column="103" selection-end-line="35" selection-end-column="103" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Categories.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -725,6 +721,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Partners.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="591">
+          <caret line="133" selection-start-line="35" selection-start-column="2" selection-end-line="133" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/pages_examples/combos_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="782">
@@ -734,8 +737,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/pages_examples/hot_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="17" column="48" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
+        <state relative-caret-position="323">
+          <caret line="45" column="34" lean-forward="true" selection-start-line="45" selection-start-column="34" selection-end-line="45" selection-end-column="34" />
           <folding>
             <element signature="n#style#0;n#i#0;n#a#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#i#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
@@ -743,17 +746,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Partners.php">
+    <entry file="file://$PROJECT_DIR$/application/controllers/Hot.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="591">
-          <caret line="133" selection-start-line="35" selection-start-column="2" selection-end-line="133" />
+        <state relative-caret-position="340">
+          <caret line="70" column="32" lean-forward="true" selection-start-line="70" selection-start-column="32" selection-end-line="70" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Hot.php">
+    <entry file="file://$PROJECT_DIR$/application/views/pages_examples/hot_form.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="492">
-          <caret line="134" column="1" selection-start-line="134" selection-start-column="1" selection-end-line="134" selection-end-column="1" />
+        <state relative-caret-position="51">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
         </state>
       </provider>
     </entry>

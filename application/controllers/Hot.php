@@ -39,10 +39,11 @@ class Hot extends CI_Controller
 
     public function new_user($id = null)
     {
+        $this->load->library('Restfull');
         if ($this->input->post('name') and $id == null) {
 
-            $this->load->library('Restfull');
-            $endpoint = 'api/v1/admin/hot';
+
+            $endpoint = 'api/v1/admin/hots';
             $metodo = 'POST';
             $params = array(
                 'description' => $this->input->post('description'),
@@ -62,18 +63,20 @@ class Hot extends CI_Controller
 
         if ($id != null and $this->input->post('name') == '') {
             $this->load->library('Restfull');
-            $endpoint = 'api/v1/admin/hot/' . $id;
+            $endpoint = 'api/v1/admin/hots/' . $id;
             $metodo = 'GET';
             $params = '';
             $response = $this->restfull->cUrl($params, $endpoint, $metodo);
             $data['response'] = $response['response'];
 //            $data['id'] = $id;
+//            print_r($response);
+//            die;
 
         }
         if ($this->input->post('name') and $id != null) {
 
             $this->load->library('Restfull');
-            $endpoint = 'api/v1/admin/hot/' . $id;
+            $endpoint = 'api/v1/admin/hots/' . $id;
             $metodo = 'PATCH';
             if ($this->input->post('image')) {
                 $params = array(
