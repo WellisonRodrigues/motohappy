@@ -14,11 +14,13 @@
 <div class="container">
     <h2>Hot</h2>
     <div class="row">
-        <div class="col-md-12" align="right">
-            <a href="<?php echo base_url() ?>Hot/new_user">
-                <button type="button" class="btn btn-default btn-sm"><i class="fas fa-plus"></i></button>
-            </a>
-        </div>
+        <?php if ($this->session->userdata("user")['typeuser'] != 'partners') { ?>
+            <div class="col-md-12" align="right">
+                <a href="<?php echo base_url() ?>Hot/new_user">
+                    <button type="button" class="btn btn-default btn-sm"><i class="fas fa-plus"></i></button>
+                </a>
+            </div>
+        <?php } ?>
     </div>
     <div class="row">
         <?php foreach ($response['hots'] as $row) { ?>
@@ -39,15 +41,17 @@
 
                                 </p>
                             </div>
-                            <div class="col-md-1">
-                                <a href="<?php echo base_url() ?>Hot/new_user/<?php echo $row['id'] ?>"><i
-                                            class="fas fa-pencil-alt"
-                                            style="color: gray"></i></a>
-                            </div>
-                            <div class="col-md-1">
-                                <a href="<?php echo base_url() ?>Hot/delete/<?php echo $row['id'] ?>"><i
-                                            class="fas fa-times" style="color: gray"></i></a>
-                            </div>
+                            <?php if ($this->session->userdata("user")['typeuser'] != 'partners') { ?>
+                                <div class="col-md-1">
+                                    <a href="<?php echo base_url() ?>Hot/new_user/<?php echo $row['id'] ?>"><i
+                                                class="fas fa-pencil-alt"
+                                                style="color: gray"></i></a>
+                                </div>
+                                <div class="col-md-1">
+                                    <a href="<?php echo base_url() ?>Hot/delete/<?php echo $row['id'] ?>"><i
+                                                class="fas fa-times" style="color: gray"></i></a>
+                                </div>
+                            <?php } ?>
                         </div>
                         <!--
 

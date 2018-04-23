@@ -28,10 +28,12 @@
                         <button type="button" id="search" class="btn btn-primary mt-sm-auto">
                             <i class="fas fa-search"></i>
                         </button>
-                        <a href="<?php echo base_url() ?>Combos/new_user">
-                            <button type="button" class="btn btn-default mt-sm-auto"><i class="fas fa-plus"></i>
-                            </button>
-                        </a>
+                        <?php if ($this->session->userdata("user")['typeuser'] != 'partners') { ?>
+                            <a href="<?php echo base_url() ?>Combos/new_user">
+                                <button type="button" class="btn btn-default mt-sm-auto"><i class="fas fa-plus"></i>
+                                </button>
+                            </a>
+                        <?php } ?>
                     </div>
 
                 </div>
@@ -47,23 +49,25 @@
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-9">
-                                    <b class="card-title"><?php echo $row['establishment_id'] ?></b>
+                                    <b class="card-title"><?php echo @$row['establishments']['name'] ?></b>
                                     <p class="card-text">
                                         <?php echo $row['description'] ?><br>
                                         &nbsp;R$ <?php echo $row['value'] ?>
 
                                     </p>
                                 </div>
-                                <div class="col-md-1">
-                                    <a href="<?php echo base_url() ?>Combos/new_user/<?php echo $row['id'] ?>"><i
-                                                class="fas fa-pencil-alt"
-                                                style="color: gray"></i></a>
-                                </div>
-                                <div class="col-md-1">
-                                    <a href="<?php echo base_url() ?>Combos/delete/<?php echo $row['id'] ?>"> <i
-                                                class="fas fa-times"
-                                                style="color: gray"></i></a>
-                                </div>
+                                <?php if ($this->session->userdata("user")['typeuser'] != 'partners') { ?>
+                                    <div class="col-md-1">
+                                        <a href="<?php echo base_url() ?>Combos/new_user/<?php echo $row['id'] ?>"><i
+                                                    class="fas fa-pencil-alt"
+                                                    style="color: gray"></i></a>
+                                    </div>
+                                    <div class="col-md-1">
+                                        <a href="<?php echo base_url() ?>Combos/delete/<?php echo $row['id'] ?>"> <i
+                                                    class="fas fa-times"
+                                                    style="color: gray"></i></a>
+                                    </div>
+                                <?php } ?>
                             </div>
                             <!--
 

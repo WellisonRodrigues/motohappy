@@ -28,10 +28,12 @@
                         <button type="button" id="search" class="btn btn-primary mt-sm-auto">
                             <i class="fas fa-search"></i>
                         </button>
-                        <a href="<?php echo base_url() ?>Establishments/new_establishments">
-                            <button type="button" class="btn btn-default mt-sm-auto"><i class="fas fa-plus"></i>
-                            </button>
-                        </a>
+                        <?php if ($this->session->userdata("user")['typeuser'] != 'partners') { ?>
+                            <a href="<?php echo base_url() ?>Establishments/new_establishments">
+                                <button type="button" class="btn btn-default mt-sm-auto"><i class="fas fa-plus"></i>
+                                </button>
+                            </a>
+                        <?php } ?>
                     </div>
 
                 </div>
@@ -75,16 +77,18 @@
                                         ,<?php echo @$row['number'] ?>
                                         <?php echo @$row['state'] ?>,<?php echo @$row['city'] ?></p>
                                 </div>
-                                <div class="col-md-1">
-                                    <a href="<?php echo base_url() ?>Establishments/new_establishments/<?php echo $row['id'] ?>"><i
-                                                class="fas fa-pencil-alt"
-                                                style="color: gray"></i></a>
-                                </div>
-                                <div class="col-md-1">
-                                    <a class="delete"
-                                       href="<?php base_url() ?>Establishments/delete/<?php echo $row['id'] ?>">
-                                        <i class="fas fa-times" style="color: gray"></i></a>
-                                </div>
+                                <?php if ($this->session->userdata("user")['typeuser'] != 'partners') { ?>
+                                    <div class="col-md-1">
+                                        <a href="<?php echo base_url() ?>Establishments/new_establishments/<?php echo $row['id'] ?>"><i
+                                                    class="fas fa-pencil-alt"
+                                                    style="color: gray"></i></a>
+                                    </div>
+                                    <div class="col-md-1">
+                                        <a class="delete"
+                                           href="<?php base_url() ?>Establishments/delete/<?php echo $row['id'] ?>">
+                                            <i class="fas fa-times" style="color: gray"></i></a>
+                                    </div>
+                                <?php } ?>
                             </div>
                             <!--
 

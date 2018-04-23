@@ -28,9 +28,12 @@
                         <button type="button" id="search" class="btn btn-primary mt-sm-auto">
                             <i class="fas fa-search"></i>
                         </button>
-                        <a href="<?php echo base_url() ?>Fuel/new_user">
-                            <button type="button" class="btn btn-default  mt-sm-auto"><i class="fas fa-plus"></i></button>
-                        </a>
+                        <?php if ($this->session->userdata("user")['typeuser'] != 'partners') { ?>
+                            <a href="<?php echo base_url() ?>Fuel/new_user">
+                                <button type="button" class="btn btn-default  mt-sm-auto"><i class="fas fa-plus"></i>
+                                </button>
+                            </a>
+                        <?php } ?>
                     </div>
 
                 </div>
@@ -38,41 +41,45 @@
         </div>
     </div>
     <div class="row">
-        <?php foreach ($response as $row) { ?>
-            <div class="col-md-4 contem" style="margin-top: 20px">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-md-2">
-                                <!--                                <img src="-->
-                                <?php //echo base_url() ?><!--imgs/Elemento6.png" class="rounded-circle">-->
-                            </div>
-                            <div class="col-md-7">
-                                <b class="card-title"><?php echo $row['establishment_id'] ?></b>
-                                <p class="card-text">
-                                    <?php echo $row['title'] ?>
-                                    &nbsp;&nbsp;R$ <?php echo $row['value'] ?>/Litro
+        <?php
+        if (isset($response)) {
+            foreach ($response as $row) {
+                ?>
+                <div class="col-md-4 contem" style="margin-top: 20px">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <!--                                <img src="-->
+                                    <?php //echo base_url() ?><!--imgs/Elemento6.png" class="rounded-circle">-->
+                                </div>
+                                <div class="col-md-7">
+                                    <b class="card-title"><?php echo $row['establishment_id'] ?></b>
+                                    <p class="card-text">
+                                        <?php echo $row['title'] ?>
+                                        &nbsp;&nbsp;R$ <?php echo $row['value'] ?>/Litro
 
-                                </p>
+                                    </p>
+                                </div>
+                                <div class="col-md-1">
+                                    <a href="<?php echo base_url() ?>Fuel/new_user/<?php echo $row['id'] ?>"><i
+                                                class="fas fa-pencil-alt"
+                                                style="color: gray"></i></a>
+                                </div>
+                                <div class="col-md-1">
+                                    <a href="<?php echo base_url() ?>Fuel/delete/<?php echo $row['id'] ?>"> <i
+                                                class="fas fa-times"
+                                                style="color: gray"></i></a>
+                                </div>
                             </div>
-                            <div class="col-md-1">
-                                <a href="<?php echo base_url() ?>Fuel/new_user/<?php echo $row['id'] ?>"><i
-                                            class="fas fa-pencil-alt"
-                                            style="color: gray"></i></a>
-                            </div>
-                            <div class="col-md-1">
-                                <a href="<?php echo base_url() ?>Fuel/delete/<?php echo $row['id'] ?>"> <i
-                                            class="fas fa-times"
-                                            style="color: gray"></i></a>
-                            </div>
+                            <!--
+
+                            <!--                    <a href="#" class="btn btn-primary">Go somewhere</a>-->
                         </div>
-                        <!--
-
-                        <!--                    <a href="#" class="btn btn-primary">Go somewhere</a>-->
                     </div>
                 </div>
-            </div>
-        <?php } ?>
+            <?php }
+        } ?>
     </div>
     <br>
     <div class="row">

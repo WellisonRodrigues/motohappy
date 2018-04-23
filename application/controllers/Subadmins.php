@@ -50,6 +50,7 @@ class Subadmins extends CI_Controller
                     'email' => $this->input->post('email'),
                     'nickname' => $this->input->post('nickname'),
                     'image' => $this->input->post('image'),
+                    'password' => $this->input->post('password'),
 
 
                 );
@@ -67,13 +68,14 @@ class Subadmins extends CI_Controller
         if ($this->input->post('name') and $id == null) {
 
             $this->load->library('Restfull');
-            $endpoint = 'api/v1/admin/subadmins';
+            $endpoint = 'admin/auth/subadmins';
             $metodo = 'POST';
             $params = array(
                 'name' => $this->input->post('name'),
                 'email' => $this->input->post('email'),
                 'nickname' => $this->input->post('nickname'),
                 'image' => $this->input->post('image'),
+                'password' => $this->input->post('password'),
 
 
             );
