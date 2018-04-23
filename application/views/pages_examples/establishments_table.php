@@ -39,59 +39,61 @@
         </div>
     </div>
     <div class="row">
-        <?php foreach ($response
+        <?php
+        if ($response) {
+            foreach ($response['establishments'] as $row) { ?>
+                <div class="col-md-4 contem">
+                    <div class="card" style="margin-top: 30px;">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <!--                            <div class="col-md-12">-->
 
-                       as $row) { ?>
-            <div class="col-md-4 contem">
-                <div class="card" style="margin-top: 30px;">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-md-3">
-                                <!--                            <div class="col-md-12">-->
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <?php if ($row['image']['url'] != null) { ?>
+                                                <img src="<?php echo $row['image']['url'] ?>"
+                                                     class="rounded-circle" width="50px" height="50px">
+                                            <?php } else { ?>
+                                                <img src="<?php echo base_url() ?>imgs/Elemento6.png"
+                                                     class="rounded-circle" width="50px" height="50px">
 
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <?php if ($row['image']['url'] != null) { ?>
-                                            <img src="<?php echo $row['image']['url'] ?>"
-                                                 class="rounded-circle" width="50px" height="50px">
-                                        <?php } else { ?>
-                                            <img src="<?php echo base_url() ?>imgs/Elemento6.png"
-                                                 class="rounded-circle" width="50px" height="50px">
-
-                                        <?php } ?>
+                                            <?php } ?>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="row">
+                                        <div class="col-md-12 h-25 d-inline-block">
+                                            <p class="card-text h-25 d-inline-block"> <?php echo @$row['establishment_cod'] ?></p>
+                                        </div>
                                     </div>
                                 </div>
-                                <br>
-                                <div class="row">
-                                    <div class="col-md-12 h-25 d-inline-block">
-                                        <p class="card-text h-25 d-inline-block"> <?php echo @$row['establishment_cod'] ?></p>
-                                    </div>
+                                <!--                        </div>-->
+                                <div class="col-md-6">
+                                    <b class="card-title h-25 d-inline-block"><?php echo @$row['name'] ?></b><br>
+                                    <p class="card-text h-25 d-inline-block"><?php echo @$row['address'] ?>
+                                        ,<?php echo @$row['number'] ?>
+                                        <?php echo @$row['state'] ?>,<?php echo @$row['city'] ?></p>
+                                </div>
+                                <div class="col-md-1">
+                                    <a href="<?php echo base_url() ?>Establishments/new_establishments/<?php echo $row['id'] ?>"><i
+                                                class="fas fa-pencil-alt"
+                                                style="color: gray"></i></a>
+                                </div>
+                                <div class="col-md-1">
+                                    <a class="delete"
+                                       href="<?php base_url() ?>Establishments/delete/<?php echo $row['id'] ?>">
+                                        <i class="fas fa-times" style="color: gray"></i></a>
                                 </div>
                             </div>
-                            <!--                        </div>-->
-                            <div class="col-md-6">
-                                <b class="card-title h-25 d-inline-block"><?php echo @$row['name'] ?></b><br>
-                                <p class="card-text h-25 d-inline-block"><?php echo @$row['address'] ?>,<?php echo @$row['number'] ?>
-                                    <?php echo @$row['state'] ?>,<?php echo @$row['city'] ?></p>
-                            </div>
-                            <div class="col-md-1">
-                                <a href="<?php echo base_url() ?>Establishments/new_establishments/<?php echo $row['id'] ?>"><i
-                                            class="fas fa-pencil-alt"
-                                            style="color: gray"></i></a>
-                            </div>
-                            <div class="col-md-1">
-                                <a class="delete"
-                                   href="<?php base_url() ?>Establishments/delete/<?php echo $row['id'] ?>">
-                                    <i class="fas fa-times" style="color: gray"></i></a>
-                            </div>
+                            <!--
+
+                            <!--                    <a href="#" class="btn btn-primary">Go somewhere</a>-->
                         </div>
-                        <!--
-
-                        <!--                    <a href="#" class="btn btn-primary">Go somewhere</a>-->
                     </div>
                 </div>
-            </div>
-        <?php } ?>
+            <?php }
+        } ?>
     </div>
     <br>
     <!--    <nav aria-label="Page navigation example">-->

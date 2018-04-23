@@ -102,7 +102,7 @@
                              class="img-responsive">Hot
                         <hr style="margin-top:20px">
                         <img src="<?php echo base_url() ?>imgs\icon5.png" width="25px" height="25px"
-                             class="img-responsive">Combos 
+                             class="img-responsive">Combos
                         <hr style="margin-top:20px;">
                         <div class="text-center">
                             <a href="<?php echo base_url() ?>Charts">

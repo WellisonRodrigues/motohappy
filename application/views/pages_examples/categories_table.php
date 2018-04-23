@@ -6,9 +6,9 @@
  * Time: 13:36
  */
 
-    //foreach ($response['category'] as $new) {
-    //    print_r($new);
-    //}
+//foreach ($response['category'] as $new) {
+//    print_r($new);
+//}
 //print_r($response['category']);
 //print_r($this->session->userdata("user"));
 
@@ -45,37 +45,40 @@
     <!--    <input type="button" id="search" class="btn btn-default" value="buscar"/>-->
     <div class="row">
         <!--        <ul style="list-style: none">-->
-        <?php foreach ($response['category'] as $row) { ?>
+        <?php
+        if ($response) {
+            foreach ($response['category'] as $row) { ?>
 
-            <div class="col-md-3 contem" style="margin-top: 30px">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="row">
+                <div class="col-md-3 contem" style="margin-top: 30px">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
 
-                            <!--                        </div>-->
-                            <div class="col-md-12">
-                                <b class="card-title"><?php echo $row ?></b>
-                                <!--                            <p class="card-text">With supporting text below as a natural lead-in to additional-->
-                                <!--                                content.</p>-->
+                                <!--                        </div>-->
+                                <div class="col-md-12">
+                                    <b class="card-title"><?php echo $row ?></b>
+                                    <!--                            <p class="card-text">With supporting text below as a natural lead-in to additional-->
+                                    <!--                                content.</p>-->
+                                </div>
+                                <!--                        <div class="col-md-1">-->
+                                <!--                            <a href="-->
+                                <?php //echo base_url() ?><!--Establishments/new_establishments"><i-->
+                                <!--                                        class="fas fa-pencil-alt"-->
+                                <!--                                        style="color: gray"></i></a>-->
+                                <!--                        </div>-->
+                                <!--                        <div class="col-md-1">-->
+                                <!--                            <i class="fas fa-times" style="color: gray"></i>-->
+                                <!--                        </div>-->
                             </div>
-                            <!--                        <div class="col-md-1">-->
-                            <!--                            <a href="-->
-                            <?php //echo base_url() ?><!--Establishments/new_establishments"><i-->
-                            <!--                                        class="fas fa-pencil-alt"-->
-                            <!--                                        style="color: gray"></i></a>-->
-                            <!--                        </div>-->
-                            <!--                        <div class="col-md-1">-->
-                            <!--                            <i class="fas fa-times" style="color: gray"></i>-->
-                            <!--                        </div>-->
-                        </div>
-                        <!--
+                            <!--
 
-                        <!--                    <a href="#" class="btn btn-primary">Go somewhere</a>-->
+                            <!--                    <a href="#" class="btn btn-primary">Go somewhere</a>-->
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!--                </li>-->
-        <?php } ?>
+                <!--                </li>-->
+            <?php }
+        } ?>
         <!--        </ul>-->
     </div>
     <br>
