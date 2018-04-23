@@ -40,7 +40,7 @@
                     </a>
                     <ul class='dropdown-menu' aria-labelledby="dropdownMenuButton"
                         style="margin-top:12px">
-                        <li><a href='<?php echo base_url() ?>/Myprofile'
+                        <li><a href='<?php echo base_url() ?>Profile'
                                style='color: gray'>
                                 <i
                                         class='fas fa-user'> </i>&nbsp;&nbsp; Meus Dados</a></li>
