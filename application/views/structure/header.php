@@ -19,7 +19,7 @@
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>&ensp;
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="<?php echo base_url() ?>Home">
                     <img src="<?php echo base_url() ?>imgs\logobrand.png" height="30" class="d-inline-block align-left">
                 </a>
             </div>

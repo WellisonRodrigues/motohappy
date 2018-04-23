@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="935b7b62-3b28-4833-9e93-ef4dc909d715" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/application/views/pages_examples/profile_form.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Profile.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/session/ci_sessionoianrlhh5h23hnj9ir5tj0b1if0egh5s" beforeDir="false" afterPath="$PROJECT_DIR$/application/session/ci_sessionoianrlhh5h23hnj9ir5tj0b1if0egh5s" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_session2dt9ruhcahnslep39m62505t2265003h" beforeDir="false" afterPath="$PROJECT_DIR$/application/session/ci_session2dt9ruhcahnslep39m62505t2265003h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/structure/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/structure/header.php" afterDir="false" />
     </list>
     <ignored path="motolegal.iws" />
@@ -64,8 +61,8 @@
       <file leaf-file-name="header.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/structure/header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="42" column="61" lean-forward="true" selection-start-line="42" selection-start-column="61" selection-end-line="42" selection-end-column="61" />
+            <state relative-caret-position="272">
+              <caret line="21" column="75" selection-end-line="104" />
             </state>
           </provider>
         </entry>
@@ -313,12 +310,12 @@
       <option name="presentableId" value="Default" />
       <updated>1522176101429</updated>
       <workItem from="1522812844269" duration="47596000" />
-      <workItem from="1523406040684" duration="78780000" />
+      <workItem from="1523406040684" duration="79841000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="126376000" />
+    <option name="totallyTimeSpent" value="127437000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1386" height="788" extended-state="0" />
@@ -744,8 +741,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/structure/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="42" column="61" lean-forward="true" selection-start-line="42" selection-start-column="61" selection-end-line="42" selection-end-column="61" />
+        <state relative-caret-position="272">
+          <caret line="21" column="75" selection-end-line="104" />
         </state>
       </provider>
     </entry>
