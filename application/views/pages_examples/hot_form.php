@@ -6,8 +6,8 @@
  * Time: 14:14
  */
 //print_r($message);
-echo '<pre>';
-print_r($response);
+//echo '<pre>';
+//print_r($response);
 ?>
 
 <div class="container">
@@ -22,6 +22,7 @@ print_r($response);
                                     aria-hidden="true">&times;</span></button>
                     </div>
                     <?php
+                    $response['hot'] = $message;
                 }
             } ?>
             <?php if (isset($message['errors'])) {
@@ -35,8 +36,8 @@ print_r($response);
         </div>
     </div>
     <?php
-    if (isset($response['id'])) {
-        echo form_open('Hot/new_user/' . $response['id'], ['role' => 'form']);
+    if (isset($response['hot']['id'])) {
+        echo form_open('Hot/new_user/' . $response['hot']['id'], ['role' => 'form']);
     } else {
         echo form_open('Hot/new_user', ['role' => 'form']);
     } ?>
@@ -45,7 +46,8 @@ print_r($response);
         <div class="col-md-12">
             <div class="form-group">
                 <label for="name">Titulo do anúncio:</label>
-                <input type="text" name="title" class="form-control" value="<?php echo @$response['hot']['title'] ?>" required
+                <input type="text" name="title" class="form-control" value="<?php echo @$response['hot']['title'] ?>"
+                       required
                        id="name">
             </div>
         </div>
@@ -53,7 +55,8 @@ print_r($response);
             <!-- Default input -->
             <div class="form-group">
                 <label for="email">Descrição:</label>
-                <input type="email" class="form-control" name="description" required value="<?php echo @$response['hot']['description'] ?>"
+                <input type="text" class="form-control" name="description" required
+                       value="<?php echo @$response['hot']['description'] ?>"
                        id="email">
             </div>
         </div>
@@ -93,7 +96,7 @@ print_r($response);
         <!--            <div class="form-group">-->
         <div class="col-md-12" align="right">
 
-            <button type="submit" class="btn btn-default"> Salvar</button>
+            <button type="submit" value="salvar" name="salvar" class="btn btn-default"> Salvar</button>
 
         </div>
         <!--            </div>-->

@@ -40,7 +40,7 @@ class Hot extends CI_Controller
     public function new_user($id = null)
     {
         $this->load->library('Restfull');
-        if ($this->input->post('name') and $id == null) {
+        if ($this->input->post('salvar') and $id == null) {
 
 
             $endpoint = 'api/v1/admin/hots';
@@ -48,32 +48,32 @@ class Hot extends CI_Controller
             $params = array(
                 'description' => $this->input->post('description'),
                 'value' => $this->input->post('value'),
+                'value_before' => $this->input->post('value'),
+                'title' => $this->input->post('title'),
+                'duration' => $this->input->post('duration'),
                 'image' => $this->input->post('image'),
-//                'phone' => $this->input->post('phone'),
-//                'password' => $this->input->post('password'),
-//                'password_confirmation' => $this->input->post('phone'),
-//                'phone'=> $this->input->post('phone'),
 
             );
 
             $response = $this->restfull->cUrl($params, $endpoint, $metodo);
             $data['message'] = $response['response'];
             $data['response'] = $response['response'];
+//            print_r($response);
+//            die;
         }
 
-        if ($id != null and $this->input->post('name') == '') {
+        if ($id != null and $this->input->post('salvar') == '') {
             $this->load->library('Restfull');
             $endpoint = 'api/v1/admin/hots/' . $id;
             $metodo = 'GET';
             $params = '';
             $response = $this->restfull->cUrl($params, $endpoint, $metodo);
             $data['response'] = $response['response'];
-//            $data['id'] = $id;
-//            print_r($response);
-//            die;
+
+
 
         }
-        if ($this->input->post('name') and $id != null) {
+        if ($this->input->post('salvar') and $id != null) {
 
             $this->load->library('Restfull');
             $endpoint = 'api/v1/admin/hots/' . $id;
@@ -82,20 +82,10 @@ class Hot extends CI_Controller
                 $params = array(
                     'description' => $this->input->post('description'),
                     'value' => $this->input->post('value'),
+                    'value_before' => $this->input->post('value'),
                     'image' => $this->input->post('image'),
-//                'phone' => $this->input->post('phone'),
-//                'password' => $this->input->post('password'),
-//                'password_confirmation' => $this->input->post('phone'),
-//                'phone'=> $this->input->post('phone'),
-
-                );
-            } else {
-                $params = array(
-                    'description' => $this->input->post('description'),
-                    'value' => $this->input->post('value'),
-//                    'nickname' => $this->input->post('nickname'),
-//                    'establishments_ids' => [$this->input->post('establishments_ids')],
-//                    'image' => $this->input->post('image'),
+                    'title' => $this->input->post('title'),
+                    'duration' => $this->input->post('duration'),
 //                'phone' => $this->input->post('phone'),
 //                'password' => $this->input->post('password'),
 //                'password_confirmation' => $this->input->post('phone'),
