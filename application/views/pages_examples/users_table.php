@@ -52,8 +52,11 @@
                             </div>
                             <div class="col-md-7">
                                 <b class="card-title h-25"><?php echo @$row['name'] ?></b>
-                                <p class="card-text h-25"><?php echo @$row['email'] ?><br>
-                                <?php echo @$row['birthday'] ?>,<?php echo @$row['phone'] ?>
+                                <p class="h-25"><?php echo @$row['email'] ?></p>
+                                <p class="card-text h-25"><?php
+                                $phpdate = strtotime( $row['birthday'] );
+                                $data = date( 'd/m/Y', $phpdate );
+                                echo @$data ?> &nbsp;&nbsp;&nbsp;<?php echo @$row['phone'] ?>
                                 <?php echo @$row['address'] ?>
                                 <?php echo @$row['city'] ?></p>
                             </div>

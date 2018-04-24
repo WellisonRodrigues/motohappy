@@ -3,8 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="935b7b62-3b28-4833-9e93-ef4dc909d715" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/session/ci_session9v27kb1edkg13v2bn2jta4p0jjni5k3d" beforeDir="false" afterPath="$PROJECT_DIR$/application/session/ci_session9v27kb1edkg13v2bn2jta4p0jjni5k3d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/pages_examples/establishments_form.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pages_examples/establishments_form.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/Users.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Users.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_sessionotj9ei37449p30q7189oup2tkf5n98bm" beforeDir="false" afterPath="$PROJECT_DIR$/application/session/ci_sessionotj9ei37449p30q7189oup2tkf5n98bm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/pages_examples/partners_form.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pages_examples/partners_form.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/pages_examples/users_form.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pages_examples/users_form.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/pages_examples/users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pages_examples/users_table.php" afterDir="false" />
     </list>
     <ignored path="motolegal.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -56,8 +59,8 @@
       <file leaf-file-name="partners_form.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/pages_examples/partners_form.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="71" column="14" selection-start-line="71" selection-start-column="14" selection-end-line="75" selection-end-column="20" />
+            <state relative-caret-position="119">
+              <caret line="99" lean-forward="true" selection-start-line="99" selection-end-line="107" selection-end-column="14" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -68,8 +71,8 @@
       <file leaf-file-name="Hot.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/Hot.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="317">
-              <caret line="58" column="58" selection-start-line="58" selection-start-column="58" selection-end-line="58" selection-end-column="58" />
+            <state relative-caret-position="351">
+              <caret line="60" column="54" lean-forward="true" selection-start-line="59" selection-start-column="11" selection-end-line="60" selection-end-column="54" />
             </state>
           </provider>
         </entry>
@@ -83,11 +86,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="establishments_form.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="establishments_form.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/pages_examples/establishments_form.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="61" column="72" selection-start-line="61" selection-start-column="72" selection-end-line="61" selection-end-column="72" />
+            <state relative-caret-position="591">
+              <caret line="83" column="72" lean-forward="true" selection-start-line="83" selection-start-column="72" selection-end-line="83" selection-end-column="72" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
@@ -96,23 +99,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hot_table.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/pages_examples/hot_table.php">
+      <file leaf-file-name="users_table.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/views/pages_examples/users_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="49" column="125" selection-start-line="49" selection-start-column="125" selection-end-line="49" selection-end-column="125" />
+            <state relative-caret-position="305">
+              <caret line="54" column="34" selection-start-line="54" selection-start-column="34" selection-end-line="54" selection-end-column="34" />
               <folding>
-                <element signature="n#style#0;n#b#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#2442#2448#0#HTML" expanded="true" />
+                <element signature="e#2448#2454#0#HTML" expanded="true" />
+                <element signature="e#2454#2460#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="partners_table.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/pages_examples/partners_table.php">
+      <file leaf-file-name="users_form.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/pages_examples/users_form.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="23" column="26" lean-forward="true" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
+            <state relative-caret-position="85">
+              <caret line="50" column="16" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="16" />
+              <folding>
+                <element signature="e#228#235#1" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Users.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/controllers/Users.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
             </state>
           </provider>
         </entry>
@@ -166,10 +183,7 @@
         <option value="$PROJECT_DIR$/application/controllers/Categories.php" />
         <option value="$PROJECT_DIR$/application/controllers/Charts.php" />
         <option value="$PROJECT_DIR$/application/views/structure/head.php" />
-        <option value="$PROJECT_DIR$/application/views/pages_examples/users_form.php" />
-        <option value="$PROJECT_DIR$/application/controllers/Users.php" />
         <option value="$PROJECT_DIR$/application/controllers/Establishments.php" />
-        <option value="$PROJECT_DIR$/application/views/pages_examples/users_table.php" />
         <option value="$PROJECT_DIR$/application/views/pages_examples/login_form.php" />
         <option value="$PROJECT_DIR$/application/controllers/Home.php" />
         <option value="$PROJECT_DIR$/application/views/pages_examples/categories_table.php" />
@@ -190,11 +204,14 @@
         <option value="$PROJECT_DIR$/application/views/pages_examples/subadmins_table.php" />
         <option value="$PROJECT_DIR$/application/views/pages_examples/partners_table.php" />
         <option value="$PROJECT_DIR$/application/controllers/Partners.php" />
-        <option value="$PROJECT_DIR$/application/views/pages_examples/partners_form.php" />
         <option value="$PROJECT_DIR$/application/views/pages_examples/hot_table.php" />
         <option value="$PROJECT_DIR$/application/views/pages_examples/hot_form.php" />
         <option value="$PROJECT_DIR$/application/controllers/Hot.php" />
         <option value="$PROJECT_DIR$/application/views/pages_examples/establishments_form.php" />
+        <option value="$PROJECT_DIR$/application/views/pages_examples/partners_form.php" />
+        <option value="$PROJECT_DIR$/application/controllers/Users.php" />
+        <option value="$PROJECT_DIR$/application/views/pages_examples/users_form.php" />
+        <option value="$PROJECT_DIR$/application/views/pages_examples/users_table.php" />
       </list>
     </option>
   </component>
@@ -268,7 +285,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="es&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/establishments_form.php&#10;c&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/combos_form.php&#10;par&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/partners_table.php&#10;hot&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/hot_table.php&#10;part&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/partners_form.php&#10;fuel&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/controllers/Fuel.php&#10;fue&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/fuel_form.php&#10;combo&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/combos_form.php&#10;com&#9;null&#9;null&#10;hom&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/home_form.php&#10;ho&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/home_form.php&#10;he&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/structure/header.php&#10;log&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/login_form.php&#10;hea&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/structure/header.php&#10;su&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/controllers/Subadmins.php&#10;ad&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/subadmins_table.php&#10;lo&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/controllers/Login.php&#10;pa&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/partners_table.php&#10;use&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/users_table.php&#10;user&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/controllers/Users.php&#10;fu&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/controllers/Fuel.php&#10;tab&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/establishments_table.php&#10;est&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/establishments_form.php&#10;cate&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/categories_table.php&#10;heade&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/structure/header.php&#10;head&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/structure/header.php&#10;us&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/users_form.php&#10;users&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/users_table.php&#10;ca&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/categories_table.php&#10;US&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/users_table.php&#10;USE&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/users_form.php&#10;new_es&#9;null&#9;null&#10;re&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/libraries/Restfull.php&#10;fo&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/structure/footer.php&#10;aut&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/config/autoload.php&#10;res&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/libraries/Restfull.php&#10;co&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/structure/container.php&#10;au&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/config/autoload.php&#10;auto&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/vendor/autoload.php" />
+    <property name="SearchEverywhereHistoryKey" value="use&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/controllers/Users.php&#10;us&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/users_table.php&#10;es&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/establishments_form.php&#10;c&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/combos_form.php&#10;par&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/partners_table.php&#10;hot&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/hot_table.php&#10;part&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/partners_form.php&#10;fuel&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/controllers/Fuel.php&#10;fue&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/fuel_form.php&#10;combo&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/combos_form.php&#10;com&#9;null&#9;null&#10;hom&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/home_form.php&#10;ho&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/home_form.php&#10;he&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/structure/header.php&#10;log&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/login_form.php&#10;hea&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/structure/header.php&#10;su&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/controllers/Subadmins.php&#10;ad&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/subadmins_table.php&#10;lo&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/controllers/Login.php&#10;pa&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/partners_table.php&#10;user&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/controllers/Users.php&#10;fu&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/controllers/Fuel.php&#10;tab&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/establishments_table.php&#10;est&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/establishments_form.php&#10;cate&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/categories_table.php&#10;heade&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/structure/header.php&#10;head&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/structure/header.php&#10;users&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/users_table.php&#10;ca&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/categories_table.php&#10;US&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/users_table.php&#10;USE&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/users_form.php&#10;new_es&#9;null&#9;null&#10;re&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/libraries/Restfull.php&#10;fo&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/structure/footer.php&#10;aut&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/config/autoload.php&#10;res&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/libraries/Restfull.php&#10;co&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/structure/container.php&#10;au&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/config/autoload.php&#10;auto&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/vendor/autoload.php" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
@@ -329,12 +346,12 @@
       <option name="presentableId" value="Default" />
       <updated>1522176101429</updated>
       <workItem from="1522812844269" duration="47596000" />
-      <workItem from="1523406040684" duration="90500000" />
+      <workItem from="1523406040684" duration="91486000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="138096000" />
+    <option name="totallyTimeSpent" value="139082000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1386" height="788" extended-state="0" />
@@ -533,27 +550,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/pages_examples/users_form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="489">
-          <caret line="93" column="26" selection-start-line="93" selection-start-column="26" selection-end-line="93" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Users.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="426">
-          <caret line="63" column="9" lean-forward="true" selection-start-line="63" selection-start-column="9" selection-end-line="63" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/pages_examples/users_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="54" column="56" selection-start-line="54" selection-start-column="56" selection-end-line="54" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Sair.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -726,16 +722,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/pages_examples/partners_form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="71" column="14" selection-start-line="71" selection-start-column="14" selection-end-line="75" selection-end-column="20" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/pages_examples/combos_form.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
@@ -753,13 +739,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Hot.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="58" column="58" selection-start-line="58" selection-start-column="58" selection-end-line="58" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/pages_examples/categories_form.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -769,11 +748,57 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/pages_examples/establishments_form.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="61" column="72" selection-start-line="61" selection-start-column="72" selection-end-line="61" selection-end-column="72" />
+        <state relative-caret-position="591">
+          <caret line="83" column="72" lean-forward="true" selection-start-line="83" selection-start-column="72" selection-end-line="83" selection-end-column="72" />
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Hot.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="60" column="54" lean-forward="true" selection-start-line="59" selection-start-column="11" selection-end-line="60" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/pages_examples/partners_form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="99" lean-forward="true" selection-start-line="99" selection-end-line="107" selection-end-column="14" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Users.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/pages_examples/users_form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="50" column="16" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="16" />
+          <folding>
+            <element signature="e#228#235#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/pages_examples/users_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="54" column="34" selection-start-line="54" selection-start-column="34" selection-end-line="54" selection-end-column="34" />
+          <folding>
+            <element signature="e#2442#2448#0#HTML" expanded="true" />
+            <element signature="e#2448#2454#0#HTML" expanded="true" />
+            <element signature="e#2454#2460#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -52,15 +52,13 @@ class Users extends CI_Controller
                 'phone' => $this->input->post('phone'),
                 'birthday' => $this->input->post('birthday'),
                 'email' => $this->input->post('email'),
-                'image'=> $this->input->post('image'),
+                'image' => $this->input->post('image'),
 
             );
             $response = $this->restfull->cUrl($params, $endpoint, $metodo);
+            $data['message'] = $response['response'];
+            $data['response'] = $response['response'];
 
-            print_r($response);
-//            echo '<br>';
-//            print_r(json_encode($this->input->post()));
-            die;
         }
         if ($this->input->post('name') and $id == null) {
 
@@ -75,19 +73,11 @@ class Users extends CI_Controller
                 'phone' => $this->input->post('phone'),
                 'birthday' => $this->input->post('birthday'),
                 'email' => $this->input->post('email'),
-//                'password' => $this->input->post('phone'),
-//                'password_confirmation' => $this->input->post('phone'),
-////                'phone'=> $this->input->post('phone'),
 
             );
-//            print_r($this->input->post());
-//            die;
             $response = $this->restfull->cUrl($params, $endpoint, $metodo);
-            print_r($response);
-            die;
-            $data['message'] = $response;
-//                   print_r($response);
-//       die;
+            $data['message'] = $response['response'];
+            $data['response'] = $response['response'];
         }
         if ($id != null and $this->input->post('name') == '') {
             $this->load->library('Restfull');
@@ -98,15 +88,7 @@ class Users extends CI_Controller
             $data['response'] = $response['response'];
             $data['id'] = $id;
 
-//            print_r($response);
-//            die;
-
         }
-//        $params2 = '';
-//        $endpoint2 = 'api/v1/admin/users';
-//        $metodo2 = 'GET';
-//        $response2 = $this->restfull->cUrl($params2, $endpoint2, $metodo2);
-//        $data['categories'] = $response2['response'];
 
         $data['menu'] = true;  // Menu true significa que a pagina tera o menu principal, false deixa a pagina sem menu(menu = header + navbar)
         $data['view'] = 'pages_examples/users_form';
