@@ -82,7 +82,13 @@
             <!-- Default input -->
             <div class="form-group">
                 <label for="">Estabelecimento:</label>
-                <input type="number" class="form-control" required name="establishments_ids" id="establishments_ids">
+                <select class="form-control tm-input tm2" name="establishment_id" id="establishment_id">
+                    <?php foreach ($estabelecimentos['establishments'] as $line2) {
+                        $idesta = $line2['id'];
+                        $text = $line2['name'];
+                        echo "<option value='$idesta'>$text</option>";
+                    } ?>
+                </select>
             </div>
         </div>
         <div class="col-md-12">

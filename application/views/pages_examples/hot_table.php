@@ -47,7 +47,7 @@
                     <div class="card">
                         <div class="view overlay">
                             <?php if (@$row['image']['url']) { ?>
-                                <img class="card-img-top" src="<?php echo @$row['image']['url']; ?>"
+                                <img class="card-img-top" src="<?php echo @$row['image']['url']; ?>" width="349px" height="233.33px"
                                      alt="Card image cap">
                                 <a href="#!">
                                     <div class="mask rgba-white-slight"></div>
@@ -66,11 +66,10 @@
                             <div class="row">
 
                                 <div class="col-md-9">
-                                    <b class="card-title"><?php echo @$row['title'] ?> </b><b style="color: #FF5D00"> R$<?php echo @$row['value'] ?></b><br>
+                                    <b class="card-title"><?php echo @$row['title'] ?> </b><b style="color: #FF5D00"> R$<?php echo @$row['value'] ?>
+                                        </b>/litro<br>
                                     <p class="card-text">
                                         <?php echo @$row['description'] ?><br>
-
-                                        /litro
                                     </p>
                                 </div>
                                 <?php if ($this->session->userdata("user")['typeuser'] != 'partners') { ?>
@@ -80,7 +79,7 @@
                                                     style="color: gray"></i></a>
                                     </div>
                                     <div class="col-md-1">
-                                        <a href="<?php echo base_url() ?>Hot/delete/<?php echo $row['id'] ?>"><i
+                                        <a class="delete" href="<?php echo base_url() ?>Hot/delete/<?php echo $row['id'] ?>"><i
                                                     class="fas fa-times" style="color: gray"></i></a>
                                     </div>
                                 <?php } ?>

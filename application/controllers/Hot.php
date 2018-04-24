@@ -49,6 +49,7 @@ class Hot extends CI_Controller
                 'description' => $this->input->post('description'),
                 'value' => $this->input->post('value'),
                 'value_before' => $this->input->post('value'),
+                'establishment_id' => $this->input->post('establishment_id'),
                 'title' => $this->input->post('title'),
                 'duration' => $this->input->post('duration'),
                 'image' => $this->input->post('image'),
@@ -83,6 +84,7 @@ class Hot extends CI_Controller
                     'description' => $this->input->post('description'),
                     'value' => $this->input->post('value'),
                     'value_before' => $this->input->post('value'),
+                    'establishment_id' => $this->input->post('establishment_id'),
                     'image' => $this->input->post('image'),
                     'title' => $this->input->post('title'),
                     'duration' => $this->input->post('duration'),
@@ -104,11 +106,11 @@ class Hot extends CI_Controller
 
         }
 
-//        $params2 = '';
-//        $endpoint2 = 'api/v1/admin/categories';
-//        $metodo2 = 'GET';
-//        $response2 = $this->restfull->cUrl($params2, $endpoint2, $metodo2);
-//        $data['categories'] = $response2['response'];
+        $params2 = '';
+        $endpoint2 = 'api/v1/admin/establishments';
+        $metodo2 = 'GET';
+        $response2 = $this->restfull->cUrl($params2, $endpoint2, $metodo2);
+        $data['estabelecimentos'] = $response2['response'];
         $data['menu'] = true;  // Menu true significa que a pagina tera o menu principal, false deixa a pagina sem menu(menu = header + navbar)
         $data['view'] = 'pages_examples/hot_form';
         $this->load->view('structure/container', $data);
@@ -118,7 +120,7 @@ class Hot extends CI_Controller
     function delete($id)
     {
         if ($id != null or $id != '') {
-            $endpoint = 'api/v1/admin/hot/' . $id;
+            $endpoint = 'api/v1/admin/hots/' . $id;
             $metodo = 'DELETE';
             $params = '';
             $response = $this->restfull->cUrl($params, $endpoint, $metodo);
