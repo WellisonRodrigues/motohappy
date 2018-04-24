@@ -145,7 +145,7 @@
             </div>
             <div class="row">
                 <div class="col-md-12" align="right">
-
+                    <a href="<?php echo base_url()?>Establishments"> <button type="button"  class="btn btn-primary"> Voltar</button></a>
                     <button type="submit" class="btn btn-default salvar" name="salvar" value="salvar"> Salvar
                     </button>
 

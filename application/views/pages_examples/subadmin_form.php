@@ -94,7 +94,7 @@
         </div>
         <!--            <div class="form-group">-->
         <div class="col-md-12" align="right">
-
+            <a href="<?php echo base_url()?>Subadmins"> <button type="button"  class="btn btn-primary"> Voltar</button></a>
             <button type="submit" class="btn btn-default"> Salvar</button>
 
         </div>

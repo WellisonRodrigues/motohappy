@@ -112,7 +112,7 @@
         </div>
         <!--            <div class="form-group">-->
         <div class="col-md-12" align="right">
-
+            <a href="<?php echo base_url()?>Users"> <button type="button"  class="btn btn-primary"> Voltar</button></a>
             <button type="submit" value="salvar" name="salvar" class="btn btn-default"> Salvar</button>
 
         </div>
