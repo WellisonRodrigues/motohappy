@@ -79,6 +79,8 @@
                 <li class="nav-item">
                     <a class="nav-link" href="<?php echo base_url() ?>Fuel">Combustivel</a></li>
                 <li class="nav-item">
+                    <a class="nav-link" href="<?php echo base_url() ?>Hot">Hot</a></li>
+                <li class="nav-item">
                     <a class="nav-link" href="<?php echo base_url() ?>Combos">Combos</a></li>
             <?php } else { ?>
 

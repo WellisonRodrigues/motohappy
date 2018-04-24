@@ -23,14 +23,29 @@ class Hot extends CI_Controller
     public function index()
     {
         $this->load->library('Restfull');
-        $endpoint = 'api/v1/admin/hots';
-        $metodo = 'GET';
-        $params = '';
 
-        $response = $this->restfull->cUrl($params, $endpoint, $metodo);
+
+        if ($this->session->userdata("user") == 'partners') {
+            $idhots = $this->session->userdata("user")['establishments_ids'][0];
+            $endpoint = "api/v1/admin/establishments/$idhots/hots";
+            $metodo = 'GET';
+            $params = '';
+
+            $response = $this->restfull->cUrl($params, $endpoint, $metodo);
 //        print_r($response);
 //        die;
-        $data['response'] = $response['response'];
+            $data['response']['hots'] = $response['response'];
+        } else {
+            $endpoint = 'api/v1/admin/hots';
+            $metodo = 'GET';
+            $params = '';
+
+            $response = $this->restfull->cUrl($params, $endpoint, $metodo);
+//        print_r($response);
+//        die;
+            $data['response'] = $response['response'];
+
+        }
 
         $data['menu'] = true;  // Menu true significa que a pagina tera o menu principal, false deixa a pagina sem menu(menu = header + navbar)
         $data['view'] = 'pages_examples/hot_table';
@@ -70,7 +85,6 @@ class Hot extends CI_Controller
             $params = '';
             $response = $this->restfull->cUrl($params, $endpoint, $metodo);
             $data['response'] = $response['response'];
-
 
 
         }
