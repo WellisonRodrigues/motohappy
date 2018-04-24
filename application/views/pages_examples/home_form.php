@@ -8,6 +8,7 @@
 //print_r($this->session->userdata('user')['uid'][0])
 //echo '<pre>';
 //print_r($response);
+
 ?>
 <div class="row" style="margin-top: 5%"></div>
 
@@ -90,19 +91,19 @@
                         Ultimos 07 dias
                         <hr style="margin-top:20px">
                         <img src="<?php echo base_url() ?>imgs\icon1.png" width="25px" height="25px"
-                             class="img-responsive"> Usuarios
+                             class="img-responsive"> Usuarios cadastrados <?php echo count(@$response['last_seven_days'][0]['users'])?>
                         <hr style="margin-top:20px">
                         <img src="<?php echo base_url() ?>imgs\icon2.png" width="25px" height="25px"
-                             class="img-responsive">Estabelecimento
+                             class="img-responsive">Estabelecimento cadastrados <?php echo count(@$response['last_seven_days'][0]['eslblishemnts'])?>
                         <hr style="margin-top:20px">
                         <img src="<?php echo base_url() ?>imgs\icon3.png" width="25px" height="25px"
-                             class="img-responsive">Parceiros
+                             class="img-responsive">Parceiros cadastrados <?php echo count(@$response['last_seven_days'][0]['partners'])?>
                         <hr style="margin-top:20px">
                         <img src="<?php echo base_url() ?>imgs\icon4.png" width="25px" height="25px"
-                             class="img-responsive">Hot
+                             class="img-responsive">Hot cadastrados <?php echo count(@$response['last_seven_days'][0]['hots'])?>
                         <hr style="margin-top:20px">
                         <img src="<?php echo base_url() ?>imgs\icon5.png" width="25px" height="25px"
-                             class="img-responsive">Combos
+                             class="img-responsive">Combos cadastrados <?php echo count(@$response['last_seven_days'][0]['combos'])?>
                         <hr style="margin-top:20px;">
                         <div class="text-center">
                             <a href="<?php echo base_url() ?>Charts">

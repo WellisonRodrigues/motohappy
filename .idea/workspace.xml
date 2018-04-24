@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="935b7b62-3b28-4833-9e93-ef4dc909d715" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/application/controllers/Esqueci.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/views/pages_examples/esqueci_form.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/session/ci_session7pijsoq8ig1jou1jfeavun7tlt6l49an" beforeDir="false" afterPath="$PROJECT_DIR$/application/session/ci_session7pijsoq8ig1jou1jfeavun7tlt6l49an" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/pages_examples/establishments_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pages_examples/establishments_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/pages_examples/login_form.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pages_examples/login_form.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/pages_examples/subadmins_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pages_examples/subadmins_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_sessionmqnrglq33a5ocd8l6j5q8gpq1e8g5sgk" beforeDir="false" afterPath="$PROJECT_DIR$/application/session/ci_sessionmqnrglq33a5ocd8l6j5q8gpq1e8g5sgk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/pages_examples/home_form.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pages_examples/home_form.php" afterDir="false" />
     </list>
     <ignored path="motolegal.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -84,11 +79,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Esqueci.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Esqueci.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/Esqueci.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="387">
-              <caret line="96" column="74" selection-start-line="96" selection-start-column="74" selection-end-line="96" selection-end-column="74" />
+            <state relative-caret-position="251">
+              <caret line="88" column="62" selection-start-line="88" selection-start-column="62" selection-end-line="88" selection-end-column="62" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Home.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/controllers/Home.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="115">
+              <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home_form.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/views/pages_examples/home_form.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="8" column="15" lean-forward="true" selection-start-line="8" selection-start-column="15" selection-end-line="9" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -124,24 +137,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="establishments_table.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/pages_examples/establishments_table.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="9" column="44" lean-forward="true" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Categories.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/Categories.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="30" column="29" lean-forward="true" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
@@ -171,7 +166,6 @@
         <option value="$PROJECT_DIR$/application/views/pages_examples/categories_form.php" />
         <option value="$PROJECT_DIR$/application/views/structure/head.php" />
         <option value="$PROJECT_DIR$/application/controllers/Home.php" />
-        <option value="$PROJECT_DIR$/application/views/pages_examples/home_form.php" />
         <option value="$PROJECT_DIR$/application/controllers/Combos.php" />
         <option value="$PROJECT_DIR$/application/views/pages_examples/combos_table.php" />
         <option value="$PROJECT_DIR$/application/controllers/Subadmins.php" />
@@ -204,6 +198,7 @@
         <option value="$PROJECT_DIR$/application/views/pages_examples/login_form.php" />
         <option value="$PROJECT_DIR$/application/views/pages_examples/esqueci_form.php" />
         <option value="$PROJECT_DIR$/application/controllers/Esqueci.php" />
+        <option value="$PROJECT_DIR$/application/views/pages_examples/home_form.php" />
       </list>
     </option>
   </component>
@@ -344,12 +339,12 @@
       <option name="presentableId" value="Default" />
       <updated>1522176101429</updated>
       <workItem from="1522812844269" duration="47596000" />
-      <workItem from="1523406040684" duration="104617000" />
+      <workItem from="1523406040684" duration="105617000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="152213000" />
+    <option name="totallyTimeSpent" value="153213000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1386" height="788" extended-state="0" />
@@ -507,20 +502,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="22" column="1" lean-forward="true" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="472">
-          <caret line="29" column="47" selection-start-line="29" selection-start-column="47" selection-end-line="29" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/pages_examples/home_form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="19" column="34" lean-forward="true" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -792,8 +773,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Esqueci.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="96" column="74" selection-start-line="96" selection-start-column="74" selection-end-line="96" selection-end-column="74" />
+        <state relative-caret-position="251">
+          <caret line="88" column="62" selection-start-line="88" selection-start-column="62" selection-end-line="88" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/pages_examples/home_form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="8" column="15" lean-forward="true" selection-start-line="8" selection-start-column="15" selection-end-line="9" selection-end-column="21" />
         </state>
       </provider>
     </entry>
