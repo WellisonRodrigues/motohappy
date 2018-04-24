@@ -63,21 +63,21 @@
         <div class="col-md-2">
             <div class="form-group">
                 <label for="name">Dinheiro:</label>
-                <input type="text" name="valor" class="form-control" required value="<?php echo @$response['fuel']['value'] ?>"
+                <input type="text" name="valor" class="form-control" required value="<?php echo @$response['fuel']['money_atual'] ?>"
                        id="valor">
             </div>
         </div>
         <div class="col-md-2">
             <div class="form-group">
                 <label for="name">Debito:</label>
-                <input type="text" name="debit" class="form-control" required value="<?php echo @$response['fuel']['debit'] ?>"
+                <input type="text" name="debit" class="form-control" required value="<?php echo @$response['fuel']['debit_atual'] ?>"
                        id="debit">
             </div>
         </div>
         <div class="col-md-2">
             <div class="form-group">
                 <label for="name">Credito:</label>
-                <input type="text" name="credit" class="form-control" required value="<?php echo @$response['fuel']['credit'] ?>"
+                <input type="text" name="credit" class="form-control" required value="<?php echo @$response['fuel']['credit_atual'] ?>"
                        id="credit">
             </div>
         </div>

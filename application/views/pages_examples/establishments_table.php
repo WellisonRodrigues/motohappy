@@ -127,13 +127,8 @@
 
         var pageCount = $(".contem").length / pageSize;
 
-
-        if (pageCount > 4) {
-            var contagem = 6;
-
-        } else {
             contagem = pageCount;
-        }
+
 
         $("#pagin").append('<li class="page-item"><a class="page-link" href="#">Anterior</a></li> ');
         for (var i = 0; i < contagem; i++) {
