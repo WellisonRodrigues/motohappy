@@ -61,7 +61,7 @@
                        id="email">
             </div>
         </div>
-        <?php if ($response['hot']['duration']) {
+        <?php if (isset($response['hot']['duration'])) {
             $phpdate = strtotime($response['hot']['duration']);
             $data = date('d/m/Y', $phpdate);
 //            print_r($data);
@@ -109,6 +109,7 @@
         <!--            <div class="form-group">-->
         <div class="col-md-12" align="right">
 
+            <a href="<?php echo base_url()?>Hot"> <button type="button"  class="btn btn-primary"> Voltar</button></a>
             <button type="submit" value="salvar" name="salvar" class="btn btn-default"> Salvar</button>
 
         </div>
