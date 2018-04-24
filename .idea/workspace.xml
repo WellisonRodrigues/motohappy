@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="935b7b62-3b28-4833-9e93-ef4dc909d715" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/session/ci_sessionoqdgbglglan81r9m0dqijk1l1066al0k" beforeDir="false" afterPath="$PROJECT_DIR$/application/session/ci_sessionoqdgbglglan81r9m0dqijk1l1066al0k" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/pages_examples/hot_form.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pages_examples/hot_form.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/Hot.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Hot.php" afterDir="false" />
     </list>
     <ignored path="motolegal.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,11 +39,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Hot.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Hot.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/controllers/Hot.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="81">
-              <caret line="81" lean-forward="true" selection-start-line="81" selection-end-line="81" />
+            <state relative-caret-position="455">
+              <caret line="103" column="21" selection-start-line="103" selection-start-column="21" selection-end-line="103" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -100,10 +98,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hot_form.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="hot_form.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/pages_examples/hot_form.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
+            <state relative-caret-position="1048">
               <caret line="72" column="33" selection-start-line="72" selection-start-column="33" selection-end-line="72" selection-end-column="33" />
             </state>
           </provider>
@@ -200,8 +198,8 @@
         <option value="$PROJECT_DIR$/application/views/pages_examples/establishments_table.php" />
         <option value="$PROJECT_DIR$/application/views/pages_examples/fuel_form.php" />
         <option value="$PROJECT_DIR$/application/views/pages_examples/fuel_table.php" />
-        <option value="$PROJECT_DIR$/application/controllers/Hot.php" />
         <option value="$PROJECT_DIR$/application/views/pages_examples/hot_form.php" />
+        <option value="$PROJECT_DIR$/application/controllers/Hot.php" />
       </list>
     </option>
   </component>
@@ -336,12 +334,12 @@
       <option name="presentableId" value="Default" />
       <updated>1522176101429</updated>
       <workItem from="1522812844269" duration="47596000" />
-      <workItem from="1523406040684" duration="94200000" />
+      <workItem from="1523406040684" duration="94320000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="141796000" />
+    <option name="totallyTimeSpent" value="141916000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1386" height="788" extended-state="0" />
@@ -779,17 +777,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Hot.php">
+    <entry file="file://$PROJECT_DIR$/application/views/pages_examples/hot_form.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="81" lean-forward="true" selection-start-line="81" selection-end-line="81" />
+        <state relative-caret-position="1048">
+          <caret line="72" column="33" selection-start-line="72" selection-start-column="33" selection-end-line="72" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/pages_examples/hot_form.php">
+    <entry file="file://$PROJECT_DIR$/application/controllers/Hot.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="72" column="33" selection-start-line="72" selection-start-column="33" selection-end-line="72" selection-end-column="33" />
+        <state relative-caret-position="455">
+          <caret line="103" column="21" selection-start-line="103" selection-start-column="21" selection-end-line="103" selection-end-column="21" />
         </state>
       </provider>
     </entry>

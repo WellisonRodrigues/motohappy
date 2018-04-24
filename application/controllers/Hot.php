@@ -94,6 +94,21 @@ class Hot extends CI_Controller
 //                'phone'=> $this->input->post('phone'),
 
                 );
+            } else {
+                $params = array(
+                    'description' => $this->input->post('description'),
+                    'value' => $this->input->post('value'),
+                    'value_before' => $this->input->post('value'),
+                    'establishment_id' => $this->input->post('establishment_id'),
+//                    'image' => $this->input->post('image'),
+                    'title' => $this->input->post('title'),
+                    'duration' => $this->input->post('duration'),
+//                'phone' => $this->input->post('phone'),
+//                'password' => $this->input->post('password'),
+//                'password_confirmation' => $this->input->post('phone'),
+//                'phone'=> $this->input->post('phone'),
+
+                );
             }
             $response = $this->restfull->cUrl($params, $endpoint, $metodo);
 //            print_r($response);
