@@ -14,7 +14,7 @@ class Profile extends CI_Controller
 
         $this->load->library('Restfull');
 
-        $endpoint = 'api/v1/admin/partners';
+        $endpoint = 'api/v1/admin/';
 
         $metodo = 'GET';
         $params = '';
@@ -34,11 +34,11 @@ class Profile extends CI_Controller
             $params = array(
                 'name' => $this->input->post('name'),
                 'email' => $this->input->post('email'),
-                'nickname' => $this->input->post('nickname'),
-                'establishments_ids' => [$this->input->post('establishments_ids')],
+//                'nickname' => $this->input->post('nickname'),
+//                'establishments_ids' => [$this->input->post('establishments_ids')],
                 'image' => $this->input->post('image'),
 //                'phone' => $this->input->post('phone'),
-//                'password' => $this->input->post('password'),
+                'password' => $this->input->post('password'),
 //                'password_confirmation' => $this->input->post('phone'),
 //                'phone'=> $this->input->post('phone'),
 
@@ -51,7 +51,7 @@ class Profile extends CI_Controller
 //                'establishments_ids' => [$this->input->post('establishments_ids')],
 //                    'image' => $this->input->post('image'),
 //                'phone' => $this->input->post('phone'),
-//                'password' => $this->input->post('password'),
+                'password' => $this->input->post('password'),
 //                'password_confirmation' => $this->input->post('phone'),
 //                'phone'=> $this->input->post('phone'),
 

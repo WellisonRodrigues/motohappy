@@ -46,7 +46,7 @@
     <div class="row">
         <!--        <ul style="list-style: none">-->
         <?php
-        if ($response) {
+        if (isset($response)) {
             foreach ($response['category'] as $row) { ?>
 
                 <div class="col-md-3 contem" style="margin-top: 30px">

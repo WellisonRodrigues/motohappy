@@ -10,7 +10,7 @@
 ?>
 
 <div class="container">
-    <h2>Parceiros</h2>
+    <h2>Meus Dados</h2>
     <div class="row">
         <div class="col-md-12">
             <?php if (isset($message)) {
@@ -64,13 +64,13 @@
                        id="nickname">
             </div>
         </div>
-        <div class="col-md-6">
-            <!-- Default input -->
-            <div class="form-group">
-                <label for="">Estabelecimento:</label>
-                <input type="number" class="form-control" required name="establishments_ids" id="establishments_ids">
-            </div>
-        </div>
+<!--        <div class="col-md-6">-->
+<!--            <!-- Default input -->-->
+<!--            <div class="form-group">-->
+<!--                <label for="">Estabelecimento:</label>-->
+<!--                <input type="number" class="form-control" required name="establishments_ids" id="establishments_ids">-->
+<!--            </div>-->
+<!--        </div>-->
         <?php if (!isset($response['id'])) { ?>
             <div class="col-md-6">
                 <!-- Default input -->
