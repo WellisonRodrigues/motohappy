@@ -78,7 +78,7 @@
                 <!-- Default input -->
                 <div class="form-group">
                     <label for="email">Senha:</label>
-                    <input type="password" class="form-control" name="password" id="password">
+                    <input type="password" class="form-control" name="password" required id="password">
                 </div>
             </div>
         <?php } ?>

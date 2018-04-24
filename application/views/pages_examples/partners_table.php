@@ -60,9 +60,9 @@
                             <div class="col-md-7">
                                 <b class="card-title"><?php echo $row['name'] ?></b>
                                 <p class="card-text h-25">
-                                    <?php echo @$row['nickname'] ?><br>
+<!--                                    --><?php //echo @$row['nickname'] ?><!--<br>-->
                                     <?php echo @$row['email'] ?><br>
-                                    <?php echo @$row['establishments_ids']['establishments_id'] ?><br>
+<!--                                    --><?php //echo @$row['establishments_ids']['establishments_id'] ?><!--<br>-->
 
                                 </p>
                             </div>

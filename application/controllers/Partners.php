@@ -109,12 +109,11 @@ class Partners extends CI_Controller
 //            die;
 
         }
-
-//        $params2 = '';
-//        $endpoint2 = 'api/v1/admin/categories';
-//        $metodo2 = 'GET';
-//        $response2 = $this->restfull->cUrl($params2, $endpoint2, $metodo2);
-//        $data['categories'] = $response2['response'];
+        $params2 = '';
+        $endpoint2 = 'api/v1/admin/establishments';
+        $metodo2 = 'GET';
+        $response2 = $this->restfull->cUrl($params2, $endpoint2, $metodo2);
+        $data['estabelecimentos'] = $response2['response'];
         $data['menu'] = true;  // Menu true significa que a pagina tera o menu principal, false deixa a pagina sem menu(menu = header + navbar)
         $data['view'] = 'pages_examples/partners_form';
         $this->load->view('structure/container', $data);

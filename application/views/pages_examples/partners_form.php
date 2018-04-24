@@ -44,7 +44,8 @@
         <div class="col-md-12">
             <div class="form-group">
                 <label for="name">Nome:</label>
-                <input type="text" name="name" class="form-control" value="<?php echo @$response['name'] ?>" required id="name">
+                <input type="text" name="name" class="form-control" value="<?php echo @$response['name'] ?>" required
+                       id="name">
             </div>
         </div>
         <div class="col-md-6">
@@ -55,21 +56,35 @@
                        id="email">
             </div>
         </div>
+
         <div class="col-md-6">
             <!-- Default input -->
             <div class="form-group">
                 <label for="nickname">Usuário:</label>
-                <input type="text" class="form-control" name="nickname" required value="<?php echo @$response['nickname'] ?>"
+                <input type="text" class="form-control" name="nickname" required
+                       value="<?php echo @$response['nickname'] ?>"
                        id="nickname">
             </div>
         </div>
-        <div class="col-md-6">
-            <!-- Default input -->
-            <div class="form-group">
-                <label for="">Estabelecimento:</label>
-                <input type="number" class="form-control" required name="establishments_ids" id="establishments_ids">
-            </div>
+        <div class="col-md-3">
+            <label for="partners">Estabelecimentos:</label>
+            <select class="form-control tm-input tm2" name="partners" id="partners">
+                <?php foreach ($estabelecimentos['establishments'] as $line2) {
+                    $idesta = $line2['id'];
+                    $text = $line2['name'];
+                    echo "<option value='$idesta'>$text</option>";
+                } ?>
+            </select>
         </div>
+        <div class="col-md-3">
+            <br/>
+            <button type="button" id="novo_partner" class="btn btn-default" data-toggle="modal"
+                    data-target="#modal"> Novo
+                Parceiro
+            </button>
+        </div>
+
+        <input type="hidden" value="" id="partner_id" name="establishments_id">
         <?php if (!isset($response['id'])) { ?>
             <div class="col-md-6">
                 <!-- Default input -->
@@ -78,6 +93,7 @@
                     <input type="password" class="form-control" name="password" id="password">
                 </div>
             </div>
+
         <?php } ?>
 
 
@@ -90,9 +106,15 @@
             <input type="hidden" name="image" id="new_image3" value="">
         </div>
         <!--            <div class="form-group">-->
+
         <div class="col-md-12" align="right">
 
             <button type="submit" class="btn btn-default"> Salvar</button>
+
+        </div>
+        <div class="col-md-12">
+            <div id="selects2">
+            </div>
 
         </div>
         <!--            </div>-->
@@ -101,6 +123,20 @@
         </form>
     </div>
     <script>
+
+        $(document).ready(function () {
+            $('#novo_partner').click(function () {
+                var valor2 = $('.tm2 option:selected').text();
+                var idpart = $('.tm2 option:selected').val();
+                $('#selects2').append('<div class="input-group mb-2 col-md-4 remover" id="' + valor2 + '" style="margin-bottom: 10px"><input type="text" class="form-control clearable clear2"  value="' + valor2 + '" readonly> <div class="input-group-prepend"><a href="#" onclick="excluir(\'' + valor2 + '\')" class="input-group-text">' +
+                    '<i class=" fas fa-times"></i> </a><input type="hidden" class="id_part" value="' + idpart + '"></div></div>')
+
+            });
+            $('.close').click(function () {
+                $(".alert").alert('close');
+            });
+        });
+
         function readURL3(input) {
             if (input.files && input.files[0]) {
                 var reader = new FileReader();
