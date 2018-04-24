@@ -8,6 +8,7 @@
 //print_r($message);
 //echo '<pre>';
 //print_r($response);
+
 ?>
 
 <div class="container">
@@ -60,15 +61,21 @@
                        id="email">
             </div>
         </div>
+        <?php if ($response['hot']['duration']) {
+            $phpdate = strtotime($response['hot']['duration']);
+            $data = date('d/m/Y', $phpdate);
+//            print_r($data);
+        } ?>
         <div class="col-md-6">
             <!-- Default input -->
             <div class="form-group">
                 <label for="nickname">Duração:</label>
                 <input type="text" class="form-control" name="duration" required
-                       value="<?php echo @$response['hot']['duration'] ?>"
+                       value="<?php echo @$data ?>"
                        id="nickname">
             </div>
         </div>
+
         <div class="col-md-6">
             <!-- Default input -->
             <div class="form-group">
@@ -95,7 +102,7 @@
             <!-- Default input -->
             <!--            <div class="col-md-6">-->
             <label for="file">Imagem:</label>
-            <input type="file" onchange="readURL3(this);" class="form-control" name="file" id="file">
+            <input type="file" onchange="readURL3(this);" required class="form-control" name="file" id="file">
             <!--            </div>-->
             <input type="hidden" name="image" id="new_image3" value="">
         </div>
