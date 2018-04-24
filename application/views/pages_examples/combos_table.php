@@ -52,7 +52,7 @@
                                     <b class="card-title"><?php echo @$row['establishments']['name'] ?></b>
                                     <p class="card-text">
                                         <?php echo $row['description'] ?><br>
-                                        &nbsp;R$ <?php echo $row['value'] ?>
+                                        &nbsp;<b style="color: #FF5D00">R$ <?php echo $row['value'] ?></b>
 
                                     </p>
                                 </div>
@@ -63,7 +63,7 @@
                                                     style="color: gray"></i></a>
                                     </div>
                                     <div class="col-md-1">
-                                        <a href="<?php echo base_url() ?>Combos/delete/<?php echo $row['id'] ?>"> <i
+                                        <a class="delete" href="<?php echo base_url() ?>Combos/delete/<?php echo $row['id'] ?>"> <i
                                                     class="fas fa-times"
                                                     style="color: gray"></i></a>
                                     </div>
@@ -100,17 +100,17 @@
             });
 
         });
-        pageSize = 6;
+        pageSize = 9;
 
         var pageCount = $(".contem").length / pageSize;
 
-
-        if (pageCount > 4) {
-            var contagem = 4;
-
-        } else {
+        //
+        // if (pageCount > 4) {
+        //     var contagem = 4;
+        //
+        // } else {
             contagem = pageCount;
-        }
+        // }
 
         $("#pagin").append('<li class="page-item"><a class="page-link" href="#">Anterior</a></li> ');
         for (var i = 0; i < contagem; i++) {
@@ -144,7 +144,16 @@
                 event.preventDefault();
             }
         });
+        $('.delete').bind('click', function () {
+            var comf = confirm('Deseja mesmo excluir?');
+            if (comf == true) {
+            } else {
+                event.preventDefault();
+            }
+        });
     });
 
 
 </script>
+
+

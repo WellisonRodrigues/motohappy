@@ -40,7 +40,7 @@ class Combos extends CI_Controller
 
     public function new_user($id = null)
     {
-        if ($this->input->post('description') and $id != null) {
+        if ($this->input->post('salvar') and $id != null) {
 
             $this->load->library('Restfull');
             $endpoint = 'api/v1/admin/combos/' . $id;
@@ -54,8 +54,10 @@ class Combos extends CI_Controller
 
             );
             $response = $this->restfull->cUrl($params, $endpoint, $metodo);
+            $data['response'] = $response ['response'];
+            $data['message'] = $response ['response'];
         }
-        if ($this->input->post('description') and $id == null) {
+        if ($this->input->post('salvar') and $id == null) {
 
             $this->load->library('Restfull');
             $endpoint = 'api/v1/admin/combos';
@@ -65,13 +67,13 @@ class Combos extends CI_Controller
                 "description" => $this->input->post('description'),
                 "establishment_id" => $this->input->post('establishment_id'),
                 "value" => $this->input->post('valor'),
+                "value_before" => $this->input->post('valor'),
             );
             $response = $this->restfull->cUrl($params, $endpoint, $metodo);
-//            print_r($response);
-//            die;
-            $data['message'] = $response;
+            $data['response'] = $response ['response'];
+            $data['message'] = $response ['response'];
         }
-        if ($id != null and $this->input->post('description') == '') {
+        if ($id != null and $this->input->post('salvar') == '') {
             $this->load->library('Restfull');
             $endpoint = 'api/v1/admin/combos/' . $id;
             $metodo = 'GET';
@@ -81,11 +83,11 @@ class Combos extends CI_Controller
             $data['id'] = $id;
 
         }
-//        $params2 = '';
-//        $endpoint2 = 'api/v1/admin/categories';
-//        $metodo2 = 'GET';
-//        $response2 = $this->restfull->cUrl($params2, $endpoint2, $metodo2);
-//        $data['categories'] = $response2['response'];
+        $params2 = '';
+        $endpoint2 = 'api/v1/admin/establishments';
+        $metodo2 = 'GET';
+        $response2 = $this->restfull->cUrl($params2, $endpoint2, $metodo2);
+        $data['estabelecimentos'] = $response2['response'];
 
         $data['menu'] = true;  // Menu true significa que a pagina tera o menu principal, false deixa a pagina sem menu(menu = header + navbar)
         $data['view'] = 'pages_examples/combos_form';

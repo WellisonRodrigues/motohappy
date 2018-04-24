@@ -40,7 +40,7 @@ class Fuel extends CI_Controller
 
     public function new_user($id = null)
     {
-        if ($this->input->post('title') and $id != null) {
+        if ($this->input->post('salvar') and $id != null) {
 
             $this->load->library('Restfull');
             $endpoint = 'api/v1/admin/fuels/' . $id;
@@ -57,10 +57,10 @@ class Fuel extends CI_Controller
 
             );
             $response = $this->restfull->cUrl($params, $endpoint, $metodo);
-//       print_r($response);
-//       die;
+            $data['response'] = $response ['response'];
+            $data['message'] = $response ['response'];
         }
-        if ($this->input->post('title') and $id == null) {
+        if ($this->input->post('salvar') and $id == null) {
 
             $this->load->library('Restfull');
             $endpoint = 'api/v1/admin/fuels';
@@ -73,14 +73,13 @@ class Fuel extends CI_Controller
                 "establishment_id" => $this->input->post('establishment_id'),
                 "value" => $this->input->post('valor'),
             );
-//            print_r($this->input->post());
-//            die;
+
             $response = $this->restfull->cUrl($params, $endpoint, $metodo);
-            $data['message'] = $response;
-//                   print_r($response);
-//       die;
+            $data['response'] = $response ['response'];
+            $data['message'] = $response ['response'];
+
         }
-        if ($id != null and $this->input->post('title') == '') {
+        if ($id != null and $this->input->post('salvar') == '') {
             $this->load->library('Restfull');
             $endpoint = 'api/v1/admin/fuels/' . $id;
             $metodo = 'GET';
@@ -90,16 +89,19 @@ class Fuel extends CI_Controller
             $data['id'] = $id;
 
         }
-//        $params2 = '';
-//        $endpoint2 = 'api/v1/admin/categories';
-//        $metodo2 = 'GET';
-//        $response2 = $this->restfull->cUrl($params2, $endpoint2, $metodo2);
-//        $data['categories'] = $response2['response'];
+
+        $params2 = '';
+        $endpoint2 = 'api/v1/admin/establishments';
+        $metodo2 = 'GET';
+        $response2 = $this->restfull->cUrl($params2, $endpoint2, $metodo2);
+        $data['estabelecimentos'] = $response2['response'];
+
 
         $data['menu'] = true;  // Menu true significa que a pagina tera o menu principal, false deixa a pagina sem menu(menu = header + navbar)
         $data['view'] = 'pages_examples/fuel_form';
         $this->load->view('structure/container', $data);
     }
+
 
     public
     function delete($id)
