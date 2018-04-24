@@ -60,7 +60,7 @@ class Login extends CI_Controller
                 $this->load->view('structure/container', $data);
             } else {
                 $userAPI = array('id' => $response['response']['data']['id'], 'name' => $response['response']['data']['name'],
-                    'uid' => $response['header']['uid'],'establishments_ids'=> @$response['establishments_ids'], 'image' => @$response['image']['url'], 'auth_token' => $response['header']['access-token'], 'typeuser' => $usertype, 'client' => $response['header']['client']);
+                    'uid' => $response['header']['uid'],'establishments_ids'=> @$response['response']['data']['establishments_ids'], 'image' => @$response['response']['data']['image']['url'], 'auth_token' => $response['header']['access-token'], 'typeuser' => $usertype, 'client' => $response['header']['client']);
                 $this->session->set_userdata('user', $userAPI);
                 redirect('Home');
             }

@@ -22,7 +22,7 @@ class Fuel extends CI_Controller
 
     public function index()
     {
-        if ($this->session->userdata("user") == 'partners') {
+        if ($this->session->userdata("user")['typeuser'] == 'partners') {
             $idhots = $this->session->userdata("user")['establishments_ids'][0];
             $endpoint = "api/v1/admin/establishments/$idhots/fuels";
             $metodo = 'GET';
@@ -31,7 +31,7 @@ class Fuel extends CI_Controller
             $response = $this->restfull->cUrl($params, $endpoint, $metodo);
 //        print_r($response);
 //        die;
-            $data['response']['hots'] = $response['response'];
+            $data['response']['fuels'] = $response['response'];
         } else {
             $this->load->library('Restfull');
             $endpoint = 'api/v1/admin/fuels';
@@ -43,10 +43,11 @@ class Fuel extends CI_Controller
 //        die;
             $data['response'] = $response['response'];
 
-            $data['menu'] = true;  // Menu true significa que a pagina tera o menu principal, false deixa a pagina sem menu(menu = header + navbar)
-            $data['view'] = 'pages_examples/fuel_table';
-            $this->load->view('structure/container', $data);
+
         }
+        $data['menu'] = true;  // Menu true significa que a pagina tera o menu principal, false deixa a pagina sem menu(menu = header + navbar)
+        $data['view'] = 'pages_examples/fuel_table';
+        $this->load->view('structure/container', $data);
     }
 
 

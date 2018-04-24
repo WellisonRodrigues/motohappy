@@ -25,7 +25,7 @@ class Hot extends CI_Controller
         $this->load->library('Restfull');
 
 
-        if ($this->session->userdata("user") == 'partners') {
+        if ($this->session->userdata("user")['typeuser']  == 'partners') {
             $idhots = $this->session->userdata("user")['establishments_ids'][0];
             $endpoint = "api/v1/admin/establishments/$idhots/hots";
             $metodo = 'GET';
@@ -35,6 +35,9 @@ class Hot extends CI_Controller
 //        print_r($response);
 //        die;
             $data['response']['hots'] = $response['response'];
+
+//            print_r($data);
+//
         } else {
             $endpoint = 'api/v1/admin/hots';
             $metodo = 'GET';
