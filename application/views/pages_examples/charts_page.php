@@ -4,7 +4,10 @@
  * User: welli
  * Date: 07/04/2018
  * Time: 18:44
- */ ?>
+// */
+//echo '<pre>';
+//print_r($response);
+?>
 <div class="container">
     <canvas id="barChart"></canvas>
 </div>
@@ -13,10 +16,17 @@
     var myBarChart = new Chart(ctxB, {
         type: 'bar',
         data: {
-            labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+            labels: ["Usuarios", "Estabelecimentos", "Parceiros", "Hot", "Combustiveis", "Combos", "Administradores"],
             datasets: [{
-                label: '# of Votes',
-                data: [12, 19, 3, 5, 2, 3],
+                label: 'Usuarios',
+                data: ["<?php echo @$response['users']?>",
+                    "<?php echo @$response['eslblishemnts']?>",
+                    "<?php echo @$response['partners']?>",
+                    "<?php echo @$response['hots']?>",
+                    "<?php echo @$response['fuels']?>",
+                    "<?php echo @$response['combos']?>",
+                    "<?php echo @$response['sub_admin']?>"
+                ],
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)',
                     'rgba(54, 162, 235, 0.2)',
