@@ -48,7 +48,7 @@
         <div class="col-md-12">
             <div class="form-group">
                 <label for="name">Nome:</label>
-                <input type="text" name="name" class="form-control" value="<?php echo @$response['name'] ?>"
+                <input type="text" name="name" class="form-control" required value="<?php echo @$response['name'] ?>"
                        id="name" placeholder="Nome">
             </div>
         </div>
@@ -59,18 +59,18 @@
 
                     <div class="col-md-6">
                         <label for="address">Endereço:</label>
-                        <input type="text" class="form-control" name="address" id="address"
+                        <input type="text" class="form-control" required name="address" id="address"
                                value="<?php echo @$response['address'] ?>">
                     </div>
 
                     <div class="col-md-3">
                         <label for="city">Cidade:</label>
-                        <input type="text" class="form-control" name="city" value="<?php echo @$response['city'] ?>"
+                        <input type="text" class="form-control" required name="city" value="<?php echo @$response['city'] ?>"
                                id="city">
                     </div>
                     <div class="col-md-3">
                         <label for="state">Estado:</label>
-                        <input type="text" class="form-control" name="state" id="state"
+                        <input type="text" class="form-control" required name="state" id="state"
                                value="<?php echo @$response['state'] ?>">
                     </div>
 
@@ -81,12 +81,12 @@
 
                     <div class="col-md-3">
                         <label for="email">Código do Estabelecimento:</label>
-                        <input type="number" class="form-control" name="establishment_cod" id="establishment_cod"
+                        <input type="number" class="form-control" required name="establishment_cod" id="establishment_cod"
                                value="<?php echo @$response['establishment_cod'] ?>">
                     </div>
                     <div class="col-md-3">
                         <label for="email">Atendimento:</label>
-                        <input type="text" class="form-control" name="attendance" id="attendance"
+                        <input type="text" class="form-control" required name="attendance" id="attendance"
                                value="<?php echo @$response['attendance'] ?>">
                     </div>
                     <div class="col-md-3">
