@@ -51,7 +51,7 @@ class Login extends CI_Controller
 
             $response = $this->restfull->cUrl($params, $endpoint, $metodo);
 //            echo '<pre>';
-//            print_r($response);
+//            print_r();
 //            die;
             if (isset($response['response']['errors'][0])) {
                 $data['message'] = $response['response']['errors'][0];

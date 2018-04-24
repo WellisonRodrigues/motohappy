@@ -29,8 +29,8 @@
                        aria-haspopup="true"
                        aria-expanded="false">
                         <?php if (isset($this->session->userdata("user")['image'])) { ?>
-                            <img src="<?php echo base_url() ?><?php echo $this->session->userdata("user")['image'] ?>"
-                                 class="rounded-circle">
+                            <img src="<?php echo $this->session->userdata("user")['image'] ?>"
+                                 class="rounded-circle" width="40px" height="40px">
                         <?php } else {
                             ?>
                             <img src="<?php echo base_url() ?>imgs/Elemento6.png"

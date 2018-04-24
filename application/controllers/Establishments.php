@@ -22,7 +22,7 @@ class Establishments extends CI_Controller
 
     public function index()
     {
-        
+
         $this->load->library('Restfull');
         $endpoint = 'api/v1/admin/establishments';
         $metodo = 'GET';

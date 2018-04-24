@@ -6,8 +6,11 @@
  * Time: 14:14
  */
 //print_r($message);
-//print_r($response);
+//echo '<pre>';
+//print_r($response['id']);
+//print_r($this->session->userdata("user"))
 ?>
+
 
 <div class="container">
     <h2>Meus Dados</h2>
@@ -34,10 +37,10 @@
         </div>
     </div>
     <?php
-    if (isset($response['id'])) {
-        echo form_open('Profile/new_user/' . $response['id'], ['role' => 'form']);
 
-    } ?>
+    echo form_open('Profile/new_user/' . $response['id'], ['role' => 'form']);
+
+    ?>
     <div class="row">
         <!-- Default input -->
         <div class="col-md-12">
@@ -55,31 +58,15 @@
                        id="email">
             </div>
         </div>
+        <!--        --><?php //if (!isset($response['id'])) { ?>
         <div class="col-md-6">
             <!-- Default input -->
             <div class="form-group">
-                <label for="nickname">Usuário:</label>
-                <input type="text" class="form-control" name="nickname" required
-                       value="<?php echo @$response['nickname'] ?>"
-                       id="nickname">
+                <label for="email">Senha:</label>
+                <input type="password" class="form-control" required name="password" id="password">
             </div>
         </div>
-<!--        <div class="col-md-6">-->
-<!--            <!-- Default input -->-->
-<!--            <div class="form-group">-->
-<!--                <label for="">Estabelecimento:</label>-->
-<!--                <input type="number" class="form-control" required name="establishments_ids" id="establishments_ids">-->
-<!--            </div>-->
-<!--        </div>-->
-        <?php if (!isset($response['id'])) { ?>
-            <div class="col-md-6">
-                <!-- Default input -->
-                <div class="form-group">
-                    <label for="email">Senha:</label>
-                    <input type="password" class="form-control" name="password" id="password">
-                </div>
-            </div>
-        <?php } ?>
+        <!--        --><?php //} ?>
 
 
         <div class="col-md-12">

@@ -8,13 +8,24 @@
  */
 class Profile extends CI_Controller
 {
+    public function __construct()
+    {
+        parent::__construct();
+        if (!$this->session->userdata("user")) {
+            redirect('sair');
+        }
+
+//        $this->load->library('table');
+        $this->load->library('Restfull');
+//        $this->load->library('PerfectTable');
+    }
 
     public function index()
     {
 
         $this->load->library('Restfull');
 
-        $endpoint = 'api/v1/admin/';
+        $endpoint = 'api/v1/admin/profile';
 
         $metodo = 'GET';
         $params = '';
@@ -25,22 +36,17 @@ class Profile extends CI_Controller
         $this->load->view('structure/container', $data);
     }
 
-    public function update($id)
+    public function new_user($id)
     {
         $this->load->library('Restfull');
-        $endpoint = 'api/v1/admin/partners/' . $id;
+        $endpoint = 'api/v1/admin/profile';
         $metodo = 'PATCH';
         if ($this->input->post('image')) {
             $params = array(
                 'name' => $this->input->post('name'),
                 'email' => $this->input->post('email'),
-//                'nickname' => $this->input->post('nickname'),
-//                'establishments_ids' => [$this->input->post('establishments_ids')],
                 'image' => $this->input->post('image'),
-//                'phone' => $this->input->post('phone'),
                 'password' => $this->input->post('password'),
-//                'password_confirmation' => $this->input->post('phone'),
-//                'phone'=> $this->input->post('phone'),
 
             );
         } else {
@@ -48,17 +54,17 @@ class Profile extends CI_Controller
                 'name' => $this->input->post('name'),
                 'email' => $this->input->post('email'),
                 'nickname' => $this->input->post('nickname'),
-//                'establishments_ids' => [$this->input->post('establishments_ids')],
-//                    'image' => $this->input->post('image'),
-//                'phone' => $this->input->post('phone'),
                 'password' => $this->input->post('password'),
-//                'password_confirmation' => $this->input->post('phone'),
-//                'phone'=> $this->input->post('phone'),
+
 
             );
         }
         $response = $this->restfull->cUrl($params, $endpoint, $metodo);
-        redirect('Profile');
+        $data['response'] = $response['response'];
+        $data['message'] = $response['response'];
+        $data['menu'] = true;  // Menu true significa que a pagina tera o menu principal, false deixa a pagina sem menu(menu = header + navbar)
+        $data['view'] = 'pages_examples/profile_form';
+        $this->load->view('structure/container', $data);
     }
 
 
