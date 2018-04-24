@@ -14,13 +14,14 @@
     <div class="row">
         <div class="col-md-12">
             <?php if (isset($message)) {
-                if (isset($message['data']['id']) or isset($message['id'])) {
+                if (isset($message['id']) or isset($message['id']) or $message['status'] = 'success') {
                     ?>
                     <div class="alert alert-success alert-dismissible fade show" role="alert">Salvo com sucesso!
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
                                     aria-hidden="true">&times;</span></button>
                     </div>
                     <?php
+                    $response = $message;
                 }
             } ?>
             <?php if (isset($message['errors'])) {
@@ -44,7 +45,8 @@
         <div class="col-md-12">
             <div class="form-group">
                 <label for="name">Nome:</label>
-                <input type="text" name="name" class="form-control" value="<?php echo @$response['name'] ?>" required id="name">
+                <input type="text" name="name" class="form-control" value="<?php echo @$response['name'] ?>" required
+                       id="name">
             </div>
         </div>
         <div class="col-md-6">
@@ -59,17 +61,18 @@
             <!-- Default input -->
             <div class="form-group">
                 <label for="nickname">Usuário:</label>
-                <input type="text" class="form-control" name="nickname" required value="<?php echo @$response['nickname'] ?>"
+                <input type="text" class="form-control" name="nickname" required
+                       value="<?php echo @$response['nickname'] ?>"
                        id="nickname">
             </div>
         </div>
-<!--        <div class="col-md-6">-->
-<!--            <!-- Default input -->
-<!--            <div class="form-group">-->
-<!--                <label for="">Estabelecimento:</label>-->
-<!--                <input type="number" class="form-control" required name="establishments_ids" id="establishments_ids">-->
-<!--            </div>-->
-<!--        </div>-->
+        <!--        <div class="col-md-6">-->
+        <!--            <!-- Default input -->
+        <!--            <div class="form-group">-->
+        <!--                <label for="">Estabelecimento:</label>-->
+        <!--                <input type="number" class="form-control" required name="establishments_ids" id="establishments_ids">-->
+        <!--            </div>-->
+        <!--        </div>-->
         <?php if (!isset($response['id'])) { ?>
             <div class="col-md-6">
                 <!-- Default input -->

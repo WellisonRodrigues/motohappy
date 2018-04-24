@@ -63,6 +63,9 @@ class Subadmins extends CI_Controller
                 );
             }
             $response = $this->restfull->cUrl($params, $endpoint, $metodo);
+            $data['response'] = $response ['response'];
+            $data['message'] = $response ['response'];
+
         }
 
         if ($this->input->post('name') and $id == null) {
@@ -79,31 +82,23 @@ class Subadmins extends CI_Controller
 
 
             );
-//            print_r($this->input->post());
-//            die;
+
             $response = $this->restfull->cUrl($params, $endpoint, $metodo);
-            $data['message'] = $response;
-//                   print_r($response);
-//       die;
+            $data['response'] = $response ['response'];
+            $data['message'] = $response ['response'];
+
         }
         if ($id != null and $this->input->post('name') == '') {
             $this->load->library('Restfull');
-            $endpoint = 'api/v1/admin/users/' . $id;
+            $endpoint = 'api/v1/admin/subadmins/' . $id;
             $metodo = 'GET';
             $params = '';
             $response = $this->restfull->cUrl($params, $endpoint, $metodo);
             $data['response'] = $response['response'];
             $data['id'] = $id;
 
-//            print_r($response);
-//            die;
 
         }
-//        $params2 = '';
-//        $endpoint2 = 'api/v1/admin/users';
-//        $metodo2 = 'GET';
-//        $response2 = $this->restfull->cUrl($params2, $endpoint2, $metodo2);
-//        $data['categories'] = $response2['response'];
 
         $data['menu'] = true;  // Menu true significa que a pagina tera o menu principal, false deixa a pagina sem menu(menu = header + navbar)
         $data['view'] = 'pages_examples/subadmin_form';
