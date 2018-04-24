@@ -6,7 +6,7 @@
  * Time: 13:36
  */
 //echo '<pre>';
-print_r($this->session->userdata("user"));
+//print_r($this->session->userdata("user"));
 //print_r($this->session->userdata("user"));
 
 ?>

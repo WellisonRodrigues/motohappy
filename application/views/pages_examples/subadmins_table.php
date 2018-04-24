@@ -42,47 +42,54 @@
         <!--        </div>-->
     </div>
     <div class="row">
-        <?php foreach ($response as $row) { ?>
-            <div class="col-md-4 contem" style="margin-top: 20px">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-md-2">
-                                <?php if ($row['image']['url'] != null) { ?>
-                                    <img src="<?php echo $row['image']['url'] ?>"
-                                         class="rounded-circle" width="50px" height="50px">
-                                <?php } else { ?>
-                                    <img src="<?php echo base_url() ?>imgs/Elemento6.png"
-                                         class="rounded-circle" width="50px" height="50px">
+        <?php
+        if (isset($response)) {
+            foreach ($response as $row) { ?>
+                <div class="col-md-4 contem" style="margin-top: 20px">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <?php if ($row['image']['url'] != null) { ?>
+                                        <img src="<?php echo $row['image']['url'] ?>"
+                                             class="rounded-circle" width="50px" height="50px">
+                                    <?php } else { ?>
+                                        <img src="<?php echo base_url() ?>imgs/Elemento6.png"
+                                             class="rounded-circle" width="50px" height="50px">
 
-                                <?php } ?>
-                            </div>
-                            <div class="col-md-7">
-                                <b class="card-title"><?php echo $row['name'] ?></b>
-                                <p class="card-text h-25">
-<!--                                    --><?php //echo @$row['nickname'] ?><!--<br>-->
-                                    <?php echo @$row['email'] ?><br>
-<!--                                    --><?php //echo @$row['establishments_ids']['establishments_id'] ?><!--<br>-->
+                                    <?php } ?>
+                                </div>
+                                <div class="col-md-7">
+                                    <b class="card-title"><?php echo $row['name'] ?></b>
+                                    <p class="card-text h-25">
+                                        <!--                                    -->
+                                        <?php //echo @$row['nickname'] ?><!--<br>-->
+                                        <?php echo @$row['email'] ?><br>
+                                        <!--                                    -->
+                                        <?php //echo @$row['establishments_ids']['establishments_id'] ?><!--<br>-->
 
-                                </p>
-                            </div>
-                            <div class="col-md-1">
-                                <a href="<?php echo base_url() ?>Subadmins/new_user/<?php echo $row['id'] ?>"><i
-                                            class="fas fa-pencil-alt"
+                                    </p>
+                                </div>
+                                <div class="col-md-1">
+                                    <a href="<?php echo base_url() ?>Subadmins/new_user/<?php echo $row['id'] ?>"><i
+                                                class="fas fa-pencil-alt"
+                                                style="color: gray"></i></a>
+                                </div>
+                                <div class="col-md-1">
+                                    <a class="delete"
+                                       href="<?php echo base_url() ?>Subadmins/delete/<?php echo $row['id'] ?>""> <i
+                                            class="fas fa-times"
                                             style="color: gray"></i></a>
+                                </div>
                             </div>
-                            <div class="col-md-1">
-                                <a class="delete" href="<?php echo base_url() ?>Subadmins/delete/<?php echo $row['id'] ?>""> <i class="fas fa-times"
-                                                                                                                               style="color: gray"></i></a>
-                            </div>
-                        </div>
-                        <!--
+                            <!--
 
-                        <!--                    <a href="#" class="btn btn-primary">Go somewhere</a>-->
+                            <!--                    <a href="#" class="btn btn-primary">Go somewhere</a>-->
+                        </div>
                     </div>
                 </div>
-            </div>
-        <?php } ?>
+            <?php }
+        } ?>
     </div>
     <br>
     <!--    <nav aria-label="Page navigation example">-->
@@ -112,7 +119,7 @@
         var pageCount = $(".contem").length / pageSize;
 
 
-            contagem = pageCount;
+        contagem = pageCount;
 
 
         $("#pagin").append('<li class="page-item"><a class="page-link" href="#">Anterior</a></li> ');

@@ -55,7 +55,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 &ensp;
                 <button type="submit" class="btn btn-default" name="entrar"
                         style="border-radius: 10px; padding-left: 100px;padding-right: 100px" value="ENTRAR"> ENTRAR
-                </button>
+                </button><br>
+                <a href="<?php echo base_url()?>Esqueci" style="color: #FF5D00">Esqueçi minha senha</a>
 
             </div>
             <?php
