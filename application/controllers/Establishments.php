@@ -123,8 +123,8 @@ class Establishments extends CI_Controller
             $response = $this->restfull->cUrl($params, $endpoint, $metodo);
             $data['message'] = $response['response'];
             $data['response'] = $response['response'];
-            print_r($response);
-            die;
+//            print_r($response);
+//            die;
         }
 
         $params2 = '';

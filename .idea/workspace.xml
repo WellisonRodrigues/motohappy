@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="935b7b62-3b28-4833-9e93-ef4dc909d715" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/application/controllers/Fuel.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Fuel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Hot.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Hot.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/session/ci_sessionl9rsgntqe8i1q6qhnd2507q0pc2a2urk" beforeDir="false" afterPath="$PROJECT_DIR$/application/session/ci_sessionl9rsgntqe8i1q6qhnd2507q0pc2a2urk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/pages_examples/combos_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pages_examples/combos_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/pages_examples/fuel_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pages_examples/fuel_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/Establishments.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Establishments.php" afterDir="false" />
     </list>
     <ignored path="motolegal.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -73,6 +69,15 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Establishments.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/controllers/Establishments.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="536">
+              <caret line="125" column="14" lean-forward="true" selection-start-line="125" selection-start-column="14" selection-end-line="126" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="combos_table.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/pages_examples/combos_table.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -82,11 +87,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Hot.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Hot.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/Hot.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="28" column="81" selection-start-line="28" selection-start-column="81" selection-end-line="28" selection-end-column="81" />
+            <state relative-caret-position="238">
+              <caret line="40" column="50" lean-forward="true" selection-start-line="40" selection-start-column="50" selection-end-line="40" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -165,12 +170,12 @@
         <option value="$PROJECT_DIR$/application/controllers/Users.php" />
         <option value="$PROJECT_DIR$/application/views/pages_examples/establishments_table.php" />
         <option value="$PROJECT_DIR$/application/views/pages_examples/establishments_form.php" />
-        <option value="$PROJECT_DIR$/application/controllers/Establishments.php" />
         <option value="$PROJECT_DIR$/application/views/pages_examples/partners_table.php" />
         <option value="$PROJECT_DIR$/application/views/pages_examples/fuel_table.php" />
         <option value="$PROJECT_DIR$/application/controllers/Fuel.php" />
         <option value="$PROJECT_DIR$/application/views/pages_examples/combos_table.php" />
         <option value="$PROJECT_DIR$/application/controllers/Hot.php" />
+        <option value="$PROJECT_DIR$/application/controllers/Establishments.php" />
       </list>
     </option>
   </component>
@@ -311,12 +316,12 @@
       <option name="presentableId" value="Default" />
       <updated>1522176101429</updated>
       <workItem from="1522812844269" duration="47596000" />
-      <workItem from="1523406040684" duration="116016000" />
+      <workItem from="1523406040684" duration="116632000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="163612000" />
+    <option name="totallyTimeSpent" value="164228000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1386" height="788" extended-state="0" />
@@ -709,13 +714,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Establishments.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="117" column="69" lean-forward="true" selection-start-line="117" selection-start-column="69" selection-end-line="117" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/pages_examples/establishments_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="142">
@@ -788,8 +786,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Hot.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="28" column="81" selection-start-line="28" selection-start-column="81" selection-end-line="28" selection-end-column="81" />
+        <state relative-caret-position="238">
+          <caret line="40" column="50" lean-forward="true" selection-start-line="40" selection-start-column="50" selection-end-line="40" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Establishments.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="536">
+          <caret line="125" column="14" lean-forward="true" selection-start-line="125" selection-start-column="14" selection-end-line="126" selection-end-column="18" />
         </state>
       </provider>
     </entry>
