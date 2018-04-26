@@ -44,37 +44,40 @@
         <?php
         if (isset($response['fuels'])) {
             foreach ($response['fuels'] as $row) {
-                ?>
-                <div class="col-md-4 contem" style="margin-top: 20px">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-md-9">
-                                    <b class="card-title"><?php echo @$row['establishments']['name'] ?></b>
-                                    <p class="card-text">
-                                        <?php echo $row['title'] ?>
-                                        &nbsp;&nbsp;R$ <?php echo $row['money_atual'] ?>/Litro
+                if (isset($row['id'])) {
+                    ?>
+                    <div class="col-md-4 contem" style="margin-top: 20px">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-9">
+                                        <b class="card-title"><?php echo @$row['establishments']['name'] ?></b>
+                                        <p class="card-text">
+                                            <?php echo $row['title'] ?>
+                                            &nbsp;&nbsp;R$ <?php echo $row['money_atual'] ?>/Litro
 
-                                    </p>
+                                        </p>
+                                    </div>
+                                    <div class="col-md-1">
+                                        <a href="<?php echo base_url() ?>Fuel/new_user/<?php echo $row['id'] ?>"><i
+                                                    class="fas fa-pencil-alt"
+                                                    style="color: gray"></i></a>
+                                    </div>
+                                    <div class="col-md-1">
+                                        <a class="delete"
+                                           href="<?php echo base_url() ?>Fuel/delete/<?php echo $row['id'] ?>"> <i
+                                                    class="fas fa-times"
+                                                    style="color: gray"></i></a>
+                                    </div>
                                 </div>
-                                <div class="col-md-1">
-                                    <a href="<?php echo base_url() ?>Fuel/new_user/<?php echo $row['id'] ?>"><i
-                                                class="fas fa-pencil-alt"
-                                                style="color: gray"></i></a>
-                                </div>
-                                <div class="col-md-1">
-                                    <a class="delete" href="<?php echo base_url() ?>Fuel/delete/<?php echo $row['id'] ?>"> <i
-                                                class="fas fa-times"
-                                                style="color: gray"></i></a>
-                                </div>
+                                <!--
+
+                                <!--                    <a href="#" class="btn btn-primary">Go somewhere</a>-->
                             </div>
-                            <!--
-
-                            <!--                    <a href="#" class="btn btn-primary">Go somewhere</a>-->
                         </div>
                     </div>
-                </div>
-            <?php }
+                <?php }
+            }
         } ?>
     </div>
     <br>
@@ -108,7 +111,7 @@
         //     var contagem = 4;
         //
         // } else {
-            contagem = pageCount;
+        contagem = pageCount;
         // }
 
         $("#pagin").append('<li class="page-item"><a class="page-link" href="#">Anterior</a></li> ');

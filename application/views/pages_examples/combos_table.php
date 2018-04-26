@@ -42,7 +42,7 @@
     </div>
     <div class="row">
         <?php
-        if ($response) {
+        if (isset($response['combos'])) {
             foreach ($response['combos'] as $row) { ?>
                 <div class="col-md-4 contem" style="margin-top: 20px">
                     <div class="card">

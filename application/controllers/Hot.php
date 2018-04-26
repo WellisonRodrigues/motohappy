@@ -25,8 +25,12 @@ class Hot extends CI_Controller
         $this->load->library('Restfull');
 
 
-        if ($this->session->userdata("user")['typeuser']  == 'partners') {
-            $idhots = $this->session->userdata("user")['establishments_ids'][0];
+        if ($this->session->userdata("user")['typeuser'] == 'partners') {
+            if (isset($this->session->userdata("user")['establishments_ids'][0])) {
+                $idhots = $this->session->userdata("user")['establishments_ids'][0];
+            } else {
+                $idhots = 0;
+            }
             $endpoint = "api/v1/admin/establishments/$idhots/hots";
             $metodo = 'GET';
             $params = '';

@@ -23,7 +23,11 @@ class Fuel extends CI_Controller
     public function index()
     {
         if ($this->session->userdata("user")['typeuser'] == 'partners') {
-            $idhots = $this->session->userdata("user")['establishments_ids'][0];
+            if (isset($this->session->userdata("user")['establishments_ids'][0])) {
+                $idhots = $this->session->userdata("user")['establishments_ids'][0];
+            } else {
+                $idhots = 0;
+            }
             $endpoint = "api/v1/admin/establishments/$idhots/fuels";
             $metodo = 'GET';
             $params = '';
