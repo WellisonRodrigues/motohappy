@@ -73,6 +73,7 @@ class Users extends CI_Controller
                 'phone' => $this->input->post('phone'),
                 'birthday' => $this->input->post('birthday'),
                 'email' => $this->input->post('email'),
+                'image' => $this->input->post('image'),
 
             );
             $response = $this->restfull->cUrl($params, $endpoint, $metodo);

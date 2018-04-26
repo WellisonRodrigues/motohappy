@@ -6,6 +6,7 @@
  * Time: 13:36
  */
 //echo '<pre>';
+//print_r($response);
 //print_r($this->session->userdata("user"));
 //print_r($this->session->userdata("user"));
 
@@ -45,10 +46,10 @@
         if ($response) {
             foreach ($response['establishments'] as $row) { ?>
                 <div class="col-md-4 contem">
-                    <div class="card" style="margin-top: 30px;">
+                    <div class="card" style="margin-top: 30px; height: 175px">
                         <div class="card-body">
                             <div class="row">
-                                <div class="col-md-3">
+                                <div class="col-md-2">
                                     <!--                            <div class="col-md-12">-->
 
                                     <div class="row">
@@ -66,16 +67,17 @@
                                     <br>
                                     <div class="row">
                                         <div class="col-md-12 h-25 d-inline-block">
-                                            <p class="card-text h-25 d-inline-block"> <?php echo @$row['establishment_cod'] ?></p>
+                                            <p class="card-text h-25 d-inline-block"> <?php echo $row['establishment_cod'] ? $row['establishment_cod'] : 'N/A' ?></p>
                                         </div>
                                     </div>
                                 </div>
                                 <!--                        </div>-->
-                                <div class="col-md-6">
+                                <div class="col-md-7">
                                     <b class="card-title h-25 d-inline-block"><?php echo @$row['name'] ?></b><br>
-                                    <p class="card-text h-25 d-inline-block"><?php echo @$row['address'] ?>
-                                        ,<?php echo @$row['number'] ?>
-                                        <?php echo @$row['state'] ?>,<?php echo @$row['city'] ?></p>
+                                    <p class="card-text h-25 d-inline-block"><?php echo $row['address'] ? $row['address'] : 'Endereço indefinido' ?>
+                                        , <?php echo $row['number'] ? $row['number'] : 'Número indefinido' ?>
+                                        <?php echo $row['state'] ? $row['state'] : 'Estado indefinido' ?>
+                                        , <?php echo $row['city'] ? $row['city'] : 'Cidade indefinida' ?></p>
                                 </div>
                                 <?php if ($this->session->userdata("user")['typeuser'] != 'partners') { ?>
                                     <div class="col-md-1">
@@ -123,11 +125,11 @@
             });
 
         });
-        pageSize = 6;
+        pageSize = 12;
 
         var pageCount = $(".contem").length / pageSize;
 
-            contagem = pageCount;
+        contagem = pageCount;
 
 
         $("#pagin").append('<li class="page-item"><a class="page-link" href="#">Anterior</a></li> ');

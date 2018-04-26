@@ -53,8 +53,8 @@ class Establishments extends CI_Controller
                 "city" => $this->input->post('city'),
                 "state" => $this->input->post('state'),
                 "establishment_cod" => $this->input->post('establishment_cod'),
-                "category" => "",
-                "partner_id" => [],
+                "category" => [$this->input->post('categorys')],
+//                "partner_id" => [],
                 "image" => $this->input->post('image'),
                 "attendance" => $this->input->post('attendance'),
 
@@ -66,8 +66,8 @@ class Establishments extends CI_Controller
             $data['response'] = $response['response'];
 
 //            $data['id'] = $response['response']['id'];
-//                   print_r($response);
-//       die;
+                   print_r($response);
+       die;
         }
         if ($id != '') {
             $this->load->library('Restfull');
@@ -99,7 +99,7 @@ class Establishments extends CI_Controller
                     "state" => $this->input->post('state'),
                     "establishment_cod" => $this->input->post('establishment_cod'),
                     "category" => [$this->input->post('categorys')],
-                    "partner_id" => [$this->input->post('partner_id')],
+//                    "partner_id" => [$this->input->post('partner_id')],
                     "image" => $this->input->post('image'),
                     "attendance" => $this->input->post('attendance'),
 
@@ -114,16 +114,17 @@ class Establishments extends CI_Controller
                     "state" => $this->input->post('state'),
                     "establishment_cod" => $this->input->post('establishment_cod'),
                     "category" => [$this->input->post('categorys')],
-                    "partner_id" => [$this->input->post('partner_id')],
+//                    "partner_id" => [$this->input->post('partner_id')],
                     "attendance" => $this->input->post('attendance'),
 
                 );
             }
-//            print_r($this->input->post());
-//            die;
+
             $response = $this->restfull->cUrl($params, $endpoint, $metodo);
             $data['message'] = $response['response'];
             $data['response'] = $response['response'];
+            print_r($response);
+            die;
         }
 
         $params2 = '';

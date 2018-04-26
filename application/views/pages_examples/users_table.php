@@ -36,8 +36,8 @@
     </div>
     <div class="row">
         <?php foreach ($response as $row) { ?>
-            <div class="col-md-4 contem" style="margin-top: 20px">
-                <div class="card">
+            <div class="col-md-4 contem" style="margin-top: 20px;">
+                <div class="card" style="height: 180px">
                     <div class="card-body">
                         <div class="row">
                             <div class="col-md-2">
@@ -52,13 +52,13 @@
                             </div>
                             <div class="col-md-7">
                                 <b class="card-title h-25"><?php echo @$row['name'] ?></b>
-                                <p class="h-25"><?php echo @$row['email'] ?></p>
-                                <p class="card-text h-25"><?php
-                                    $phpdate = strtotime($row['birthday']);
-                                    $data = date('d/m/Y', $phpdate);
-                                    echo @$data ?> &nbsp;&nbsp;&nbsp;<?php echo @$row['phone'] ?>
-                                    <?php echo @$row['address'] ?>
-                                    <?php echo @$row['city'] ?></p>
+                                <p class="h-25" style="font-size: 10pt;margin-bottom: 0;"><?php echo @$row['email'] ?></p>
+                                    <div class="h-25 text-left" style="font-size: 10pt;padding-top: 10px"><?php
+                                        $phpdate = strtotime($row['birthday']);
+                                        $data = date('d/m/Y', $phpdate);
+                                        echo @$data ?> &nbsp;&nbsp;&nbsp;<?php echo @$row['phone'] ?></div>
+                                    <div class="h-25 text-left" style="font-size: 10pt">  <?php echo @$row['address'] ?>
+                                        <?php echo @$row['city'] ?></div>
                             </div>
                             <div class="col-md-1">
                                 <a href="<?php echo base_url() ?>Users/new_user/<?php echo $row['id'] ?>"><i
@@ -66,7 +66,8 @@
                                             style="color: gray"></i></a>
                             </div>
                             <div class="col-md-1">
-                                <a class="delete" href="<?php echo base_url() ?>Users/delete/<?php echo $row['id'] ?>"> <i
+                                <a class="delete" href="<?php echo base_url() ?>Users/delete/<?php echo $row['id'] ?>">
+                                    <i
                                             class="fas fa-times" style="color: gray"></i>
                                 </a></div>
                         </div>

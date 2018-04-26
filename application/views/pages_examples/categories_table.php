@@ -47,7 +47,9 @@
         <!--        <ul style="list-style: none">-->
         <?php
         if (isset($response)) {
-            foreach ($response['category'] as $row) { ?>
+            foreach ($response['category'] as $row) {
+                $new = str_replace("_", " ", $row);
+                ?>
 
                 <div class="col-md-3 contem" style="margin-top: 30px">
                     <div class="card">
@@ -56,7 +58,7 @@
 
                                 <!--                        </div>-->
                                 <div class="col-md-12">
-                                    <b class="card-title"><?php echo $row ?></b>
+                                    <b class="card-title"><?php echo $new ?></b>
                                     <!--                            <p class="card-text">With supporting text below as a natural lead-in to additional-->
                                     <!--                                content.</p>-->
                                 </div>
@@ -105,27 +107,27 @@
             });
 
         });
-        pageSize = 6;
+        pageSize = 12;
+        //
+        // var pageCount = $(".contem").length / pageSize;
 
-        var pageCount = $(".contem").length / pageSize;
+        //
+        // if (pageCount > 4) {
+        //     var contagem = 4;
+        //
+        // } else {
+        //     contagem = pageCount;
+        // }
 
-
-        if (pageCount > 4) {
-            var contagem = 4;
-
-        } else {
-            contagem = pageCount;
-        }
-
-        $("#pagin").append('<li class="page-item"><a class="page-link" href="#">Anterior</a></li> ');
-        for (var i = 0; i < contagem; i++) {
-
-
-            $("#pagin").append('<li class="page-item"><a class="page-link" href="#">' + (i + 1) + '</a></li> ');
-
-        }
-        $("#pagin").append('<li class="page-item"><a class="page-link" href="#">Proxima</a></li> ');
-        $("#pagin li").eq(1).addClass("active");
+        // $("#pagin").append('<li class="page-item"><a class="page-link" href="#">Anterior</a></li> ');
+        // for (var i = 0; i < contagem; i++) {
+        //
+        //
+        //     $("#pagin").append('<li class="page-item"><a class="page-link" href="#">' + (i + 1) + '</a></li> ');
+        //
+        // }
+        // $("#pagin").append('<li class="page-item"><a class="page-link" href="#">Proxima</a></li> ');
+        // $("#pagin li").eq(1).addClass("active");
 
         showPage = function (page) {
             $(".contem").hide();
@@ -135,13 +137,13 @@
             });
         }
 
-        showPage(1);
+        // showPage(1);
 
-        $("#pagin li ").click(function () {
-            $("#pagin li").removeClass("active");
-            $(this).addClass("active");
-            showPage(parseInt($(this).text()))
-        });
+        // $("#pagin li ").click(function () {
+        //     $("#pagin li").removeClass("active");
+        //     $(this).addClass("active");
+        //     showPage(parseInt($(this).text()))
+        // });
     });
 
 

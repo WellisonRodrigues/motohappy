@@ -9,7 +9,7 @@
  */
 //print_r($categories['response']);
 //echo '<pre>';
-//print_r($response);
+//print_r($message);
 
 //print_r($partners['response']);
 ?>
@@ -26,6 +26,7 @@
                                     aria-hidden="true">&times;</span></button>
                     </div>
                     <?php
+                    $response = $message;
                 }
             } ?>
             <?php if (isset($message['errors'][0])) {
@@ -66,7 +67,8 @@
 
                     <div class="col-md-3">
                         <label for="city">Cidade:</label>
-                        <input type="text" class="form-control" required name="city" value="<?php echo @$response['city'] ?>"
+                        <input type="text" class="form-control" required name="city"
+                               value="<?php echo @$response['city'] ?>"
                                id="city">
                     </div>
                     <div class="col-md-3">
@@ -82,7 +84,8 @@
 
                     <div class="col-md-3">
                         <label for="email">Código do Estabelecimento:</label>
-                        <input type="number" class="form-control" required name="establishment_cod" id="establishment_cod"
+                        <input type="number" class="form-control" required name="establishment_cod"
+                               id="establishment_cod"
                                value="<?php echo @$response['establishment_cod'] ?>">
                     </div>
                     <div class="col-md-3">
@@ -109,11 +112,11 @@
                 </div>
             </div>
             <div class="form-group row" id="selects">
-<!--                <div class="input-group mb-2 col-md-2 remover" id="" style="margin-bottom: 10px">-->
-<!--                    <input type="text" class="form-control clearable" value="" readonly>-->
-<!--                    <div class="input-group-prepend"><a href="#" onclick="excluir()" class="input-group-text">-->
-<!--                            <i class=" fas fa-times"></i> </a></div>-->
-<!--                </div>-->
+                <!--                <div class="input-group mb-2 col-md-2 remover" id="" style="margin-bottom: 10px">-->
+                <!--                    <input type="text" class="form-control clearable" value="" readonly>-->
+                <!--                    <div class="input-group-prepend"><a href="#" onclick="excluir()" class="input-group-text">-->
+                <!--                            <i class=" fas fa-times"></i> </a></div>-->
+                <!--                </div>-->
             </div>
             <div class="form-group">
                 <!-- Default input -->
@@ -128,14 +131,14 @@
                             } ?>
                         </select>
                     </div>
-                    <div class="col-md-3">
-                        <br/>
-                        <button type="button" id="novo_partner" class="btn btn-default" data-toggle="modal"
-                                data-target="#modal"> Novo
-                            Parceiro
-                        </button>
-                    </div>
-                    <input type="hidden" value="" id="partner_id" name="partner_id">
+                    <!--                    <div class="col-md-3">-->
+                    <!--                        <br/>-->
+                    <!--                        <button type="button" id="novo_partner" class="btn btn-default" data-toggle="modal"-->
+                    <!--                                data-target="#modal"> Novo-->
+                    <!--                            Parceiro-->
+                    <!--                        </button>-->
+                    <!--                    </div>-->
+                    <!--                    <input type="hidden" value="" id="partner_id" name="partner_id">-->
                     <div class="col-md-6">
                         <label for="email">Imagem:</label>
                         <input type="file" onchange="readURL3(this);" class="form-control" name="file" id="file">
@@ -146,7 +149,9 @@
             </div>
             <div class="row">
                 <div class="col-md-12" align="right">
-                    <a href="<?php echo base_url()?>Establishments"> <button type="button"  class="btn btn-primary"> Voltar</button></a>
+                    <a href="<?php echo base_url() ?>Establishments">
+                        <button type="button" class="btn btn-primary"> Voltar</button>
+                    </a>
                     <button type="submit" class="btn btn-default salvar" name="salvar" value="salvar"> Salvar
                     </button>
 
@@ -168,13 +173,13 @@
 
             });
 
-            $('#novo_partner').click(function () {
-                var valor2 = $('.tm2 option:selected').text();
-                var idpart = $('.tm2 option:selected').val();
-                $('#selects2').append('<div class="input-group mb-2 col-md-2 remover" id="' + valor2 + '" style="margin-bottom: 10px"><input type="text" class="form-control clearable clear2"  value="' + valor2 + '" readonly> <div class="input-group-prepend"><a href="#" onclick="excluir(\'' + valor2 + '\')" class="input-group-text">' +
-                    '<i class=" fas fa-times"></i> </a><input type="hidden" class="id_part" value="' + idpart + '"></div></div>')
-
-            });
+            // $('#novo_partner').click(function () {
+            //     var valor2 = $('.tm2 option:selected').text();
+            //     var idpart = $('.tm2 option:selected').val();
+            //     $('#selects2').append('<div class="input-group mb-2 col-md-2 remover" id="' + valor2 + '" style="margin-bottom: 10px"><input type="text" class="form-control clearable clear2"  value="' + valor2 + '" readonly> <div class="input-group-prepend"><a href="#" onclick="excluir(\'' + valor2 + '\')" class="input-group-text">' +
+            //         '<i class=" fas fa-times"></i> </a><input type="hidden" class="id_part" value="' + idpart + '"></div></div>')
+            //
+            // });
             $('.close').click(function () {
                 $(".alert").alert('close');
             });
