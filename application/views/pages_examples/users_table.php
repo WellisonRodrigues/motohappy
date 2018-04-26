@@ -54,11 +54,11 @@
                                 <b class="card-title h-25"><?php echo @$row['name'] ?></b>
                                 <p class="h-25"><?php echo @$row['email'] ?></p>
                                 <p class="card-text h-25"><?php
-                                $phpdate = strtotime( $row['birthday'] );
-                                $data = date( 'd/m/Y', $phpdate );
-                                echo @$data ?> &nbsp;&nbsp;&nbsp;<?php echo @$row['phone'] ?>
-                                <?php echo @$row['address'] ?>
-                                <?php echo @$row['city'] ?></p>
+                                    $phpdate = strtotime($row['birthday']);
+                                    $data = date('d/m/Y', $phpdate);
+                                    echo @$data ?> &nbsp;&nbsp;&nbsp;<?php echo @$row['phone'] ?>
+                                    <?php echo @$row['address'] ?>
+                                    <?php echo @$row['city'] ?></p>
                             </div>
                             <div class="col-md-1">
                                 <a href="<?php echo base_url() ?>Users/new_user/<?php echo $row['id'] ?>"><i
@@ -66,8 +66,9 @@
                                             style="color: gray"></i></a>
                             </div>
                             <div class="col-md-1">
-                                <i class="fas fa-times" style="color: gray"></i>
-                            </div>
+                                <a class="delete" href="<?php echo base_url() ?>Users/delete/<?php echo $row['id'] ?>"> <i
+                                            class="fas fa-times" style="color: gray"></i>
+                                </a></div>
                         </div>
                         <!--
 
@@ -100,7 +101,7 @@
             });
 
         });
-        pageSize = 6;
+        pageSize = 12;
 
         var pageCount = $(".contem").length / pageSize;
 

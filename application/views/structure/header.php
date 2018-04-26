@@ -28,6 +28,7 @@
                     <a class="dropdown-toggle" style="margin-left: 70px" id="dropdownMenuButton" data-toggle="dropdown"
                        aria-haspopup="true"
                        aria-expanded="false">
+                        <b style="color: white"><?php echo $this->session->userdata("user")['name'] ?> </b>
                         <?php if (isset($this->session->userdata("user")['image'])) { ?>
                             <img src="<?php echo $this->session->userdata("user")['image'] ?>"
                                  class="rounded-circle" width="40px" height="40px">
@@ -55,11 +56,22 @@
 
 </header>
 <style>
-    li:hover {
-        background-color: gray;
-        opacity: 0.20;
-        text-decoration: none;
+
+    li  a:hover {
+        background: rgba(0, 0, 0, 0.1);
+        color:#fff;
+        -moz-box-shadow:0 1px 1px 0 #CCC;
+        -webkit-box-shadow:0 1px 1px 0 #ccc;
+        text-shadow:0px 0px 0px #fff;
+        list-style-type: none;
     }
+
+    /*li:hover {*/
+        /*box-shadow: -9px -9px 5px -5px rgba(0,0,0, 1) inset,   !* combined shadows *!*/
+        /*2px -2px 3px 0px rgba(255,255,255, 0.2),*/
+        /*2px 2px 3px 0px rgba(255,255,255, 0.2);*/
+
+    /*}*/
 
     a {
         color: white;
