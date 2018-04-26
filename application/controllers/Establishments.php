@@ -52,9 +52,11 @@ class Establishments extends CI_Controller
                 "address" => $this->input->post('address'),
                 "city" => $this->input->post('city'),
                 "state" => $this->input->post('state'),
+                "number" => $this->input->post('number'),
+                "neighborhood" => $this->input->post('neighborhood'),
                 "establishment_cod" => $this->input->post('establishment_cod'),
                 "category" => [$this->input->post('categorys')],
-//                "partner_id" => [],
+                "description" => $this->input->post('description'),
                 "image" => $this->input->post('image'),
                 "attendance" => $this->input->post('attendance'),
 
@@ -65,9 +67,6 @@ class Establishments extends CI_Controller
             $data['message'] = $response['response'];
             $data['response'] = $response['response'];
 
-//            $data['id'] = $response['response']['id'];
-                   print_r($response);
-       die;
         }
         if ($id != '') {
             $this->load->library('Restfull');
@@ -76,11 +75,6 @@ class Establishments extends CI_Controller
             $params = '';
             $response = $this->restfull->cUrl($params, $endpoint, $metodo);
             $data['response'] = $response['response'];
-//            print_r($response);
-//            die;
-//            $data['message'] = $response['response'];
-//            $data['id'] = $id;
-
 
         }
         if ($this->input->post('salvar') == 'salvar' and $id != null) {
@@ -99,10 +93,11 @@ class Establishments extends CI_Controller
                     "state" => $this->input->post('state'),
                     "establishment_cod" => $this->input->post('establishment_cod'),
                     "category" => [$this->input->post('categorys')],
-//                    "partner_id" => [$this->input->post('partner_id')],
+                    "number" => $this->input->post('number'),
+                    "neighborhood" => $this->input->post('neighborhood'),
                     "image" => $this->input->post('image'),
                     "attendance" => $this->input->post('attendance'),
-
+                    "description" => $this->input->post('description'),
                 );
             } else {
                 $params = array(
@@ -114,17 +109,17 @@ class Establishments extends CI_Controller
                     "state" => $this->input->post('state'),
                     "establishment_cod" => $this->input->post('establishment_cod'),
                     "category" => [$this->input->post('categorys')],
-//                    "partner_id" => [$this->input->post('partner_id')],
+                    "number" => $this->input->post('number'),
+                    "neighborhood" => $this->input->post('neighborhood'),
                     "attendance" => $this->input->post('attendance'),
-
+                    "description" => $this->input->post('description'),
                 );
             }
 
             $response = $this->restfull->cUrl($params, $endpoint, $metodo);
             $data['message'] = $response['response'];
             $data['response'] = $response['response'];
-//            print_r($response);
-//            die;
+
         }
 
         $params2 = '';

@@ -11,8 +11,7 @@
 //print_r($this->session->userdata("user"));
 
 ?>
-
-<div class="container">
+<div class="col-md-10 mx-auto">
     <h2>Estabelecimentos</h2>
     <div class="row">
         <div class="col-md-12" align="right">
@@ -46,7 +45,7 @@
         if ($response) {
             foreach ($response['establishments'] as $row) { ?>
                 <div class="col-md-4 contem">
-                    <div class="card" style="margin-top: 30px; height: 175px">
+                    <div class="card" style="margin-top: 30px;height: 200px">
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-2">
@@ -74,7 +73,10 @@
                                 <!--                        </div>-->
                                 <div class="col-md-7">
                                     <b class="card-title h-25 d-inline-block"><?php echo @$row['name'] ?></b><br>
-                                    <p class="card-text h-25 d-inline-block"><?php echo $row['address'] ? $row['address'] : 'Endereço indefinido' ?>
+                                    <p class="card-text h-25 d-inline-block">
+                                        <?php echo $row['description'] ? $row['description'] : 'Descrição indefinida' ?>, 
+                                        <?php echo $row['attendance'] ? $row['attendance'] : 'Atendimento indefinido' ?><br>
+                                        <?php echo $row['address'] ? $row['address'] : 'Endereço indefinido' ?>
                                         , <?php echo $row['number'] ? $row['number'] : 'Número indefinido' ?>
                                         <?php echo $row['state'] ? $row['state'] : 'Estado indefinido' ?>
                                         , <?php echo $row['city'] ? $row['city'] : 'Cidade indefinida' ?></p>

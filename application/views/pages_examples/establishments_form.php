@@ -60,9 +60,19 @@
                 <div class="row">
 
                     <div class="col-md-6">
-                        <label for="address">Endereço:</label>
+                        <label for="address">Rua:</label>
                         <input type="text" class="form-control" required name="address" id="address"
                                value="<?php echo @$response['address'] ?>">
+                    </div>
+                    <div class="col-md-3">
+                        <label for="address">Bairro:</label>
+                        <input type="text" class="form-control" required name="neighborhood" id="neighborhood"
+                               value="<?php echo @$response['neighborhood'] ?>">
+                    </div>
+                    <div class="col-md-3">
+                        <label for="address">Numero:</label>
+                        <input type="number" class="form-control" required name="number" id="number"
+                               value="<?php echo @$response['number'] ?>">
                     </div>
 
                     <div class="col-md-3">
@@ -77,11 +87,6 @@
                                value="<?php echo @$response['state'] ?>">
                     </div>
 
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="row">
-
                     <div class="col-md-3">
                         <label for="email">Código do Estabelecimento:</label>
                         <input type="number" class="form-control" required name="establishment_cod"
@@ -93,6 +98,15 @@
                         <input type="text" class="form-control" required name="attendance" id="attendance"
                                value="<?php echo @$response['attendance'] ?>">
                     </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-12">
+                        <label for="email">Descrição:</label>
+                        <input type="text" class="form-control" required name="description" id="description"
+                               value="<?php echo @$response['description'] ?>">
+                    </div>
                     <div class="col-md-3">
                         <label for="categories">Categoria:</label>
                         <select class="form-control tm-input" name="categories" id="categories">
@@ -101,6 +115,7 @@
                             } ?>
                         </select>
                     </div>
+                    <input type="hidden" name="image" id="new_image3" value="">
                     <input type="hidden" value="" id="salvar" name="categorys">
                     <div class="col-md-3">
                         <br/>
@@ -109,44 +124,15 @@
                             Categoria
                         </button>
                     </div>
-                </div>
-            </div>
-            <div class="form-group row" id="selects">
-                <!--                <div class="input-group mb-2 col-md-2 remover" id="" style="margin-bottom: 10px">-->
-                <!--                    <input type="text" class="form-control clearable" value="" readonly>-->
-                <!--                    <div class="input-group-prepend"><a href="#" onclick="excluir()" class="input-group-text">-->
-                <!--                            <i class=" fas fa-times"></i> </a></div>-->
-                <!--                </div>-->
-            </div>
-            <div class="form-group">
-                <!-- Default input -->
-                <div class="row">
-                    <div class="col-md-3">
-                        <label for="partners">Parceiro:</label>
-                        <select class="form-control tm-input tm2" name="partners" id="partners">
-                            <?php foreach ($partners['response'] as $line2) {
-                                $text = $line2['name'];
-                                $idpart = $line2['id'];
-                                echo "<option value='$idpart'>$text</option>";
-                            } ?>
-                        </select>
-                    </div>
-                    <!--                    <div class="col-md-3">-->
-                    <!--                        <br/>-->
-                    <!--                        <button type="button" id="novo_partner" class="btn btn-default" data-toggle="modal"-->
-                    <!--                                data-target="#modal"> Novo-->
-                    <!--                            Parceiro-->
-                    <!--                        </button>-->
-                    <!--                    </div>-->
-                    <!--                    <input type="hidden" value="" id="partner_id" name="partner_id">-->
                     <div class="col-md-6">
                         <label for="email">Imagem:</label>
                         <input type="file" onchange="readURL3(this);" class="form-control" name="file" id="file">
                     </div>
-                    <input type="hidden" name="image" id="new_image3" value="">
                 </div>
-
             </div>
+            <div class="form-group row" id="selects">
+            </div>
+
             <div class="row">
                 <div class="col-md-12" align="right">
                     <a href="<?php echo base_url() ?>Establishments">
@@ -156,8 +142,6 @@
                     </button>
 
                 </div>
-            </div>
-            <div class="form-group row" id="selects2">
             </div>
         </div>
         <?php echo form_close() ?>
