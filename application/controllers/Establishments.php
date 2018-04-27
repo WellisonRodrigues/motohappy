@@ -49,6 +49,7 @@ class Establishments extends CI_Controller
             $this->load->library('Restfull');
             $endpoint = 'api/v1/admin/establishments';
             $metodo = 'POST';
+            $vetor = explode(',',$this->input->post('categorys'));
             $params = array(
 
 
@@ -59,7 +60,7 @@ class Establishments extends CI_Controller
                 "number" => $this->input->post('number'),
                 "neighborhood" => $this->input->post('neighborhood'),
                 "establishment_cod" => $this->input->post('establishment_cod'),
-                "category" => [$this->input->post('categorys')],
+                "category" => $vetor,
                 "description" => $this->input->post('description'),
                 "image" => $this->input->post('image'),
                 "attendance" => $this->input->post('attendance'),
@@ -87,6 +88,7 @@ class Establishments extends CI_Controller
             $this->load->library('Restfull');
             $endpoint = 'api/v1/admin/establishments/' . $id;
             $metodo = 'PATCH';
+            $vetor = explode(',',$this->input->post('categorys'));
             if ($this->input->post('image')) {
                 $params = array(
 
@@ -96,7 +98,7 @@ class Establishments extends CI_Controller
                     "city" => $this->input->post('city'),
                     "state" => $this->input->post('state'),
                     "establishment_cod" => $this->input->post('establishment_cod'),
-                    "category" => [$this->input->post('categorys')],
+                    "category" => $vetor,
                     "number" => $this->input->post('number'),
                     "neighborhood" => $this->input->post('neighborhood'),
                     "image" => $this->input->post('image'),
@@ -112,7 +114,7 @@ class Establishments extends CI_Controller
                     "city" => $this->input->post('city'),
                     "state" => $this->input->post('state'),
                     "establishment_cod" => $this->input->post('establishment_cod'),
-                    "category" => [$this->input->post('categorys')],
+                    "category" => $vetor,
                     "number" => $this->input->post('number'),
                     "neighborhood" => $this->input->post('neighborhood'),
                     "attendance" => $this->input->post('attendance'),
@@ -120,7 +122,10 @@ class Establishments extends CI_Controller
                 );
             }
 
+
             $response = $this->restfull->cUrl($params, $endpoint, $metodo);
+//            print_r($response);
+//            die;
             $data['message'] = $response['response'];
             $data['response'] = $response['response'];
 

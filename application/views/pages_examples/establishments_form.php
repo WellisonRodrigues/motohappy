@@ -174,14 +174,17 @@
             $('#' + id).remove();
         }
 
-        var valores = [];
+        var valores = new Array();
         var valores2 = [];
         $('.salvar').click(function () {
             $(".clearable").each(function (index) {
-
+                // alert(index);
                 valores.push($(this).val());
-                $('#salvar').val(valores)
+                $('#salvar').val(valores);
+
             });
+
+            // alert($('#salvar').val());
             $(".id_part").each(function (index) {
 
                 valores2.push($(this).val());

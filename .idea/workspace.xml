@@ -4,9 +4,111 @@
     <list default="true" id="935b7b62-3b28-4833-9e93-ef4dc909d715" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/controllers/Establishments.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Establishments.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/session/ci_sessionm89bhfdnhrqja9e05268cjag9hns1f0r" beforeDir="false" afterPath="$PROJECT_DIR$/application/session/ci_sessionm89bhfdnhrqja9e05268cjag9hns1f0r" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_session0fk5ivv0gb7erc3m8v0dl2rkrh7mf2b0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_session0p19lmpu8t03tm05ofc3n6m5nq0s8tc5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_session0seqra6iuag6hi8ft9f5po680qn595jr" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_session2dt9ruhcahnslep39m62505t2265003h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_session3kkk56lpvtgcmgbsacg7t51davnakcl9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_session4fp2r1bsuc93fuot1j5s0ruai314ul3b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_session4ljsut42gu0pdee66m81utt7gnqsqpf1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_session55mrk21bgh7hpfl5g7tgbrnitqaleqs1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_session5l0av8s512bbhb9dfbbah0fh38nkkbo4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_session61t71lbtbhopojcd7mfqc8udtnlf0ghb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_session7favkcf7tjeck72ei96rqgh154v0jg26" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_session7pijsoq8ig1jou1jfeavun7tlt6l49an" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_session7t0u3he9bnarf9i350smvab6u6qs83nl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_session7ugd0jqnp5rd4js7pbbb9gr9agvg6di7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_session81eh5l2rof50jm4eob8d7fqefsq0dfan" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_session83fnf3703iu43d0aqm99pm1d3l4lb3r7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_session86uc8l2datejtui2sov9q81e0tgi1ers" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_session8f80s182eaub1d9a58jqauot23f75a0i" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_session8o3dnhng94cb1ilh1nhfuhe2c3n0251s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_session96he5rmugr1hbo9j7oresgug5r2g76a2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_session9lkbnq43ei2p6mjoe9rskdglrn3jo78b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_session9qkp4dri97kngmat8oqb7p2fgvb7jaua" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_session9s9995d656g0f0hudr5blbekltv01epm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_session9us4r3testdj8kbhvhh5ritpooes093n" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_session9v27kb1edkg13v2bn2jta4p0jjni5k3d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_sessiona4ig0jkk57a8qr0ofgalq2qrrihtagc1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_sessionaltg58l8fs6q13iddk58j1m3e84j0k23" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_sessionar0o2pplk5p7ggo0junj470jk5shmlvk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_sessionb9thr5vl5hf05u33ea3fs13fmteu550p" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_sessionbtr0v541rdp5enmdgvvg2pr3413gjp6l" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_sessionc05usu8fp5qojs3ls8osr4ori5gmfm4q" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_sessionc29uobdd067t50i0chcp3p62ii9ap7uj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_sessionc2blhpnsmusosei97cioi2is081c6pmb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_sessionc7lpvt04pe194nm0o2n2lbfd44n5o3ff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_sessioncach0oosvna2fudsa5a9eb9q06hgp0bv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_sessioncbb2sj5pcg3ua0ssl6qtgc4j5j7c5qc9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_sessioncpqdako67thld5t3k6hu5369mhnb5qdq" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_sessioncptnhvdkqgelh9dtap1l760rpsdgqihr" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_sessioncu5nedoadigr3fplkpv24lfbqfhlhnhb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_sessiond6lqi88f57ldjrebibr4af5d9rbploeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_sessiondel70t0oe5mfda1d4bd7vp16i078b9pj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_sessiondk344orh5v2u48k22mrpc3ucfuhouske" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_sessiondpoljvmeigeb04appu0th6bsdgjrgtel" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_sessionecrsblq4g741pqi6asuda6etb8idls3i" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_sessioneh5jcm99fuf6880mb43nedd06fh2fh3d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_sessionervjlbdn5et0j5a8h6jvo74vu7sf1i3o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_sessionfglofcpp1d3af562klenj7h7fs8onvvr" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_sessionft71jv0sqgntgeaf9fhv6np4h058um21" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_sessiong1l45h9b7smlo8n4s96v049o5emhi1kb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_sessiong39dq0ikr9c0uripun9j2brpdsajsjo9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_sessiong4bkp64bnqf6du6naslitsa3lc7sn068" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_sessionh3hl1fje9i8aqrb2euq8sqljo72iq8rm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_sessionhfb04ai16tc7mrffscij9oblpdh7g5er" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_sessionhijs2d3b19j9j5np3km5rh7pj80u2cf1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_sessionhj3hj8sl2e1mff3317b0550fi725uh92" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_sessionhm0ehljlcm3kmdua8fvja3arltu91nfj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_sessionj7vbrpoe2scra6k7a3no3samju7kun35" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_sessionjkphk6ccmqufs18gn6j6c6dfup96kjqt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_sessionjo7avr7gjcdgg2ngig8qs6g45kr62vsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_sessionl12scd1df02cr3r4hdm18jdd1416669m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_sessionl2cir1uhvci05befavvn5gv4fl4obo6h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_sessionl4qlpjco7pt764ko5tc0fcq7psna83kd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_sessionl9rsgntqe8i1q6qhnd2507q0pc2a2urk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_sessionlgmdedthb5k6k7cud6thojhu7b3tbsgo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_sessionlgsdr4vnvfiovpiem3qmjb83ehsas5m2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_sessionljlh0r55gna3t0pb5vvb44p8lug9k4qp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_sessionlqc2att7iua118alf51qgkot23dssm22" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_sessionm89bhfdnhrqja9e05268cjag9hns1f0r" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_sessionmcqmnmjbj50vng1bejnk8pp5jje7gtt2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_sessionmnq0lfnar5bpt5hm94n30tj1t6i58qae" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_sessionmqnrglq33a5ocd8l6j5q8gpq1e8g5sgk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_sessionnqjp7hurkalh73e6shg3h3opp5i6krrt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_sessionoianrlhh5h23hnj9ir5tj0b1if0egh5s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_sessionoqdgbglglan81r9m0dqijk1l1066al0k" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_sessionoqjt5pkqhbpm87sbul841191m4esnn1j" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_sessionotj9ei37449p30q7189oup2tkf5n98bm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_sessionp5ocri2q7u67s3aath6h8fe6nkfni07i" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_sessionp7tiqrn6a75esebv6ife5d98701sr5ov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_sessionpn6qkrqptvkdhjp4pd9g83nflsude10g" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_sessionq8daqq6ann7of5rg6bcpmmikre0o4k62" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_sessionqgl33normuksvfmb1hgu86l0l7bemgi9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_sessionqhhclosrjq11evskfespoh1hml560hii" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_sessionqs5j2ktmqlscipnhikg3uu0pui56s1fj" beforeDir="false" afterPath="$PROJECT_DIR$/application/session/ci_sessionqs5j2ktmqlscipnhikg3uu0pui56s1fj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_sessionqumg8bs275u02uvcr6mq1t6c3k2ak5hl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_sessionqunmea8hhs1airs5ge691f01juhd1si5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_sessionr3npqveq8mar524t09kkve71pa6uov75" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_sessionrc3n65anuitlsujlmoc9o0gmato85ish" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_sessionrdq0t0e10jle1tvk7hte1t0fhbdd14i3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_sessionrove9kuig85gmneblvda8p46bqc0aer4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_sessionrsllrr9jinmr241th5c4u3asu4s78977" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_sessions5pnlssemhrjphqhjjji0ngivv78jcr3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_sessionsk6p77h3npojenoh8va5umqe5uljddh1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_sessionsn0pgnq18jgklr9stmvoisrpk119aref" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_sessionstt83cspi48srpu9tl63bs95pfv2rsah" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_sessiontbl576e8ehpl8l7nbh6i5tqo5lh0p3n0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_sessiontqd1fghls461m8gsa8gg0rqq74afd1j0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_sessionu4tgben1pmkuiejqi5397rsbpq7k5mus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_sessionuvgth27fddria1mipde2mjuva76g9dps" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_sessionv49lgn2t2n4lid8r4rvf9np58nhc67c1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_sessionv6ea5kthh63ta9gt8e7ui5g6ovakp8f6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_sessionvcsedg0jpdgnfdjt572hfmqqj2v9r331" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_sessionvick8m7ao7pnbl079s5j2bh613rlplqk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/session/ci_sessionvoi02lg2k2til5t5ksvsfhq8058g6e86" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/pages_examples/establishments_form.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pages_examples/establishments_form.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/pages_examples/establishments_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pages_examples/establishments_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/pages_examples/partners_form.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pages_examples/partners_form.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/pages_examples/partners_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pages_examples/partners_table.php" afterDir="false" />
     </list>
     <ignored path="motolegal.iws" />
@@ -44,15 +146,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="partners_table.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="partners_table.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/pages_examples/partners_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="65" column="52" selection-start-line="65" selection-start-column="52" selection-end-line="65" selection-end-column="52" />
+            <state relative-caret-position="-84">
+              <caret line="107" column="72" selection-start-line="107" selection-start-column="72" selection-end-line="107" selection-end-column="72" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#p#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#i#0;n#a#0;n#div#4;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#5304#5311#1#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -70,22 +173,43 @@
       <file leaf-file-name="Establishments.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/Establishments.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="33" column="39" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="39" />
+            <state relative-caret-position="149">
+              <caret line="126" column="33" lean-forward="true" selection-start-line="126" selection-start-column="33" selection-end-line="127" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="establishments_table.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="establishments_form.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/pages_examples/establishments_form.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="429">
+              <caret line="187" column="41" selection-start-line="187" selection-start-column="41" selection-end-line="187" selection-end-column="41" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="establishments_table.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/pages_examples/establishments_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="146">
-              <caret line="101" column="42" lean-forward="true" selection-start-line="98" selection-start-column="36" selection-end-line="101" selection-end-column="42" />
+            <state relative-caret-position="68">
+              <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#i#0;n#div#4;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
                 <element signature="e#6466#6473#1#HTML" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="combos_form.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/pages_examples/combos_form.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="183">
+              <caret line="67" column="79" lean-forward="true" selection-start-line="67" selection-start-column="79" selection-end-line="67" selection-end-column="79" />
             </state>
           </provider>
         </entry>
@@ -133,7 +257,7 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>&lt;a href=&quot;&lt;?php echo base_url() ?&gt;Users&quot;&gt;Usuarios&lt;/a&gt;</find>
+      <find />
       <find>for</find>
       <find>CODI</find>
       <find>$response</find>
@@ -167,7 +291,6 @@
         <option value="$PROJECT_DIR$/application/views/pages_examples/fuel_form.php" />
         <option value="$PROJECT_DIR$/application/views/pages_examples/users_form.php" />
         <option value="$PROJECT_DIR$/application/views/pages_examples/subadmin_form.php" />
-        <option value="$PROJECT_DIR$/application/views/pages_examples/combos_form.php" />
         <option value="$PROJECT_DIR$/application/views/pages_examples/hot_table.php" />
         <option value="$PROJECT_DIR$/application/controllers/Profile.php" />
         <option value="$PROJECT_DIR$/application/controllers/Login.php" />
@@ -186,11 +309,12 @@
         <option value="$PROJECT_DIR$/application/controllers/Fuel.php" />
         <option value="$PROJECT_DIR$/application/views/pages_examples/combos_table.php" />
         <option value="$PROJECT_DIR$/application/controllers/Hot.php" />
+        <option value="$PROJECT_DIR$/application/views/pages_examples/partners_form.php" />
+        <option value="$PROJECT_DIR$/application/views/pages_examples/partners_table.php" />
+        <option value="$PROJECT_DIR$/application/views/pages_examples/combos_form.php" />
         <option value="$PROJECT_DIR$/application/views/pages_examples/establishments_form.php" />
         <option value="$PROJECT_DIR$/application/controllers/Establishments.php" />
         <option value="$PROJECT_DIR$/application/views/pages_examples/establishments_table.php" />
-        <option value="$PROJECT_DIR$/application/views/pages_examples/partners_form.php" />
-        <option value="$PROJECT_DIR$/application/views/pages_examples/partners_table.php" />
       </list>
     </option>
   </component>
@@ -270,7 +394,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="pa&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/partners_form.php&#10;es&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/establishments_table.php&#10;par&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/partners_table.php&#10;us&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/users_table.php&#10;est&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/controllers/Establishments.php&#10;esta&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/establishments_table.php&#10;user&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/users_form.php&#10;cate&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/categories_table.php&#10;use&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/controllers/Users.php&#10;tab&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/hot_table.php&#10;he&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/structure/header.php&#10;hea&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/structure/header.php&#10;fuel&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/controllers/Fuel.php&#10;co&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/controllers/Combos.php&#10;fue&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/controllers/Fuel.php&#10;lo&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/controllers/Login.php&#10;part&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/partners_table.php&#10;hot&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/hot_table.php&#10;pro&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/controllers/Profile.php&#10;pr&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/profile_form.php&#10;ca&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/categories_table.php&#10;sub&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/controllers/Subadmins.php&#10;char&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/charts_page.php&#10;cha&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/charts_page.php&#10;c&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/combos_form.php&#10;combo&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/combos_form.php&#10;com&#9;null&#9;null&#10;hom&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/home_form.php&#10;ho&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/home_form.php&#10;log&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/login_form.php&#10;su&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/controllers/Subadmins.php&#10;ad&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/subadmins_table.php&#10;fu&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/controllers/Fuel.php&#10;heade&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/structure/header.php&#10;head&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/structure/header.php&#10;users&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/users_table.php&#10;US&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/users_table.php&#10;USE&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/users_form.php&#10;new_es&#9;null&#9;null&#10;re&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/libraries/Restfull.php&#10;fo&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/structure/footer.php&#10;aut&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/config/autoload.php&#10;res&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/libraries/Restfull.php&#10;au&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/config/autoload.php&#10;auto&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/vendor/autoload.php" />
+    <property name="SearchEverywhereHistoryKey" value="fuel&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/fuel_form.php&#10;est&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/establishments_form.php&#10;combo&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/combos_form.php&#10;pa&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/partners_form.php&#10;es&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/establishments_table.php&#10;par&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/partners_table.php&#10;us&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/users_table.php&#10;esta&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/establishments_table.php&#10;user&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/users_form.php&#10;cate&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/categories_table.php&#10;use&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/controllers/Users.php&#10;tab&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/hot_table.php&#10;he&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/structure/header.php&#10;hea&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/structure/header.php&#10;co&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/controllers/Combos.php&#10;fue&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/controllers/Fuel.php&#10;lo&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/controllers/Login.php&#10;part&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/partners_table.php&#10;hot&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/hot_table.php&#10;pro&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/controllers/Profile.php&#10;pr&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/profile_form.php&#10;ca&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/categories_table.php&#10;sub&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/controllers/Subadmins.php&#10;char&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/charts_page.php&#10;cha&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/charts_page.php&#10;c&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/combos_form.php&#10;com&#9;null&#9;null&#10;hom&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/home_form.php&#10;ho&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/home_form.php&#10;log&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/login_form.php&#10;su&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/controllers/Subadmins.php&#10;ad&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/subadmins_table.php&#10;fu&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/controllers/Fuel.php&#10;heade&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/structure/header.php&#10;head&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/structure/header.php&#10;users&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/users_table.php&#10;US&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/users_table.php&#10;USE&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/users_form.php&#10;new_es&#9;null&#9;null&#10;re&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/libraries/Restfull.php&#10;fo&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/structure/footer.php&#10;aut&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/config/autoload.php&#10;res&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/libraries/Restfull.php&#10;au&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/config/autoload.php&#10;auto&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/vendor/autoload.php" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
@@ -331,12 +455,12 @@
       <option name="presentableId" value="Default" />
       <updated>1522176101429</updated>
       <workItem from="1522812844269" duration="47596000" />
-      <workItem from="1523406040684" duration="122263000" />
+      <workItem from="1523406040684" duration="125900000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="169859000" />
+    <option name="totallyTimeSpent" value="173496000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1386" height="788" extended-state="0" />
@@ -545,16 +669,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/pages_examples/combos_form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
-          <folding>
-            <element signature="e#228#235#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/pages_examples/subadmin_form.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="183">
@@ -757,41 +871,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/pages_examples/establishments_form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="115" column="33" lean-forward="true" selection-start-line="110" selection-start-column="24" selection-end-line="115" selection-end-column="33" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Establishments.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="33" column="39" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/pages_examples/partners_form.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="8" column="20" lean-forward="true" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/pages_examples/establishments_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="101" column="42" lean-forward="true" selection-start-line="98" selection-start-column="36" selection-end-line="101" selection-end-column="42" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#div#4;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#6466#6473#1#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -803,14 +888,51 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/pages_examples/combos_form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="67" column="79" lean-forward="true" selection-start-line="67" selection-start-column="79" selection-end-line="67" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/pages_examples/partners_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="65" column="52" selection-start-line="65" selection-start-column="52" selection-end-line="65" selection-end-column="52" />
+        <state relative-caret-position="-84">
+          <caret line="107" column="72" selection-start-line="107" selection-start-column="72" selection-end-line="107" selection-end-column="72" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#p#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#i#0;n#a#0;n#div#4;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#5304#5311#1#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/pages_examples/establishments_form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="429">
+          <caret line="187" column="41" selection-start-line="187" selection-start-column="41" selection-end-line="187" selection-end-column="41" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Establishments.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="126" column="33" lean-forward="true" selection-start-line="126" selection-start-column="33" selection-end-line="127" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/pages_examples/establishments_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#div#4;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#6466#6473#1#HTML" expanded="true" />
           </folding>
         </state>
       </provider>

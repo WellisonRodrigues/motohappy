@@ -5,8 +5,8 @@
  * Date: 07/04/2018
  * Time: 13:36
  */
-//echo '<pre>';
-//print_r($partners);
+echo '<pre>';
+//print_r($response);
 //print_r($this->session->userdata("user"));
 //print_r($this->session->userdata("user"));
 
