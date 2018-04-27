@@ -21,7 +21,7 @@
                                     aria-hidden="true">&times;</span></button>
                     </div>
                     <?php
-                    $response = $message;
+                    $response['partner'] = $message['data'];
                 }
             } ?>
             <?php if (isset($message['errors'])) {
@@ -30,7 +30,7 @@
                 $texto  <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\"><span
                                     aria-hidden=\"true\">&times;</span></button>
                </div>";
-
+                $response['partner'] = $message['data'];
             } ?>
         </div>
     </div>
@@ -45,7 +45,7 @@
         <div class="col-md-12">
             <div class="form-group">
                 <label for="name">Nome:</label>
-                <input type="text" name="name" class="form-control" value="<?php echo @$response['name'] ?>" required
+                <input type="text" name="name" class="form-control" value="<?php echo @$response['partner']['name'] ?>" required
                        id="name">
             </div>
         </div>
@@ -53,7 +53,7 @@
             <!-- Default input -->
             <div class="form-group">
                 <label for="email">E-mail:</label>
-                <input type="email" class="form-control" name="email" required value="<?php echo @$response['email'] ?>"
+                <input type="email" class="form-control" name="email" required value="<?php echo @$response['partner']['email'] ?>"
                        id="email">
             </div>
         </div>
@@ -63,27 +63,33 @@
             <div class="form-group">
                 <label for="nickname">Usuário:</label>
                 <input type="text" class="form-control" name="nickname" required
-                       value="<?php echo @$response['nickname'] ?>"
+                       value="<?php echo @$response['partner']['nickname'] ?>"
                        id="nickname">
             </div>
         </div>
-        <div class="col-md-3">
-            <label for="partners">Estabelecimentos:</label>
-            <select class="form-control tm-input tm2" name="partners" id="partners">
-                <?php foreach ($estabelecimentos['establishments'] as $line2) {
-                    $idesta = $line2['id'];
-                    $text = $line2['name'];
-                    echo "<option value='$idesta'>$text</option>";
-                } ?>
-            </select>
+        <div class="col-md-6">
+            <!-- Default input -->
+            <label for="file">Imagem:</label>
+            <input type="file" onchange="readURL3(this);" class="form-control" name="file" id="file">
+            <input type="hidden" name="image" id="new_image3" value="">
         </div>
-        <div class="col-md-3">
-            <br/>
-            <button type="button" id="novo_partner" class="btn btn-default" data-toggle="modal"
-                    data-target="#modal"> Novo
-                Parceiro
-            </button>
-        </div>
+<!--        <div class="col-md-3">-->
+<!--            <label for="partners">Estabelecimentos:</label>-->
+<!--            <select class="form-control tm-input tm2" name="partners" id="partners">-->
+<!--                --><?php //foreach ($estabelecimentos['establishments'] as $line2) {
+//                    $idesta = $line2['id'];
+//                    $text = $line2['name'];
+//                    echo "<option value='$idesta'>$text</option>";
+//                } ?>
+<!--            </select>-->
+<!--        </div>-->
+<!--        <div class="col-md-3">-->
+<!--            <br/>-->
+<!--            <button type="button" id="novo_partner" class="btn btn-default" data-toggle="modal"-->
+<!--                    data-target="#modal"> Novo-->
+<!--                Parceiro-->
+<!--            </button>-->
+<!--        </div>-->
 
         <input type="hidden" value="" id="partner_id" name="establishments_id">
         <?php if (!isset($response['id'])) { ?>
@@ -98,14 +104,6 @@
         <?php } ?>
 
 
-        <div class="col-md-12">
-            <!-- Default input -->
-            <!--            <div class="col-md-6">-->
-            <label for="file">Imagem:</label>
-            <input type="file" onchange="readURL3(this);" class="form-control" name="file" id="file">
-            <!--            </div>-->
-            <input type="hidden" name="image" id="new_image3" value="">
-        </div>
         <!--            <div class="form-group">-->
 
         <div class="col-md-12" align="right">

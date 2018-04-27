@@ -9,10 +9,12 @@
 //print_r($response);
 ?>
 
-<div class="container">
-    <h2>Parceiros</h2>
+<div class="col-md-8 mx-auto">
     <div class="row">
-        <div class="col-md-12" align="right">
+        <div class="col-md-2" align="left">
+            <h2>Parceiros</h2>
+        </div>
+        <div class="col-md-10" align="right">
             <div class="float-md-right">
                 <div class="form-row align-items-center">
                     <div class="col-auto">
@@ -42,47 +44,58 @@
         <!--        </div>-->
     </div>
     <div class="row">
-        <?php foreach ($response as $row) { ?>
-            <div class="col-md-4 contem" style="margin-top: 20px">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-md-2">
-                                <?php if ($row['image']['url'] != null) { ?>
-                                    <img src="<?php echo $row['image']['url'] ?>"
-                                         class="rounded-circle" width="50px" height="50px">
-                                <?php } else { ?>
-                                    <img src="<?php echo base_url() ?>imgs/Elemento6.png"
-                                         class="rounded-circle" width="50px" height="50px">
+        <?php
+        if (isset($response)) {
+            foreach ($response
 
-                                <?php } ?>
-                            </div>
-                            <div class="col-md-7">
-                                <b class="card-title"><?php echo $row['name'] ?></b>
-                                <p class="card-text h-25" style="font-size: 10pt;">
-<!--                                    --><?php //echo @$row['nickname'] ?><!--<br>-->
-                                    <?php echo @$row['email'] ?><br>
-<!--                                    --><?php //echo @$row['establishments_ids']['establishments_id'] ?><!--<br>-->
+                     as $row) { ?>
+                <div class="col-md-4 contem" style="margin-top: 20px">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <?php if ($row['image']['url'] != null) { ?>
+                                        <img src="<?php echo $row['image']['url'] ?>"
+                                             class="rounded-circle" width="50px" height="50px">
+                                    <?php } else { ?>
+                                        <img src="<?php echo base_url() ?>imgs/Elemento6.png"
+                                             class="rounded-circle" width="50px" height="50px">
 
-                                </p>
+                                    <?php } ?>
+                                </div>
+                                <div class="col-md-6">
+                                    <b class="card-title"><?php echo @$row['name'] ?></b>
+                                    <p class="card-text h-25" style="font-size: 10pt;">
+                                        <!--                                    -->
+                                        <?php //echo @$row['nickname'] ?><!--<br>-->
+                                        <?php echo @$row['email'] ?><br>
+                                        <!--                                    -->
+                                        <?php //echo @$row['establishments_ids']['establishments_id'] ?><!--<br>-->
+
+                                    </p>
+                                </div>
+                                <div class="col-md-1">
+                                    <a href="<?php echo base_url() ?>Partners/new_user/<?php echo $row['id'] ?>"><i
+                                                class="fas fa-pencil-alt"
+                                                style="color: gray"></i></a></div>
+                                <div class="col-md-1">
+                                    <a class="delete"
+                                       href="<?php echo base_url() ?>Partners/delete/<?php echo $row['id'] ?>""> <i
+                                            class="fas fa-times"
+                                            style="color: gray"></i></a></div>
+                                <div class="col-md-1">
+                                    <a data-toggle="modal" data-target="#exampleModal" href="#">
+                                        <i class="fas fa-home" style="color: gray"></i></a>
+                                </div>
                             </div>
-                            <div class="col-md-1">
-                                <a href="<?php echo base_url() ?>Partners/new_user/<?php echo $row['id'] ?>"><i
-                                            class="fas fa-pencil-alt"
-                                            style="color: gray"></i></a>
-                            </div>
-                            <div class="col-md-1">
-                                <a class="delete" href="<?php echo base_url() ?>Partners/delete/<?php echo $row['id'] ?>""> <i class="fas fa-times"
-                                                                                       style="color: gray"></i></a>
-                            </div>
+                            <!--
+
+                            <!--                    <a href="#" class="btn btn-primary">Go somewhere</a>-->
                         </div>
-                        <!--
-
-                        <!--                    <a href="#" class="btn btn-primary">Go somewhere</a>-->
                     </div>
                 </div>
-            </div>
-        <?php } ?>
+            <?php }
+        } ?>
     </div>
     <br>
     <!--    <nav aria-label="Page navigation example">-->
@@ -107,17 +120,17 @@
             });
 
         });
-        pageSize = 6;
+        pageSize = 12;
 
         var pageCount = $(".contem").length / pageSize;
 
-
-        if (pageCount > 4) {
-            var contagem = 4;
-
-        } else {
-            contagem = pageCount;
-        }
+        //
+        // if (pageCount > 4) {
+        //     var contagem = 4;
+        //
+        // } else {
+        contagem = pageCount;
+        // }
 
         $("#pagin").append('<li class="page-item"><a class="page-link" href="#">Anterior</a></li> ');
         for (var i = 0; i < contagem; i++) {

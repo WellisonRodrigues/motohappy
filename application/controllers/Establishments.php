@@ -27,7 +27,11 @@ class Establishments extends CI_Controller
         $endpoint = 'api/v1/admin/establishments';
         $metodo = 'GET';
         $params = '';
-
+        $params3 = '';
+        $endpoint3 = 'api/v1/admin/partners';
+        $metodo3 = 'GET';
+        $response3 = $this->restfull->cUrl($params3, $endpoint3, $metodo3);
+        $data['partners'] = $response3;
         $response = $this->restfull->cUrl($params, $endpoint, $metodo);
         $data['response'] = $response['response'];
 //        print_r($response);
@@ -127,11 +131,6 @@ class Establishments extends CI_Controller
         $metodo2 = 'GET';
         $response2 = $this->restfull->cUrl($params2, $endpoint2, $metodo2);
         $data['categories'] = $response2;
-        $params3 = '';
-        $endpoint3 = 'api/v1/admin/partners';
-        $metodo3 = 'GET';
-        $response3 = $this->restfull->cUrl($params3, $endpoint3, $metodo3);
-        $data['partners'] = $response3;
 
         $data['menu'] = true;  // Menu true significa que a pagina tera o menu principal, false deixa a pagina sem menu(menu = header + navbar)
         $data['view'] = 'pages_examples/establishments_form';

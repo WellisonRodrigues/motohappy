@@ -6,15 +6,17 @@
  * Time: 13:36
  */
 //echo '<pre>';
-//print_r($response);
+//print_r($partners);
 //print_r($this->session->userdata("user"));
 //print_r($this->session->userdata("user"));
 
 ?>
 <div class="col-md-10 mx-auto">
-    <h2>Estabelecimentos</h2>
     <div class="row">
-        <div class="col-md-12" align="right">
+        <div class="col-md-2" align="left">
+            <h2>Estabelecimentos</h2>
+        </div>
+        <div class="col-md-10" align="right">
             <div class="float-md-right">
                 <div class="form-row align-items-center">
                     <div class="col-auto">
@@ -74,8 +76,10 @@
                                 <div class="col-md-7">
                                     <b class="card-title h-25 d-inline-block"><?php echo @$row['name'] ?></b><br>
                                     <p class="card-text h-25 d-inline-block">
-                                        <?php echo $row['description'] ? $row['description'] : 'Descrição indefinida' ?>, 
-                                        <?php echo $row['attendance'] ? $row['attendance'] : 'Atendimento indefinido' ?><br>
+                                        <?php echo $row['description'] ? $row['description'] : 'Descrição indefinida' ?>
+                                        ,
+                                        <?php echo $row['attendance'] ? $row['attendance'] : 'Atendimento indefinido' ?>
+                                        <br>
                                         <?php echo $row['address'] ? $row['address'] : 'Endereço indefinido' ?>
                                         , <?php echo $row['number'] ? $row['number'] : 'Número indefinido' ?>
                                         <?php echo $row['state'] ? $row['state'] : 'Estado indefinido' ?>
@@ -92,11 +96,42 @@
                                            href="<?php base_url() ?>Establishments/delete/<?php echo $row['id'] ?>">
                                             <i class="fas fa-times" style="color: gray"></i></a>
                                     </div>
+                                    <div class="col-md-1">
+                                        <a data-toggle="modal" data-target="#exampleModal" href="#">
+                                            <i class="fas fa-user" style="color: gray"></i></a>
+                                    </div>
                                 <?php } ?>
                             </div>
                             <!--
 
                             <!--                    <a href="#" class="btn btn-primary">Go somewhere</a>-->
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                     aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <label for="categories">Parceiros:</label>
+                                <select class="form-control tm-input" name="categories" id="categories">
+                                    <?php foreach ($partners['response'] as $line) {
+                                        $name = $line['name'];
+                                        $id = $line['id'];
+                                        echo "<option value='$id'>$name</option>";
+                                    } ?>
+                                </select>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                                <button type="button" class="btn btn-primary">Salvar</button>
+                            </div>
                         </div>
                     </div>
                 </div>
