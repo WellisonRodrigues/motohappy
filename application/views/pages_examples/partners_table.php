@@ -50,24 +50,24 @@
 
                      as $row) { ?>
                 <div class="col-md-4 contem" style="margin-top: 20px">
-                    <div class="card">
+                    <div class="card" style="height: 150px">
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-2">
                                     <?php if ($row['image']['url'] != null) { ?>
                                         <img src="<?php echo $row['image']['url'] ?>"
-                                             class="rounded-circle" width="50px" height="50px">
+                                             class="rounded-circle" width="50px" height="50px">&nbsp;&nbsp;
                                     <?php } else { ?>
                                         <img src="<?php echo base_url() ?>imgs/Elemento6.png"
-                                             class="rounded-circle" width="50px" height="50px">
+                                             class="rounded-circle" width="50px" height="50px">&nbsp;&nbsp;
 
                                     <?php } ?>
-                                </div>
+                                </div>&nbsp;&nbsp;&nbsp;
                                 <div class="col-md-6">
                                     <b class="card-title"><?php echo @$row['name'] ?></b>
                                     <p class="card-text h-25" style="font-size: 10pt;">
                                         <!--                                    -->
-                                        <?php //echo @$row['nickname'] ?><!--<br>-->
+                                        <?php echo @$row['nickname'] ?><br>
                                         <?php echo @$row['email'] ?><br>
                                         <!--                                    -->
                                         <?php //echo @$row['establishments_ids']['establishments_id'] ?><!--<br>-->

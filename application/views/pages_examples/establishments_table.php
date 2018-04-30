@@ -82,8 +82,8 @@
                                         <br>
                                         <?php echo $row['address'] ? $row['address'] : 'Endereço indefinido' ?>
                                         , <?php echo $row['number'] ? $row['number'] : 'Número indefinido' ?>
-                                        <?php echo $row['state'] ? $row['state'] : 'Estado indefinido' ?>
-                                        , <?php echo $row['city'] ? $row['city'] : 'Cidade indefinida' ?></p>
+                                        <?php echo $row['city'] ? $row['city'] : 'Cidade indefinida' ?> ,
+                                        <?php echo $row['state'] ? $row['state'] : 'Estado indefinido' ?></p>
                                 </div>
                                 <?php if ($this->session->userdata("user")['typeuser'] != 'partners') { ?>
                                     <div class="col-md-1">

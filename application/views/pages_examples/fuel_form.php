@@ -55,7 +55,7 @@
         <!-- Default input -->
         <div class="col-md-2">
             <div class="form-group">
-                <label for="name">Medida::</label>
+                <label for="name">Medida(Litros) :</label>
                 <input type="text" name="measure" class="form-control" required
                        value="<?php echo @$response['fuel']['measure'] ?>"
                        id="measure">
@@ -65,30 +65,53 @@
         <div class="col-md-2">
             <div class="form-group">
                 <label for="name">Dinheiro:</label>
-                <input type="text" name="valor" class="form-control" required
+                <input type="text" name="money_atual" class="form-control" required
                        value="<?php echo @$response['fuel']['money_atual'] ?>"
                        id="valor">
             </div>
         </div>
         <div class="col-md-2">
             <div class="form-group">
+                <label for="name">Dinheiro Before:</label>
+                <input type="text" name="money_before" class="form-control" required
+                       value="<?php echo @$response['fuel']['money_before'] ?>"
+                       id="valor">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="form-group">
                 <label for="name">Debito:</label>
-                <input type="text" name="debit" class="form-control" required
+                <input type="text" name="debit_atual" class="form-control" required
                        value="<?php echo @$response['fuel']['debit_atual'] ?>"
+                       id="debit">
+            </div>
+        </div> <div class="col-md-2">
+            <div class="form-group">
+                <label for="name">Debito Before:</label>
+                <input type="text" name="debit_before" class="form-control" required
+                       value="<?php echo @$response['fuel']['debit_before'] ?>"
                        id="debit">
             </div>
         </div>
         <div class="col-md-2">
             <div class="form-group">
                 <label for="name">Credito:</label>
-                <input type="text" name="credit" class="form-control" required
+                <input type="text" name="credit_atual" class="form-control" required
                        value="<?php echo @$response['fuel']['credit_atual'] ?>"
+                       id="credit">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="form-group">
+                <label for="name">Credito Before:</label>
+                <input type="text" name="credit_before" class="form-control" required
+                       value="<?php echo @$response['fuel']['credit_before'] ?>"
                        id="credit">
             </div>
         </div>
         <div class="col-md-3">
             <label for="establishment_id">Estabelecimento:</label>
-            <select class="form-control tm-input tm2" name="establishment_id" id="establishment_id">
+            <select class="form-control tm-input tm2" name="establishment_id" required id="establishment_id">
                 <?php foreach ($estabelecimentos['establishments'] as $line2) {
                     foreach ($line2['category'] as $categoria) {
                         if ($categoria == 'combustivel') {

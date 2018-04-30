@@ -21,7 +21,7 @@
                                     aria-hidden="true">&times;</span></button>
                     </div>
                     <?php
-                    $response = $message;
+                    $response = $message['data'];
                 }
             } ?>
             <?php if (isset($message['errors'])) {

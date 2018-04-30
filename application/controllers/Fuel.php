@@ -67,13 +67,19 @@ class Fuel extends CI_Controller
 
                 "title" => $this->input->post('title'),
                 "measure" => $this->input->post('measure'),
-                "debit" => $this->input->post('debit'),
-                "credit" => $this->input->post('credit'),
+                "money_atual" => $this->input->post('money_atual'),
+                "debit_atual" => $this->input->post('debit_atual'),
+                "credit_atual" => $this->input->post('credit_atual'),
+                "credit_before" => $this->input->post('credit_before'),
+                "money_before" => $this->input->post('money_before'),
+                "debit_before" => $this->input->post('debit_before'),
                 "establishment_id" => $this->input->post('establishment_id'),
-                "value" => $this->input->post('valor'),
 
             );
             $response = $this->restfull->cUrl($params, $endpoint, $metodo);
+//            echo '<pre>';
+//            print_r($response);
+//            die;
             $data['response'] = $response ['response'];
             $data['message'] = $response ['response'];
         }
@@ -85,10 +91,13 @@ class Fuel extends CI_Controller
             $params = array(
                 "title" => $this->input->post('title'),
                 "measure" => $this->input->post('measure'),
-                "debit" => $this->input->post('debit'),
-                "credit" => $this->input->post('credit'),
-                "establishment_id" => $this->input->post('establishment_id'),
-                "value" => $this->input->post('valor'),
+                "money_atual" => $this->input->post('money_atual'),
+                "debit_atual" => $this->input->post('debit_atual'),
+                "credit_atual" => $this->input->post('credit_atual'),
+                "credit_before" => $this->input->post('credit_before'),
+                "money_before" => $this->input->post('money_before'),
+                "debit_before" => $this->input->post('debit_before'),                "establishment_id" => $this->input->post('establishment_id'),
+
             );
 
             $response = $this->restfull->cUrl($params, $endpoint, $metodo);

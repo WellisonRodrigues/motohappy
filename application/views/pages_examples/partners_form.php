@@ -35,8 +35,8 @@
         </div>
     </div>
     <?php
-    if (isset($response['id'])) {
-        echo form_open('Partners/new_user/' . $response['id'], ['role' => 'form']);
+    if (isset($response['partner']['id'])) {
+        echo form_open('Partners/new_user/' . $response['partner']['id'], ['role' => 'form']);
     } else {
         echo form_open('Partners/new_user', ['role' => 'form']);
     } ?>
@@ -73,24 +73,6 @@
             <input type="file" onchange="readURL3(this);" class="form-control" name="file" id="file">
             <input type="hidden" name="image" id="new_image3" value="">
         </div>
-<!--        <div class="col-md-3">-->
-<!--            <label for="partners">Estabelecimentos:</label>-->
-<!--            <select class="form-control tm-input tm2" name="partners" id="partners">-->
-<!--                --><?php //foreach ($estabelecimentos['establishments'] as $line2) {
-//                    $idesta = $line2['id'];
-//                    $text = $line2['name'];
-//                    echo "<option value='$idesta'>$text</option>";
-//                } ?>
-<!--            </select>-->
-<!--        </div>-->
-<!--        <div class="col-md-3">-->
-<!--            <br/>-->
-<!--            <button type="button" id="novo_partner" class="btn btn-default" data-toggle="modal"-->
-<!--                    data-target="#modal"> Novo-->
-<!--                Parceiro-->
-<!--            </button>-->
-<!--        </div>-->
-
         <input type="hidden" value="" id="partner_id" name="establishments_id">
         <?php if (!isset($response['id'])) { ?>
             <div class="col-md-6">
