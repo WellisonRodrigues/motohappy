@@ -49,7 +49,7 @@ class Establishments extends CI_Controller
             $this->load->library('Restfull');
             $endpoint = 'api/v1/admin/establishments';
             $metodo = 'POST';
-            $vetor = explode(',',$this->input->post('categorys'));
+            $vetor = explode(',', $this->input->post('categorys'));
             $params = array(
 
 
@@ -88,7 +88,7 @@ class Establishments extends CI_Controller
             $this->load->library('Restfull');
             $endpoint = 'api/v1/admin/establishments/' . $id;
             $metodo = 'PATCH';
-            $vetor = explode(',',$this->input->post('categorys'));
+            $vetor = explode(',', $this->input->post('categorys'));
             if ($this->input->post('image')) {
                 $params = array(
 
@@ -151,6 +151,18 @@ class Establishments extends CI_Controller
             $params = '';
             $response = $this->restfull->cUrl($params, $endpoint, $metodo);
             redirect('Establishments');
+        }
+    }
+
+    public
+    function addpartner($id = null, $partnerid = null)
+    {
+        if ($id != null or $id != '') {
+            $endpoint = "api/v1/admin/establishments/$id/add/partners/$partnerid";
+            $metodo = 'PATCH';
+            $params = '';
+            $response = $this->restfull->cUrl($params, $endpoint, $metodo);
+            print_r($response);
         }
     }
 }

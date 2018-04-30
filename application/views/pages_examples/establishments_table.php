@@ -6,7 +6,7 @@
  * Time: 13:36
  */
 //echo '<pre>';
-//print_r($response);
+//print_r($response)
 //print_r($this->session->userdata("user"));
 //print_r($this->session->userdata("user"));
 
@@ -113,28 +113,81 @@
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                <h5 class="modal-title" id="exampleModalLabel">Parceiros</h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
                             <div class="modal-body">
-                                <label for="categories">Parceiros:</label>
-                                <select class="form-control tm-input" name="categories" id="categories">
-                                    <?php foreach ($partners['response'] as $line) {
-                                        $name = $line['name'];
-                                        $id = $line['id'];
-                                        echo "<option value='$id'>$name</option>";
-                                    } ?>
-                                </select>
+
+                                    <div class="esta<?php echo $row['id'] ?>">
+                                        <div class="row">
+                                        <?php
+                                        if (isset($row['partners'])) {
+                                            foreach ($row['partners'] as $newrow) { ?>
+
+                                                <div class="col-md-3">
+                                                    <input type="text" class="form-control" readonly
+                                                           value="<?php echo $newrow['partner_name'] ?>">
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <button type="button"
+                                                            id=""
+                                                            class="btn btn-danger mt-sm-auto"><i
+                                                                class="fas fa-trash"></i>
+                                                    </button>
+                                                </div>
+
+                                                <?php
+                                            }
+                                        }
+                                        ?>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <label for="categories">Parceiros:</label>
+                                        <select class="form-control tm-input<?php echo $row['id'] ?>" name="categories"
+                                                id="categories">
+                                            <?php foreach ($partners['response'] as $line) {
+                                                $name = $line['name'];
+                                                $id = $line['id'];
+                                                echo "<option value='$id'>$name</option>";
+                                            } ?>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <br>
+                                        <button type="button" id="salvar<?php echo $row['id'] ?>"
+                                                class="btn btn-primary mt-sm-auto">Salvar
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                                <button type="button" class="btn btn-primary">Salvar</button>
                             </div>
                         </div>
                     </div>
                 </div>
+                <script>
+                    $(document).ready(function () {
+                        $('#salvar<?php echo $row['id']?>').click( function () {
+                            var idpartner = $('.tm-input<?php echo $row['id']?>').val();
+                            var name = $(".tm-input<?php echo $row['id']?> option:selected").text();
+                            $.get('<?php echo base_url()?>Establishments/addpartner/' + "<?php echo $row['id']?>/" + idpartner,
+                                function (data) {
+                                    $(".esta<?php echo $row['id']?> .row").append
+                                    ("<div class='col-md-3'><input type='text' class='form-control' readonly value='" + name + "' ></div><div class='col-md-3'><button type=\"button\"\n" +
+                                        "                                                            id=\"\"\n" +
+                                        "                                                            class=\"btn btn-danger mt-sm-auto\"><i\n" +
+                                        "                                                                class=\"fas fa-trash\"></i>\n" +
+                                        "                                                    </button></div> ")
+                                });
+                        });
+                    });
+                </script>
             <?php }
         } ?>
     </div>
