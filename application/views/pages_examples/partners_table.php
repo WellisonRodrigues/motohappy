@@ -7,6 +7,16 @@
  */
 //echo '<pre>';
 //print_r($response);
+//foreach ($response as $line){
+//    print_r($line['name']);
+//    echo '<br>';
+//    if(isset($line['establishments'])){
+//    foreach ($line['establishments'] as $line2){
+//
+//        print_r($line2);echo '<br>';
+//    }
+//    }
+//}
 ?>
 
 <div class="col-md-8 mx-auto">
@@ -46,9 +56,7 @@
     <div class="row">
         <?php
         if (isset($response)) {
-            foreach ($response
-
-                     as $row) { ?>
+            foreach ($response as $key => $row) { ?>
                 <div class="col-md-4 contem" style="margin-top: 20px">
                     <div class="card" style="height: 150px">
                         <div class="card-body">
@@ -84,7 +92,7 @@
                                             class="fas fa-times"
                                             style="color: gray"></i></a></div>
                                 <div class="col-md-1">
-                                    <a data-toggle="modal" data-target="#exampleModal" href="#">
+                                    <a data-toggle="modal" data-target="#<?php echo $row['id']?>" href="#">
                                         <i class="fas fa-home" style="color: gray"></i></a>
                                 </div>
                             </div>
@@ -94,29 +102,67 @@
                         </div>
                     </div>
                 </div>
-                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                <div class="modal fade" id="<?php echo $row['id']?>" tabindex="-1" role="dialog"
                      aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                <h5 class="modal-title" id="exampleModalLabel">Estabelecimentos</h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
                             <div class="modal-body">
-                                <label for="categories">Estabelecimentos:</label>
-                                <select class="form-control tm-input" name="categories" id="categories">
-                                    <?php foreach ($partners['response'] as $line) {
-                                        $name = $line['name'];
-                                        $id = $line['id'];
-                                        echo "<option value='$id'>$name</option>";
-                                    } ?>
-                                </select>
+
+                                <div class="esta<?php echo $row['id'] ?>">
+                                    <div class="row">
+                                        <?php
+                                        if (isset($row['establishments'])) {
+                                            foreach ($row['establishments'] as $line) {
+//                                                print_r($row['establishments']);
+//                                                ?>
+
+                                                <div class="col-md-3">
+                                                    <input type="text" class="form-control" readonly
+                                                           value="<?php echo $line['name']?>">
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <button type="button"
+                                                            id=""
+                                                            class="btn btn-danger mt-sm-auto"><i
+                                                                class="fas fa-trash"></i>
+                                                    </button>
+                                                </div>
+
+                                                <?php
+                                            }
+                                        }
+                                        ?>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <label for="categories">Estabelecimento:</label>
+                                        <select class="form-control tm-input<?php echo $row['id'] ?>" name="categories"
+                                                id="categories">
+                                            <?php foreach ($estabelecimentos['response']['establishments'] as $vars) {
+                                                $name = $vars['name'];
+                                                $id = $vars['id'];
+                                                echo "<option value='$id'>$name</option>";
+                                                                                        } ?>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <br>
+                                        <button type="button" id="salvar<?php echo $row['id'] ?>"
+                                                class="btn btn-primary mt-sm-auto">Salvar
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                                <button type="button" class="btn btn-primary">Salvar</button>
                             </div>
                         </div>
                     </div>

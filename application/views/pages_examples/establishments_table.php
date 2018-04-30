@@ -97,7 +97,7 @@
                                             <i class="fas fa-times" style="color: gray"></i></a>
                                     </div>
                                     <div class="col-md-1">
-                                        <a data-toggle="modal" data-target="#exampleModal" href="#">
+                                        <a data-toggle="modal" data-target="#<?php echo $row['id']?>" href="#">
                                             <i class="fas fa-user" style="color: gray"></i></a>
                                     </div>
                                 <?php } ?>
@@ -108,7 +108,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                <div class="modal fade" id="<?php echo $row['id']?>" tabindex="-1" role="dialog"
                      aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
