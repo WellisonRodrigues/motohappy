@@ -102,7 +102,7 @@
             });
 
         });
-        pageSize = 9;
+        pageSize = 15;
 
         var pageCount = $(".contem").length / pageSize;
 

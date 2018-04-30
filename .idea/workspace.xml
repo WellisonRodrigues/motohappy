@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="935b7b62-3b28-4833-9e93-ef4dc909d715" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Fuel.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Fuel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/session/ci_sessionujtchrg4b92i2kft504n613kfcjobmj2" beforeDir="false" afterPath="$PROJECT_DIR$/application/session/ci_sessionujtchrg4b92i2kft504n613kfcjobmj2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/pages_examples/establishments_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pages_examples/establishments_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/pages_examples/fuel_form.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pages_examples/fuel_form.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/pages_examples/partners_form.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pages_examples/partners_form.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/pages_examples/partners_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pages_examples/partners_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/pages_examples/subadmin_form.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pages_examples/subadmin_form.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/pages_examples/fuel_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pages_examples/fuel_table.php" afterDir="false" />
     </list>
     <ignored path="motolegal.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -96,11 +89,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fuel_form.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="fuel_form.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/pages_examples/fuel_form.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="57" column="47" selection-start-line="57" selection-start-column="47" selection-end-line="57" selection-end-column="47" />
+            <state relative-caret-position="289">
+              <caret line="69" column="34" lean-forward="true" selection-start-line="69" selection-start-column="34" selection-end-line="69" selection-end-column="34" />
               <folding>
                 <element signature="e#625#632#1#HTML" expanded="true" />
               </folding>
@@ -117,11 +110,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Hot.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/Hot.php">
+      <file leaf-file-name="fuel_table.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/views/pages_examples/fuel_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="40" column="50" selection-start-line="40" selection-start-column="50" selection-end-line="40" selection-end-column="50" />
+            <state relative-caret-position="459">
+              <caret line="104" column="21" selection-start-line="104" selection-start-column="21" selection-end-line="104" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -206,7 +199,6 @@
         <option value="$PROJECT_DIR$/application/views/pages_examples/categories_table.php" />
         <option value="$PROJECT_DIR$/application/views/pages_examples/users_table.php" />
         <option value="$PROJECT_DIR$/application/controllers/Users.php" />
-        <option value="$PROJECT_DIR$/application/views/pages_examples/fuel_table.php" />
         <option value="$PROJECT_DIR$/application/views/pages_examples/combos_table.php" />
         <option value="$PROJECT_DIR$/application/controllers/Hot.php" />
         <option value="$PROJECT_DIR$/application/views/pages_examples/combos_form.php" />
@@ -218,6 +210,7 @@
         <option value="$PROJECT_DIR$/application/views/pages_examples/partners_form.php" />
         <option value="$PROJECT_DIR$/application/views/pages_examples/subadmin_form.php" />
         <option value="$PROJECT_DIR$/application/views/pages_examples/fuel_form.php" />
+        <option value="$PROJECT_DIR$/application/views/pages_examples/fuel_table.php" />
       </list>
     </option>
   </component>
@@ -297,7 +290,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="adm&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/subadmin_form.php&#10;par&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/partners_form.php&#10;fuel&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/fuel_form.php&#10;est&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/establishments_form.php&#10;combo&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/combos_form.php&#10;pa&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/partners_form.php&#10;es&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/establishments_table.php&#10;us&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/users_table.php&#10;esta&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/establishments_table.php&#10;user&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/users_form.php&#10;cate&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/categories_table.php&#10;use&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/controllers/Users.php&#10;tab&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/hot_table.php&#10;he&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/structure/header.php&#10;hea&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/structure/header.php&#10;co&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/controllers/Combos.php&#10;fue&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/controllers/Fuel.php&#10;lo&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/controllers/Login.php&#10;part&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/partners_table.php&#10;hot&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/hot_table.php&#10;pro&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/controllers/Profile.php&#10;pr&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/profile_form.php&#10;ca&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/categories_table.php&#10;sub&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/controllers/Subadmins.php&#10;char&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/charts_page.php&#10;cha&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/charts_page.php&#10;c&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/combos_form.php&#10;com&#9;null&#9;null&#10;hom&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/home_form.php&#10;ho&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/home_form.php&#10;log&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/login_form.php&#10;su&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/controllers/Subadmins.php&#10;ad&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/subadmins_table.php&#10;fu&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/controllers/Fuel.php&#10;heade&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/structure/header.php&#10;head&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/structure/header.php&#10;users&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/users_table.php&#10;US&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/users_table.php&#10;USE&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/users_form.php&#10;new_es&#9;null&#9;null&#10;re&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/libraries/Restfull.php&#10;fo&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/structure/footer.php&#10;aut&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/config/autoload.php&#10;res&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/libraries/Restfull.php&#10;au&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/config/autoload.php&#10;auto&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/vendor/autoload.php" />
+    <property name="SearchEverywhereHistoryKey" value="fuel&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/fuel_table.php&#10;adm&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/subadmin_form.php&#10;par&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/partners_form.php&#10;est&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/establishments_form.php&#10;combo&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/combos_form.php&#10;pa&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/partners_form.php&#10;es&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/establishments_table.php&#10;us&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/users_table.php&#10;esta&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/establishments_table.php&#10;user&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/users_form.php&#10;cate&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/categories_table.php&#10;use&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/controllers/Users.php&#10;tab&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/hot_table.php&#10;he&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/structure/header.php&#10;hea&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/structure/header.php&#10;co&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/controllers/Combos.php&#10;fue&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/controllers/Fuel.php&#10;lo&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/controllers/Login.php&#10;part&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/partners_table.php&#10;hot&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/hot_table.php&#10;pro&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/controllers/Profile.php&#10;pr&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/profile_form.php&#10;ca&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/categories_table.php&#10;sub&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/controllers/Subadmins.php&#10;char&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/charts_page.php&#10;cha&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/charts_page.php&#10;c&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/combos_form.php&#10;com&#9;null&#9;null&#10;hom&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/home_form.php&#10;ho&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/home_form.php&#10;log&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/login_form.php&#10;su&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/controllers/Subadmins.php&#10;ad&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/subadmins_table.php&#10;fu&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/controllers/Fuel.php&#10;heade&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/structure/header.php&#10;head&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/structure/header.php&#10;users&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/users_table.php&#10;US&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/users_table.php&#10;USE&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/pages_examples/users_form.php&#10;new_es&#9;null&#9;null&#10;re&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/libraries/Restfull.php&#10;fo&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/views/structure/footer.php&#10;aut&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/config/autoload.php&#10;res&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/libraries/Restfull.php&#10;au&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/application/config/autoload.php&#10;auto&#9;FILE&#9;file://C:/inetpub/wwwroot/motohappy/vendor/autoload.php" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
@@ -359,12 +352,12 @@
       <updated>1522176101429</updated>
       <workItem from="1522812844269" duration="47596000" />
       <workItem from="1523406040684" duration="127749000" />
-      <workItem from="1525097951388" duration="1513000" />
+      <workItem from="1525097951388" duration="1670000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="176858000" />
+    <option name="totallyTimeSpent" value="177015000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1386" height="788" extended-state="0" />
@@ -691,13 +684,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/pages_examples/fuel_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/pages_examples/combos_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -787,11 +773,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/pages_examples/fuel_form.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="57" column="47" selection-start-line="57" selection-start-column="47" selection-end-line="57" selection-end-column="47" />
+        <state relative-caret-position="289">
+          <caret line="69" column="34" lean-forward="true" selection-start-line="69" selection-start-column="34" selection-end-line="69" selection-end-column="34" />
           <folding>
             <element signature="e#625#632#1#HTML" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/pages_examples/fuel_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="104" column="21" selection-start-line="104" selection-start-column="21" selection-end-line="104" selection-end-column="21" />
         </state>
       </provider>
     </entry>
