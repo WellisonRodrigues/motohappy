@@ -124,11 +124,11 @@
                                                 $newid = $line['id'];
                                                 ?>
 
-                                                <div class="col-md-3">
+                                                <div class="col-md-3 remover<?php echo $newid ?>">
                                                     <input type="text" class="form-control" readonly
                                                            value="<?php echo $line['name'] ?>">
                                                 </div>
-                                                <div class="col-md-3">
+                                                <div class="col-md-3 remover<?php echo $newid ?>">
                                                     <button type="button"
                                                             class="btn btn-danger mt-sm-auto"
                                                             onclick="deletar('<?php echo $newid ?>')"><i
@@ -139,7 +139,7 @@
                                                     function deletar(idesta) {
                                                         $.get('<?php echo base_url()?>Partners/deleteesta/' + "<?php echo $row['id']?>/" + idesta,
                                                             function (data) {
-                                                                alert('ok');
+                                                                $('.remover' + idesta).remove()
                                                             })
                                                     }
                                                 </script>
@@ -183,9 +183,9 @@
                         $.get('<?php echo base_url()?>Partners/addesta/' + "<?php echo $row['id']?>/" + idpartner,
                             function (data) {
                                 $(".esta<?php echo $row['id']?> .row").append
-                                ("<div class='col-md-3'><input type='text' class='form-control' readonly value='" + name + "' ></div><div class='col-md-3'><button type=\"button\"\n" +
+                                ("<div class='col-md-3 remover" + idpartner + "'><input type='text' class='form-control' readonly value='" + name + "' ></div><div class='col-md-3 remover" + idpartner + "'><button type=\"button\"\n" +
                                     "                                                            id=\"\"\n" +
-                                    "                                                            class=\"btn btn-danger mt-sm-auto\"><i\n" +
+                                    "                                                            class=\"btn btn-danger mt-sm-auto\" onclick='deletar(" + idpartner + ")'><i\n" +
                                     "                                                                class=\"fas fa-trash\"></i>\n" +
                                     "                                                    </button></div> ")
                             });
