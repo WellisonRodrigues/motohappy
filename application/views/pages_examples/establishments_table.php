@@ -128,11 +128,11 @@
                                                 $chave = $newrow['partner_id'];
                                                 ?>
 
-                                                <div class="col-md-3">
+                                                <div class="col-md-3 remover<?php echo $chave ?>">
                                                     <input type="text" class="form-control" readonly
                                                            value="<?php echo $newrow['partner_name'] ?>">
                                                 </div>
-                                                <div class="col-md-3">
+                                                <div class="col-md-3 remover<?php echo $chave ?>">
                                                     <button type="button"
                                                             onclick="part(<?php echo $chave ?>)"
                                                             class="btn btn-danger mt-sm-auto"><i
@@ -143,7 +143,7 @@
                                                     function part(idesta) {
                                                         $.get('<?php echo base_url()?>Establishments/deletepart/' + "<?php echo $row['id']?>/" + idesta,
                                                             function (data) {
-                                                                alert('ok');
+                                                                $('.remover' + idesta).remove()
                                                             })
                                                     }
                                                 </script>
@@ -174,14 +174,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <script>
-                                function deletar(idesta) {
-                                    $.get('<?php echo base_url()?>Partners/deleteesta/' + "<?php echo $row['id']?>/" + idesta,
-                                        function (data) {
-                                            alert('ok');
-                                        })
-                                }
-                            </script>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
                             </div>
@@ -196,9 +188,9 @@
                             $.get('<?php echo base_url()?>Establishments/addpartner/' + "<?php echo $row['id']?>/" + idpartner,
                                 function (data) {
                                     $(".esta<?php echo $row['id']?> .row").append
-                                    ("<div class='col-md-3'><input type='text' class='form-control' readonly value='" + name + "' ></div><div class='col-md-3'><button type=\"button\"\n" +
+                                    ("<div class='col-md-3 remover" + idpartner + "'><input type='text' class='form-control' readonly value='" + name + "' ></div><div class='col-md-3 remover" + idpartner + "'><button type=\"button\"\n" +
                                         "                                                            id=\"\"\n" +
-                                        "                                                            class=\"btn btn-danger mt-sm-auto\"><i\n" +
+                                        "                                                            class=\"btn btn-danger mt-sm-auto\" onclick='part(" + idpartner + ")'><i\n" +
                                         "                                                                class=\"fas fa-trash\"></i>\n" +
                                         "                                                    </button></div> ")
                                 });
