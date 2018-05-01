@@ -97,7 +97,13 @@
                     </div>
                 </div>
             <?php }
-        } ?>
+        } else { ?>
+
+        <div class="col-md-6 mx-auto" style="margin-top: 20px">
+            <h2>Não há Hots para serem exibidas.</h2>
+        </div>
+
+       <?php } ?>
     </div>
     <br>
     <div class="row">

@@ -79,9 +79,18 @@
         <div class="col-md-6">
             <!-- Default input -->
             <div class="form-group">
-                <label for="nickname">Valor:</label>
+                <label for="nickname">Value:</label>
                 <input type="text" class="form-control" name="value" required
                        value="<?php echo @$response['hot']['value'] ?>"
+                       id="nickname">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <!-- Default input -->
+            <div class="form-group">
+                <label for="nickname">Value Before :</label>
+                <input type="text" class="form-control" name="value_before" required
+                       value="<?php echo @$response['hot']['value_before'] ?>"
                        id="nickname">
             </div>
         </div>

@@ -165,4 +165,16 @@ class Establishments extends CI_Controller
             print_r($response);
         }
     }
+
+    public
+    function deletepart($id = null, $partnerid = null)
+    {
+        if ($id != null or $id != '') {
+            $endpoint = "api/v1/admin/establishments/$id/remove/partners/$partnerid";
+            $metodo = 'DELETE';
+            $params = '';
+            $response = $this->restfull->cUrl($params, $endpoint, $metodo);
+            print_r($response);
+        }
+    }
 }

@@ -6,7 +6,8 @@
  * Time: 14:14
  */
 //print_r($estabelecimentos);
-
+//echo '<pre>';
+//print_r($response);
 ?>
 
 <div class="container">
@@ -54,10 +55,18 @@
     </div>
     <div class="row">
         <!-- Default input -->
-        <div class="col-md-12">
+        <div class="col-md-3">
             <div class="form-group">
-                <label for="name">Valor:</label>
+                <label for="name">Value:</label>
                 <input type="text" name="valor" required value="<?php echo @$response['combo']['value'] ?>"
+                       class="form-control"
+                       id="valor">
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <label for="name">Value before:</label>
+                <input type="text" name="value_before" required value="<?php echo @$response['combo']['value_before'] ?>"
                        class="form-control"
                        id="valor">
             </div>

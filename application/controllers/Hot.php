@@ -70,7 +70,7 @@ class Hot extends CI_Controller
             $params = array(
                 'description' => $this->input->post('description'),
                 'value' => $this->input->post('value'),
-                'value_before' => $this->input->post('value'),
+                'value_before' => $this->input->post('value_before'),
                 'establishment_id' => $this->input->post('establishment_id'),
                 'title' => $this->input->post('title'),
                 'duration' => $this->input->post('duration'),
@@ -104,7 +104,7 @@ class Hot extends CI_Controller
                 $params = array(
                     'description' => $this->input->post('description'),
                     'value' => $this->input->post('value'),
-                    'value_before' => $this->input->post('value'),
+                    'value_before' => $this->input->post('value_before'),
                     'establishment_id' => $this->input->post('establishment_id'),
                     'image' => $this->input->post('image'),
                     'title' => $this->input->post('title'),
@@ -119,7 +119,7 @@ class Hot extends CI_Controller
                 $params = array(
                     'description' => $this->input->post('description'),
                     'value' => $this->input->post('value'),
-                    'value_before' => $this->input->post('value'),
+                    'value_before' => $this->input->post('value_before'),
                     'establishment_id' => $this->input->post('establishment_id'),
 //                    'image' => $this->input->post('image'),
                     'title' => $this->input->post('title'),

@@ -6,7 +6,7 @@
  * Time: 13:36
  */
 //echo '<pre>';
-//print_r($response);
+//print_r($estabelecimentos);
 //foreach ($response as $line){
 //    print_r($line['name']);
 //    echo '<br>';
@@ -92,7 +92,7 @@
                                             class="fas fa-times"
                                             style="color: gray"></i></a></div>
                                 <div class="col-md-1">
-                                    <a data-toggle="modal" data-target="#<?php echo $row['id']?>" href="#">
+                                    <a data-toggle="modal" data-target="#<?php echo $row['id'] ?>" href="#">
                                         <i class="fas fa-home" style="color: gray"></i></a>
                                 </div>
                             </div>
@@ -102,7 +102,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="modal fade" id="<?php echo $row['id']?>" tabindex="-1" role="dialog"
+                <div class="modal fade" id="<?php echo $row['id'] ?>" tabindex="-1" role="dialog"
                      aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
@@ -120,20 +120,29 @@
                                         if (isset($row['establishments'])) {
                                             foreach ($row['establishments'] as $line) {
 //                                                print_r($row['establishments']);
-//                                                ?>
+//
+                                                $newid = $line['id'];
+                                                ?>
 
                                                 <div class="col-md-3">
                                                     <input type="text" class="form-control" readonly
-                                                           value="<?php echo $line['name']?>">
+                                                           value="<?php echo $line['name'] ?>">
                                                 </div>
                                                 <div class="col-md-3">
                                                     <button type="button"
-                                                            id=""
-                                                            class="btn btn-danger mt-sm-auto"><i
+                                                            class="btn btn-danger mt-sm-auto"
+                                                            onclick="deletar('<?php echo $newid ?>')"><i
                                                                 class="fas fa-trash"></i>
                                                     </button>
                                                 </div>
-
+                                                <script>
+                                                    function deletar(idesta) {
+                                                        $.get('<?php echo base_url()?>Partners/deleteesta/' + "<?php echo $row['id']?>/" + idesta,
+                                                            function (data) {
+                                                                alert('ok');
+                                                            })
+                                                    }
+                                                </script>
                                                 <?php
                                             }
                                         }
@@ -146,11 +155,11 @@
                                         <label for="categories">Estabelecimento:</label>
                                         <select class="form-control tm-input<?php echo $row['id'] ?>" name="categories"
                                                 id="categories">
-                                            <?php foreach ($estabelecimentos['response']['establishments'] as $vars) {
+                                            <?php foreach ($estabelecimentos['establishments'] as $vars) {
                                                 $name = $vars['name'];
                                                 $id = $vars['id'];
                                                 echo "<option value='$id'>$name</option>";
-                                                                                        } ?>
+                                            } ?>
                                         </select>
                                     </div>
                                     <div class="col-md-4">
@@ -167,6 +176,21 @@
                         </div>
                     </div>
                 </div>
+                <script>
+                    $('#salvar<?php echo $row['id']?>').click(function () {
+                        var idpartner = $('.tm-input<?php echo $row['id']?>').val();
+                        var name = $(".tm-input<?php echo $row['id']?> option:selected").text();
+                        $.get('<?php echo base_url()?>Partners/addesta/' + "<?php echo $row['id']?>/" + idpartner,
+                            function (data) {
+                                $(".esta<?php echo $row['id']?> .row").append
+                                ("<div class='col-md-3'><input type='text' class='form-control' readonly value='" + name + "' ></div><div class='col-md-3'><button type=\"button\"\n" +
+                                    "                                                            id=\"\"\n" +
+                                    "                                                            class=\"btn btn-danger mt-sm-auto\"><i\n" +
+                                    "                                                                class=\"fas fa-trash\"></i>\n" +
+                                    "                                                    </button></div> ")
+                            });
+                    });
+                </script>
             <?php }
         } ?>
     </div>

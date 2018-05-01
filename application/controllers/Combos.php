@@ -51,6 +51,7 @@ class Combos extends CI_Controller
                 "description" => $this->input->post('description'),
                 "establishment_id" => $this->input->post('establishment_id'),
                 "value" => $this->input->post('valor'),
+                "value_before" => $this->input->post('value_before'),
 
             );
             $response = $this->restfull->cUrl($params, $endpoint, $metodo);
@@ -67,7 +68,7 @@ class Combos extends CI_Controller
                 "description" => $this->input->post('description'),
                 "establishment_id" => $this->input->post('establishment_id'),
                 "value" => $this->input->post('valor'),
-                "value_before" => $this->input->post('valor'),
+                "value_before" => $this->input->post('value_before'),
             );
             $response = $this->restfull->cUrl($params, $endpoint, $metodo);
             $data['response'] = $response ['response'];

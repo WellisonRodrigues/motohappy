@@ -97,7 +97,7 @@
                                             <i class="fas fa-times" style="color: gray"></i></a>
                                     </div>
                                     <div class="col-md-1">
-                                        <a data-toggle="modal" data-target="#<?php echo $row['id']?>" href="#">
+                                        <a data-toggle="modal" data-target="#<?php echo $row['id'] ?>" href="#">
                                             <i class="fas fa-user" style="color: gray"></i></a>
                                     </div>
                                 <?php } ?>
@@ -108,7 +108,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="modal fade" id="<?php echo $row['id']?>" tabindex="-1" role="dialog"
+                <div class="modal fade" id="<?php echo $row['id'] ?>" tabindex="-1" role="dialog"
                      aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
@@ -120,11 +120,13 @@
                             </div>
                             <div class="modal-body">
 
-                                    <div class="esta<?php echo $row['id'] ?>">
-                                        <div class="row">
+                                <div class="esta<?php echo $row['id'] ?>">
+                                    <div class="row">
                                         <?php
                                         if (isset($row['partners'])) {
-                                            foreach ($row['partners'] as $newrow) { ?>
+                                            foreach ($row['partners'] as $newrow) {
+                                                $chave = $newrow['partner_id'];
+                                                ?>
 
                                                 <div class="col-md-3">
                                                     <input type="text" class="form-control" readonly
@@ -132,12 +134,19 @@
                                                 </div>
                                                 <div class="col-md-3">
                                                     <button type="button"
-                                                            id=""
+                                                            onclick="part(<?php echo $chave ?>)"
                                                             class="btn btn-danger mt-sm-auto"><i
                                                                 class="fas fa-trash"></i>
                                                     </button>
                                                 </div>
-
+                                                <script>
+                                                    function part(idesta) {
+                                                        $.get('<?php echo base_url()?>Establishments/deletepart/' + "<?php echo $row['id']?>/" + idesta,
+                                                            function (data) {
+                                                                alert('ok');
+                                                            })
+                                                    }
+                                                </script>
                                                 <?php
                                             }
                                         }
@@ -165,6 +174,14 @@
                                     </div>
                                 </div>
                             </div>
+                            <script>
+                                function deletar(idesta) {
+                                    $.get('<?php echo base_url()?>Partners/deleteesta/' + "<?php echo $row['id']?>/" + idesta,
+                                        function (data) {
+                                            alert('ok');
+                                        })
+                                }
+                            </script>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
                             </div>
@@ -173,7 +190,7 @@
                 </div>
                 <script>
                     $(document).ready(function () {
-                        $('#salvar<?php echo $row['id']?>').click( function () {
+                        $('#salvar<?php echo $row['id']?>').click(function () {
                             var idpartner = $('.tm-input<?php echo $row['id']?>').val();
                             var name = $(".tm-input<?php echo $row['id']?> option:selected").text();
                             $.get('<?php echo base_url()?>Establishments/addpartner/' + "<?php echo $row['id']?>/" + idpartner,

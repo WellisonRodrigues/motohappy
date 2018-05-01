@@ -27,6 +27,11 @@ class Partners extends CI_Controller
         $metodo = 'GET';
         $params = '';
         $response = $this->restfull->cUrl($params, $endpoint, $metodo);
+        $params2 = '';
+        $endpoint2 = 'api/v1/admin/establishments';
+        $metodo2 = 'GET';
+        $response2 = $this->restfull->cUrl($params2, $endpoint2, $metodo2);
+        $data['estabelecimentos'] = $response2['response'];
         $data['response'] = $response['response'];
         $data['menu'] = true;  // Menu true significa que a pagina tera o menu principal, false deixa a pagina sem menu(menu = header + navbar)
         $data['view'] = 'pages_examples/partners_table';
@@ -79,10 +84,6 @@ class Partners extends CI_Controller
                     'nickname' => $this->input->post('nickname'),
                     'establishments_ids' => [$this->input->post('establishments_ids')],
                     'image' => $this->input->post('image'),
-//                'phone' => $this->input->post('phone'),
-//                'password' => $this->input->post('password'),
-//                'password_confirmation' => $this->input->post('phone'),
-//                'phone'=> $this->input->post('phone'),
 
                 );
             } else {
@@ -91,11 +92,7 @@ class Partners extends CI_Controller
                     'email' => $this->input->post('email'),
                     'nickname' => $this->input->post('nickname'),
                     'establishments_ids' => [$this->input->post('establishments_ids')],
-//                    'image' => $this->input->post('image'),
-//                'phone' => $this->input->post('phone'),
-//                'password' => $this->input->post('password'),
-//                'password_confirmation' => $this->input->post('phone'),
-//                'phone'=> $this->input->post('phone'),
+
 
                 );
             }
@@ -128,6 +125,29 @@ class Partners extends CI_Controller
             $params = '';
             $response = $this->restfull->cUrl($params, $endpoint, $metodo);
             redirect('Partners');
+        }
+    }
+
+    public function deleteesta($id = null, $idesta = null)
+    {
+        if ($id != null or $id != '') {
+            $endpoint = "api/v1/admin/partners/$id/remove/establishments/$idesta";
+            $metodo = 'DELETE';
+            $params = '';
+            $response = $this->restfull->cUrl($params, $endpoint, $metodo);
+            print_r($response);
+        }
+    }
+
+    public
+    function addesta($id = null, $partnerid = null)
+    {
+        if ($id != null or $id != '') {
+            $endpoint = "api/v1/admin/partners/$id/add/establishments/$partnerid";
+            $metodo = 'PATCH';
+            $params = '';
+            $response = $this->restfull->cUrl($params, $endpoint, $metodo);
+            print_r($response);
         }
     }
 }
