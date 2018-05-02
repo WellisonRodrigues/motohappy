@@ -5,18 +5,6 @@
  * Date: 07/04/2018
  * Time: 13:36
  */
-//echo '<pre>';
-//print_r($estabelecimentos);
-//foreach ($response as $line){
-//    print_r($line['name']);
-//    echo '<br>';
-//    if(isset($line['establishments'])){
-//    foreach ($line['establishments'] as $line2){
-//
-//        print_r($line2);echo '<br>';
-//    }
-//    }
-//}
 ?>
 
 <div class="col-md-8 mx-auto">

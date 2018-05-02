@@ -28,6 +28,12 @@
                         <button type="button" id="search" class="btn btn-primary mt-sm-auto">
                             <i class="fas fa-search"></i>
                         </button>
+                        <?php if ($this->session->userdata("user")['typeuser'] != 'partners') { ?>
+                            <a href="<?php echo base_url() ?>Users/new_user">
+                                <button type="button" class="btn btn-default mt-sm-auto"><i class="fas fa-plus"></i>
+                                </button>
+                            </a>
+                        <?php } ?>
                     </div>
 
                 </div>

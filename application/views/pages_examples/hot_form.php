@@ -69,7 +69,7 @@
         <div class="col-md-6">
             <!-- Default input -->
             <div class="form-group">
-                <label for="nickname">Duração:</label>
+                <label for="nickname">Data de expiração:</label>
                 <input type="text" class="form-control" name="duration" required
                        value="<?php echo @$data ?>"
                        id="nickname">
@@ -81,7 +81,7 @@
             <div class="form-group">
                 <label for="nickname">Value:</label>
                 <input type="text" class="form-control" name="value" required
-                       value="<?php echo @$response['hot']['value'] ?>"
+                       value="<?php echo str_replace(".", ",", @$response['hot']['value']) ?>"
                        id="nickname">
             </div>
         </div>
@@ -90,7 +90,7 @@
             <div class="form-group">
                 <label for="nickname">Value Before :</label>
                 <input type="text" class="form-control" name="value_before" required
-                       value="<?php echo @$response['hot']['value_before'] ?>"
+                       value="<?php echo str_replace(".", ",", @$response['hot']['value_before']) ?>"
                        id="nickname">
             </div>
         </div>
@@ -111,14 +111,16 @@
             <!-- Default input -->
             <!--            <div class="col-md-6">-->
             <label for="file">Imagem:</label>
-            <input type="file" onchange="readURL3(this);" required class="form-control" name="file" id="file">
+            <input type="file" onchange="readURL3(this);" class="form-control" name="file" id="file">
             <!--            </div>-->
             <input type="hidden" name="image" id="new_image3" value="">
         </div>
         <!--            <div class="form-group">-->
         <div class="col-md-12" align="right">
 
-            <a href="<?php echo base_url()?>Hot"> <button type="button"  class="btn btn-primary"> Voltar</button></a>
+            <a href="<?php echo base_url() ?>Hot">
+                <button type="button" class="btn btn-primary"> Voltar</button>
+            </a>
             <button type="submit" value="salvar" name="salvar" class="btn btn-default"> Salvar</button>
 
         </div>

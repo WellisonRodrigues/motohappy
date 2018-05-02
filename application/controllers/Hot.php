@@ -69,8 +69,8 @@ class Hot extends CI_Controller
             $metodo = 'POST';
             $params = array(
                 'description' => $this->input->post('description'),
-                'value' => $this->input->post('value'),
-                'value_before' => $this->input->post('value_before'),
+                'value' => str_replace(",", ".", $this->input->post('value')),
+                'value_before' => str_replace(",", ".", $this->input->post('value_before')),
                 'establishment_id' => $this->input->post('establishment_id'),
                 'title' => $this->input->post('title'),
                 'duration' => $this->input->post('duration'),
@@ -103,8 +103,8 @@ class Hot extends CI_Controller
             if ($this->input->post('image')) {
                 $params = array(
                     'description' => $this->input->post('description'),
-                    'value' => $this->input->post('value'),
-                    'value_before' => $this->input->post('value_before'),
+                    'value' => str_replace(",", ".", $this->input->post('value')),
+                    'value_before' => str_replace(",", ".", $this->input->post('value_before')),
                     'establishment_id' => $this->input->post('establishment_id'),
                     'image' => $this->input->post('image'),
                     'title' => $this->input->post('title'),
@@ -118,8 +118,8 @@ class Hot extends CI_Controller
             } else {
                 $params = array(
                     'description' => $this->input->post('description'),
-                    'value' => $this->input->post('value'),
-                    'value_before' => $this->input->post('value_before'),
+                    'value' => str_replace(",", ".", $this->input->post('value')),
+                    'value_before' => str_replace(",", ".", $this->input->post('value_before')),
                     'establishment_id' => $this->input->post('establishment_id'),
 //                    'image' => $this->input->post('image'),
                     'title' => $this->input->post('title'),
@@ -132,6 +132,7 @@ class Hot extends CI_Controller
                 );
             }
             $response = $this->restfull->cUrl($params, $endpoint, $metodo);
+//            print_r($this->input->post());
 //            print_r($response);
 //            die;
             $data['message'] = $response['response'];

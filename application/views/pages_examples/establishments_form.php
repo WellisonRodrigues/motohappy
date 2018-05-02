@@ -89,7 +89,7 @@
 
                     <div class="col-md-3">
                         <label for="email">Código do Estabelecimento:</label>
-                        <input type="number" class="form-control" required name="establishment_cod"
+                        <input type="number" class="form-control" min="1" max="9999" required name="establishment_cod"
                                id="establishment_cod"
                                value="<?php echo @$response['establishment_cod'] ?>">
                     </div>
