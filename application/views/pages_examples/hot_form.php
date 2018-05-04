@@ -98,13 +98,19 @@
             <!-- Default input -->
             <div class="form-group">
                 <label for="">Estabelecimento:</label>
-                <select class="form-control tm-input tm2" name="establishment_id" id="establishment_id">
-                    <?php foreach ($estabelecimentos['establishments'] as $line2) {
-                        $idesta = $line2['id'];
-                        $text = $line2['name'];
-                        echo "<option value='$idesta'>$text</option>";
-                    } ?>
-                </select>
+                <?php
+                $array_tiposprodutos [''] = ' - - - Escolha um estabelecimento  - - - ';
+                foreach ($estabelecimentos['establishments'] as $newline) {
+                    foreach ($newline['category'] as $categoria) {
+                        if ($categoria == 'combustivel') {
+                            $array_tiposprodutos[$newline['id']] = $newline['name'];
+                        }
+                    }
+                }
+                echo form_dropdown('establishment_id', $array_tiposprodutos,
+                    set_value('establishment_id', @$response['hot']['establishment_id']), ' class="form-control"
+                id="establishment_id" required="" ');
+                ?>
             </div>
         </div>
         <div class="col-md-12">

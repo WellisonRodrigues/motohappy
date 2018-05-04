@@ -6,7 +6,9 @@
  * Time: 13:36
  */
 //echo '<pre>';
-//print_r($response)
+//foreach($response['establishments'] as $test){
+//    print_r($test['category']);
+//}
 //print_r($this->session->userdata("user"));
 //print_r($this->session->userdata("user"));
 
@@ -84,6 +86,7 @@
                                         , <?php echo $row['number'] ? $row['number'] : 'Número indefinido' ?>
                                         <?php echo $row['city'] ? $row['city'] : 'Cidade indefinida' ?> ,
                                         <?php echo $row['state'] ? $row['state'] : 'Estado indefinido' ?></p>
+                                        <b class="align-bottom" style="color: #FF5D00"><?php echo $row['category'][0] ? $row['category'][0] : 'Categoria indefinida' ?></b>
                                 </div>
                                 <?php if ($this->session->userdata("user")['typeuser'] != 'partners') { ?>
                                     <div class="col-md-1">

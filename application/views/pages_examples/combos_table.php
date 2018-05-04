@@ -45,7 +45,7 @@
         if (isset($response['combos'])) {
             foreach ($response['combos'] as $row) { ?>
                 <div class="col-md-4 contem" style="margin-top: 20px">
-                    <div class="card">
+                    <div class="card" style="height: 130px">
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-9">

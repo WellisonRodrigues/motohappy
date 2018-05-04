@@ -21,7 +21,11 @@
                                     aria-hidden="true">&times;</span></button>
                     </div>
                     <?php
-                    $response['partner'] = $message['data'];
+                    if (isset($message['data']['id'])) {
+                        $response['partner'] = $message['data'];
+                    } else {
+                        $response['partner'] = $message;
+                    }
                 }
             } ?>
             <?php if (isset($message['errors'])) {
@@ -45,7 +49,8 @@
         <div class="col-md-12">
             <div class="form-group">
                 <label for="name">Nome:</label>
-                <input type="text" name="name" class="form-control" value="<?php echo @$response['partner']['name'] ?>" required
+                <input type="text" name="name" class="form-control" value="<?php echo @$response['partner']['name'] ?>"
+                       required
                        id="name">
             </div>
         </div>
@@ -53,7 +58,8 @@
             <!-- Default input -->
             <div class="form-group">
                 <label for="email">E-mail:</label>
-                <input type="email" class="form-control" name="email" required value="<?php echo @$response['partner']['email'] ?>"
+                <input type="email" class="form-control" name="email" required
+                       value="<?php echo @$response['partner']['email'] ?>"
                        id="email">
             </div>
         </div>
@@ -89,7 +95,9 @@
         <!--            <div class="form-group">-->
 
         <div class="col-md-12" align="right">
-            <a href="<?php echo base_url()?>Partners"> <button type="button"  class="btn btn-primary"> Voltar</button></a>
+            <a href="<?php echo base_url() ?>Partners">
+                <button type="button" class="btn btn-primary"> Voltar</button>
+            </a>
             <button type="submit" class="btn btn-default"> Salvar</button>
 
         </div>

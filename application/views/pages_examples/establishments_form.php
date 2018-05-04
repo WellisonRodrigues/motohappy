@@ -9,7 +9,7 @@
  */
 //print_r($categories['response']);
 //echo '<pre>';
-//print_r($message);
+//print_r($response);
 
 //print_r($partners['response']);
 ?>
@@ -131,6 +131,22 @@
                 </div>
             </div>
             <div class="form-group row" id="selects">
+                <?php if (isset($response['id'])) {
+                    if (isset($response['category'])) {
+                        foreach ($response['category'] as $categ) { ?>
+                            <div class="input-group mb-2 col-md-2 remover" id="<?php echo $categ ?>"
+                                 style="margin-bottom: 10px">
+                                <input type="text" class="form-control clearable" value="<?php echo $categ ?>"
+                                       readonly="">
+                                <div class="input-group-prepend"><a href="#"
+                                                                    onclick="excluir('<?php echo $categ ?>')"
+                                                                    class="input-group-text">
+                                        <i class=" fas fa-times"></i> </a></div>
+                            </div>
+                            <?php
+                        }
+                    }
+                } ?>
             </div>
 
             <div class="row">

@@ -63,7 +63,7 @@ class Users extends CI_Controller
         if ($this->input->post('name') and $id == null) {
 
             $this->load->library('Restfull');
-            $endpoint = 'api/v1/admin/users';
+            $endpoint = 'admin/auth/users';
             $metodo = 'POST';
             $params = array(
                 'name' => $this->input->post('name'),
@@ -74,6 +74,7 @@ class Users extends CI_Controller
                 'birthday' => $this->input->post('birthday'),
                 'email' => $this->input->post('email'),
                 'image' => $this->input->post('image'),
+                'password' => $this->input->post('password')
 
             );
             $response = $this->restfull->cUrl($params, $endpoint, $metodo);

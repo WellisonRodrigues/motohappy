@@ -21,7 +21,11 @@
                                     aria-hidden="true">&times;</span></button>
                     </div>
                     <?php
-                    $response = $message['data'];
+                    if (isset($message['data']['id'])) {
+                        $response = $message['data'];
+                    } else {
+                        $response = $message;
+                    }
                 }
             } ?>
             <?php if (isset($message['errors'])) {

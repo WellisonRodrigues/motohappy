@@ -46,7 +46,7 @@
         if (isset($response)) {
             foreach ($response as $row) { ?>
                 <div class="col-md-4 contem" style="margin-top: 20px">
-                    <div class="card">
+                    <div class="card" style="height: 140px">
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-2">
@@ -63,7 +63,7 @@
                                     <b class="card-title"><?php echo $row['name'] ?></b>
                                     <p class="card-text h-25">
                                         <!--                                    -->
-                                        <?php //echo @$row['nickname'] ?><!--<br>-->
+                                        <?php echo @$row['nickname'] ?><br>
                                         <?php echo @$row['email'] ?><br>
                                         <!--                                    -->
                                         <?php //echo @$row['establishments_ids']['establishments_id'] ?><!--<br>-->
