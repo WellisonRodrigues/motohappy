@@ -41,6 +41,69 @@ class Establishments extends CI_Controller
         $this->load->view('structure/container', $data);
     }
 
+    public function hot_list($id = null)
+    {
+
+        $this->load->library('Restfull');
+        $endpoint = "api/v1/admin/establishments/$id/hots";
+        $metodo = 'GET';
+        $params = '';
+        $params3 = '';
+        $endpoint3 = 'api/v1/admin/partners';
+        $metodo3 = 'GET';
+        $response3 = $this->restfull->cUrl($params3, $endpoint3, $metodo3);
+        $data['partners'] = $response3;
+        $response = $this->restfull->cUrl($params, $endpoint, $metodo);
+        $data['response'] = $response['response'];
+//        print_r($response);
+//        die;
+        $data['menu'] = true;  // Menu true significa que a pagina tera o menu principal, false deixa a pagina sem menu(menu = header + navbar)
+        $data['view'] = 'pages_examples/hots_list';
+        $this->load->view('structure/container', $data);
+    }
+
+    public function combo_list($id = null)
+    {
+
+        $this->load->library('Restfull');
+        $endpoint = "api/v1/admin/establishments/$id/combos";
+        $metodo = 'GET';
+        $params = '';
+        $params3 = '';
+        $endpoint3 = 'api/v1/admin/partners';
+        $metodo3 = 'GET';
+        $response3 = $this->restfull->cUrl($params3, $endpoint3, $metodo3);
+        $data['partners'] = $response3;
+        $response = $this->restfull->cUrl($params, $endpoint, $metodo);
+        $data['response'] = $response['response'];
+//        print_r($response);
+//        die;
+        $data['menu'] = true;  // Menu true significa que a pagina tera o menu principal, false deixa a pagina sem menu(menu = header + navbar)
+        $data['view'] = 'pages_examples/combos_list';
+        $this->load->view('structure/container', $data);
+    }
+
+    public function fuel_list($id = null)
+    {
+
+        $this->load->library('Restfull');
+        $endpoint = "api/v1/admin/establishments/$id/fuels";
+        $metodo = 'GET';
+        $params = '';
+        $params3 = '';
+        $endpoint3 = 'api/v1/admin/partners';
+        $metodo3 = 'GET';
+        $response3 = $this->restfull->cUrl($params3, $endpoint3, $metodo3);
+        $data['partners'] = $response3;
+        $response = $this->restfull->cUrl($params, $endpoint, $metodo);
+        $data['response'] = $response['response'];
+//        print_r($response);
+//        die;
+        $data['menu'] = true;  // Menu true significa que a pagina tera o menu principal, false deixa a pagina sem menu(menu = header + navbar)
+        $data['view'] = 'pages_examples/fuels_list';
+        $this->load->view('structure/container', $data);
+    }
+
     public function new_establishments($id = null)
     {
 

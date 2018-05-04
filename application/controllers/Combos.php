@@ -26,12 +26,8 @@ class Combos extends CI_Controller
         $endpoint = 'api/v1/admin/combos';
         $metodo = 'GET';
         $params = '';
-
         $response = $this->restfull->cUrl($params, $endpoint, $metodo);
-//        print_r($response);
-//        die;
         $data['response'] = $response['response'];
-
         $data['menu'] = true;  // Menu true significa que a pagina tera o menu principal, false deixa a pagina sem menu(menu = header + navbar)
         $data['view'] = 'pages_examples/combos_table';
         $this->load->view('structure/container', $data);

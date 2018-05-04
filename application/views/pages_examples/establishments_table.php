@@ -100,7 +100,44 @@
                                         <a data-toggle="modal" data-target="#<?php echo $row['id'] ?>" href="#">
                                             <i class="fas fa-user" style="color: gray"></i></a>
                                     </div>
-                                <?php } ?>
+                                <?php } elseif ($this->session->userdata("user")['typeuser'] == 'partners') {
+                                    foreach ($row['category'] as $category) {
+                                        if ($category == 'combustivel') {
+
+
+                                            ?>
+                                            <div class="col-md-1">
+                                                <a href="<?php echo base_url() ?>Establishments/fuel_list/<?php echo $row['id'] ?>">
+                                                    <i
+                                                            class="fas fa-tint"
+                                                            style="color: gray"></i></a>
+                                            </div>
+                                            <div class="col-md-1">
+                                                <a
+                                                        href="<?php base_url() ?>Establishments/hot_list/<?php echo $row['id'] ?>">
+                                                    <img src="<?php echo base_url() ?>imgs\icon4.png" width="25px"
+                                                         height="25px"
+                                                         class="img-responsive"></a>
+                                            </div>
+
+                                            <?php break;
+                                        } else { ?>
+                                            <div class="col-md-1">
+                                                <a href="<?php echo base_url() ?>Establishments/combo_list/<?php echo $row['id'] ?>">
+                                                    <img src="<?php echo base_url() ?>imgs\icon5.png" width="25px"
+                                                         height="25px"
+                                                         class="img-responsive"></a>
+                                            </div>
+                                            <div class="col-md-1">
+                                                <a
+                                                        href="<?php base_url() ?>Establishments/hot_list/<?php echo $row['id'] ?>">
+                                                    <img src="<?php echo base_url() ?>imgs\icon4.png" width="25px"
+                                                         height="25px"
+                                                         class="img-responsive"></a>
+                                            </div>
+                                        <?php }
+                                    }
+                                } ?>
                             </div>
                             <!--
 

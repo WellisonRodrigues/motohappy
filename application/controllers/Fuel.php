@@ -22,33 +22,12 @@ class Fuel extends CI_Controller
 
     public function index()
     {
-        if ($this->session->userdata("user")['typeuser'] == 'partners') {
-            if (isset($this->session->userdata("user")['establishments_ids'][0])) {
-                $idhots = $this->session->userdata("user")['establishments_ids'][0];
-            } else {
-                $idhots = 0;
-            }
-            $endpoint = "api/v1/admin/establishments/$idhots/fuels";
-            $metodo = 'GET';
-            $params = '';
-
-            $response = $this->restfull->cUrl($params, $endpoint, $metodo);
-//        print_r($response);
-//        die;
-            $data['response']['fuels'] = $response['response'];
-        } else {
-            $this->load->library('Restfull');
-            $endpoint = 'api/v1/admin/fuels';
-            $metodo = 'GET';
-            $params = '';
-
-            $response = $this->restfull->cUrl($params, $endpoint, $metodo);
-//        print_r($response);
-//        die;
-            $data['response'] = $response['response'];
-
-
-        }
+        $this->load->library('Restfull');
+        $endpoint = 'api/v1/admin/fuels';
+        $metodo = 'GET';
+        $params = '';
+        $response = $this->restfull->cUrl($params, $endpoint, $metodo);
+        $data['response'] = $response['response'];
         $data['menu'] = true;  // Menu true significa que a pagina tera o menu principal, false deixa a pagina sem menu(menu = header + navbar)
         $data['view'] = 'pages_examples/fuel_table';
         $this->load->view('structure/container', $data);
@@ -96,7 +75,7 @@ class Fuel extends CI_Controller
                 "credit_atual" => $this->input->post('credit_atual'),
                 "credit_before" => $this->input->post('credit_before'),
                 "money_before" => $this->input->post('money_before'),
-                "debit_before" => $this->input->post('debit_before'),                "establishment_id" => $this->input->post('establishment_id'),
+                "debit_before" => $this->input->post('debit_before'), "establishment_id" => $this->input->post('establishment_id'),
 
             );
 
