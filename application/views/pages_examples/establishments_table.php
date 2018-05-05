@@ -49,7 +49,7 @@
         if ($response) {
             foreach ($response['establishments'] as $row) { ?>
                 <div class="col-md-4 contem">
-                    <div class="card" style="margin-top: 30px;height: 200px">
+                    <div class="card" style="margin-top: 30px;height: 250px">
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-2">
@@ -86,7 +86,13 @@
                                         , <?php echo $row['number'] ? $row['number'] : 'Número indefinido' ?>
                                         <?php echo $row['city'] ? $row['city'] : 'Cidade indefinida' ?> ,
                                         <?php echo $row['state'] ? $row['state'] : 'Estado indefinido' ?></p>
-                                        <b class="align-bottom" style="color: #FF5D00"><?php echo $row['category'][0] ? $row['category'][0] : 'Categoria indefinida' ?></b>
+                                    <?php
+                                    if ($row['category']) {
+                                        foreach ($row['category'] as $cats) { ?>
+                                            <b class="align-bottom"
+                                               style="color: #FF5D00"><?php echo $cats ?> &nbsp;</b>
+                                        <?php }
+                                    } ?>
                                 </div>
                                 <?php if ($this->session->userdata("user")['typeuser'] != 'partners') { ?>
                                     <div class="col-md-1">

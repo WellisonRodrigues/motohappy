@@ -53,24 +53,13 @@
                         <div class="card">
                             <div class="card-body">
                                 <div class="row">
-                                    <div class="col-md-9">
+                                    <div class="col-md-12">
                                         <b class="card-title"><?php echo @$row['establishments']['name'] ?></b>
                                         <p class="card-text">
                                             <?php echo $row['title'] ?>
                                             &nbsp;&nbsp;R$ <?php echo $row['money_atual'] ?>/Litro
 
                                         </p>
-                                    </div>
-                                    <div class="col-md-1">
-                                        <a href="<?php echo base_url() ?>Fuel/new_user/<?php echo $row['id'] ?>"><i
-                                                    class="fas fa-pencil-alt"
-                                                    style="color: gray"></i></a>
-                                    </div>
-                                    <div class="col-md-1">
-                                        <a class="delete"
-                                           href="<?php echo base_url() ?>Fuel/delete/<?php echo $row['id'] ?>"> <i
-                                                    class="fas fa-times"
-                                                    style="color: gray"></i></a>
                                     </div>
                                 </div>
                                 <!--

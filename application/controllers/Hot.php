@@ -55,7 +55,7 @@ class Hot extends CI_Controller
             $response = $this->restfull->cUrl($params, $endpoint, $metodo);
             $data['message'] = $response['response'];
             $data['response'] = $response['response'];
-//            print_r($response);
+//            print_r($this->input->post());
 //            die;
         }
 

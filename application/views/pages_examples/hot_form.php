@@ -10,7 +10,8 @@
 //print_r($response);
 
 ?>
-
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <div class="container">
     <h2>Hots</h2>
     <div class="row">
@@ -26,8 +27,8 @@
                     $response['hot'] = $message;
                 }
             } ?>
-            <?php if (isset($message['errors'])) {
-                $texto = $message['errors']['full_messages'][0];
+            <?php if (isset($message['message'])) {
+                $texto = $message['message'];
                 echo "<div class='alert alert-danger' role='alert'>
                 $texto  <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\"><span
                                     aria-hidden=\"true\">&times;</span></button>
@@ -70,9 +71,9 @@
             <!-- Default input -->
             <div class="form-group">
                 <label for="nickname">Data de expiração:</label>
-                <input type="text" class="form-control" name="duration" required
+                <input type="text" name="duration" class="form-control" required
                        value="<?php echo @$data ?>"
-                       id="nickname">
+                       id="duration">
             </div>
         </div>
 
@@ -136,6 +137,11 @@
         </form>
     </div>
     <script>
+        $(function () {
+            $("#duration").datepicker();
+        });
+
+        // $('#duration').datepicker();
         function readURL3(input) {
             if (input.files && input.files[0]) {
                 var reader = new FileReader();

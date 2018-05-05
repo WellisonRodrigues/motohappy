@@ -6,8 +6,14 @@
  * Time: 13:36
  */
 ?>
-
-<div class="col-md-8 mx-auto">
+<style>
+    .disabled {
+        pointer-events: none;
+    / / This makes it not clickable opacity: 0.6;
+    / / This grays it out to look disabled
+    }
+</style>
+<div class="col-md-10 mx-auto">
     <div class="row">
         <div class="col-md-2" align="left">
             <h2>Parceiros</h2>
@@ -70,16 +76,16 @@
 
                                     </p>
                                 </div>
-                                <div class="col-md-1">
+                                <div class="col-md-1 d-inline-block">
                                     <a href="<?php echo base_url() ?>Partners/new_user/<?php echo $row['id'] ?>"><i
                                                 class="fas fa-pencil-alt"
                                                 style="color: gray"></i></a></div>
-                                <div class="col-md-1">
+                                <div class="col-md-1 d-inline-block">
                                     <a class="delete"
                                        href="<?php echo base_url() ?>Partners/delete/<?php echo $row['id'] ?>""> <i
                                             class="fas fa-times"
                                             style="color: gray"></i></a></div>
-                                <div class="col-md-1">
+                                <div class="col-md-1 d-inline-block">
                                     <a data-toggle="modal" data-target="#<?php echo $row['id'] ?>" href="#">
                                         <i class="fas fa-home" style="color: gray"></i></a>
                                 </div>
@@ -217,25 +223,34 @@
         contagem = pageCount;
         // }
 
-        $("#pagin").append('<li class="page-item"><a class="page-link" href="#">Anterior</a></li> ');
+        $("#pagin").append('<li class="page-item anterior""><a class="page-link" href="#">Anterior</a></li> ');
         for (var i = 0; i < contagem; i++) {
 
 
             $("#pagin").append('<li class="page-item"><a class="page-link" href="#">' + (i + 1) + '</a></li> ');
 
         }
-        $("#pagin").append('<li class="page-item"><a class="page-link" href="#">Proxima</a></li> ');
+        $("#pagin").append('<li class="page-item posterior"><a class="page-link" href="#">Proxima</a></li> ');
         $("#pagin li").eq(1).addClass("active");
-
         showPage = function (page) {
             $(".contem").hide();
             $(".contem").each(function (n) {
                 if (n >= pageSize * (page - 1) && n < pageSize * page)
                     $(this).show();
+
             });
-        }
+        };
+        // alert(atual);
+        // if (atual === 1) {
+        //     alert(atual);
+        //     $('.page-item .anterior').addClass('disabled');
+        // }
 
         showPage(1);
+        //
+        // $('.anterior').click(function () {
+        //     if()
+        // });
 
         $("#pagin li ").click(function () {
             $("#pagin li").removeClass("active");
