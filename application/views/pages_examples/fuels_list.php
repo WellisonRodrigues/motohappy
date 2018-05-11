@@ -111,21 +111,24 @@
         contagem = pageCount;
         // }
 
+
+
         $("#pagin").append('<li class="page-item"><a class="page-link" href="#">Anterior</a></li> ');
         for (var i = 0; i < contagem; i++) {
 
 
-            $("#pagin").append('<li class="page-item"><a class="page-link" href="#">' + (i + 1) + '</a></li> ');
+            $("#pagin").append('<li class="page-item"><a class="page-link"  href="#">' + (i + 1) + '</a></li> ');
 
         }
-        $("#pagin").append('<li class="page-item"><a class="page-link" href="#">Proxima</a></li> ');
+
+        $("#pagin").append('<li class="page-item"><a class="page-link"  href="#">Proxima</a></li> ');
         $("#pagin li").eq(1).addClass("active");
 
         showPage = function (page) {
             $(".contem").hide();
             $(".contem").each(function (n) {
                 if (n >= pageSize * (page - 1) && n < pageSize * page)
-                    $(this).show();
+                    $(this).show();S
             });
         }
 

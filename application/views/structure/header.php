@@ -108,3 +108,11 @@
             <?php } ?>
     </div>
 </div>
+<style>
+    #easyPaginate {width:100%;}
+    #easyPaginate .contem {display:inline-block; width: 33.1%;margin: 0;}
+    .easyPaginateNav a {padding:10px;}
+    .easyPaginateNav a {color: gray}
+    /*.easyPaginateNav a.current {text-decoration:underline;}*/
+    /*.easyPaginateNav li.current {background-color: #0b2e13;}*/
+</style>

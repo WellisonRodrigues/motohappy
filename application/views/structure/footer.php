@@ -26,6 +26,42 @@
 <!-- Bootstrap core JavaScript -->
 <script type="text/javascript" src="<?php echo base_url() ?>MDB/js/bootstrap.min.js"></script>
 <!-- MDB core JavaScript -->
+<script>
+    $(document).ready(function () {
+        $('#search').click(function () {
+                    $('.contem').hide();
+                    var txt = $('#search-criteria').val();
+                    // $('.contem:contains("' + txt + '")').show();
+                    $('.contem').each(function () {
+                        if ($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1) {
+                            $(this).show();
+                        }
+                    });
 
+                });
+        $('#easyPaginate').easyPaginate({
+            paginateElement: 'newtag',
+            elementsPerPage: 15,
+            firstButtonText: 'Primeira',
+            lastButtonText: 'Ultima',
+            prevButton: false,
+            nextButton: false
+            // effect: 'slide'
+        });
+
+        $('li').bind('click', function () {
+            $('li').removeClass('active');
+            $(this).addClass('active')
+        });
+        $('.delete').bind('click', function () {
+            var comf = confirm('Deseja mesmo excluir?');
+            if (comf == true) {
+            } else {
+                event.preventDefault();
+            }
+        });
+    });
+
+</script>
 
 </body>

@@ -56,24 +56,24 @@
         <div class="col-md-2">
             <div class="form-group">
                 <label for="name">Dinheiro: <b> Original </b> </label>
-                <input type="text" name="money_atual" class="form-control" required
-                       value="<?php echo @$response['fuel']['money_atual'] ?>"
+                <input type="text" name="money_before" class="form-control" required
+                       value="<?php echo @$response['fuel']['money_before'] ?>"
                        id="valor">
             </div>
         </div>
         <div class="col-md-2">
             <div class="form-group">
                 <label for="name">Debito: <b> Original </b> </label>
-                <input type="text" name="debit_atual" class="form-control" required
-                       value="<?php echo @$response['fuel']['debit_atual'] ?>"
+                <input type="text" name="debit_before" class="form-control" required
+                       value="<?php echo @$response['fuel']['debit_before'] ?>"
                        id="debit">
             </div>
         </div>
         <div class="col-md-2">
             <div class="form-group">
                 <label for="name">Credito: <b> Original </b> </label>
-                <input type="text" name="credit_atual" class="form-control" required
-                       value="<?php echo @$response['fuel']['credit_atual'] ?>"
+                <input type="text" name="credit_before" class="form-control" required
+                       value="<?php echo @$response['fuel']['credit_before'] ?>"
                        id="credit">
             </div>
         </div>
@@ -104,24 +104,24 @@
         <div class="col-md-2">
             <div class="form-group">
                 <label for="name"><b class="h-25" style="font-size: 10pt">Dinheiro c/ MotoHappy:</b></label>
-                <input type="text" name="money_before" class="form-control" required
-                       value="<?php echo @$response['fuel']['money_before'] ?>"
+                <input type="text" name="money_atual" class="form-control" required
+                       value="<?php echo @$response['fuel']['money_atual'] ?>"
                        id="valor">
             </div>
         </div>
         <div class="col-md-2">
             <div class="form-group">
                 <label for="name"><b class="h-25" style="font-size: 10pt">Debito c/ MotoHappy:</b></label>
-                <input type="text" name="debit_before" class="form-control" required
-                       value="<?php echo @$response['fuel']['debit_before'] ?>"
+                <input type="text" name="debit_atual" class="form-control" required
+                       value="<?php echo @$response['fuel']['debit_atual'] ?>"
                        id="debit">
             </div>
         </div>
         <div class="col-md-2">
             <div class="form-group">
                 <label for="name"><b class="h-25" style="font-size: 10pt">Credito c/ MotoHappy:</b></label>
-                <input type="text" name="credit_before" class="form-control" required
-                       value="<?php echo @$response['fuel']['credit_before'] ?>"
+                <input type="text" name="credit_atual" class="form-control" required
+                       value="<?php echo @$response['fuel']['credit_atual'] ?>"
                        id="credit">
             </div>
         </div>
