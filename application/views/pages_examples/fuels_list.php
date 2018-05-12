@@ -43,12 +43,13 @@
             </div>
         </div>
     </div>
-    <div class="row">
+    <div id="easyPaginate">
         <?php
         if (isset($response)) {
             foreach ($response as $row) {
                 if (isset($row['id'])) {
                     ?>
+                    <newtag>
                     <div class="col-md-4 contem" style="margin-top: 20px">
                         <div class="card">
                             <div class="card-body">
@@ -68,6 +69,7 @@
                             </div>
                         </div>
                     </div>
+                    </newtag>
                 <?php }
             }
         } else { ?>
@@ -78,75 +80,17 @@
         <?php } ?>
     </div>
     <br>
-    <div class="row">
-        <div class="col-md-12">
-            <ul id="pagin" class="pagination justify-content-center">
-            </ul>
-        </div>
-    </div>
 </div>
 <script>
     $(document).ready(function () {
-        $('.contem').show();
-        $('#search').click(function () {
-            $('.contem').hide();
-            var txt = $('#search-criteria').val();
-            // $('.contem:contains("' + txt + '")').show();
-            $('.contem').each(function () {
-                if ($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1) {
-                    $(this).show();
-                }
-            });
-
-        });
-        pageSize = 15;
-
-        var pageCount = $(".contem").length / pageSize;
-
-
-        // if (pageCount > 4) {
-        //     var contagem = 4;
-        //
-        // } else {
-        contagem = pageCount;
-        // }
-
-
-
-        $("#pagin").append('<li class="page-item"><a class="page-link" href="#">Anterior</a></li> ');
-        for (var i = 0; i < contagem; i++) {
-
-
-            $("#pagin").append('<li class="page-item"><a class="page-link"  href="#">' + (i + 1) + '</a></li> ');
-
-        }
-
-        $("#pagin").append('<li class="page-item"><a class="page-link"  href="#">Proxima</a></li> ');
-        $("#pagin li").eq(1).addClass("active");
-
-        showPage = function (page) {
-            $(".contem").hide();
-            $(".contem").each(function (n) {
-                if (n >= pageSize * (page - 1) && n < pageSize * page)
-                    $(this).show();S
-            });
-        }
-
-        showPage(1);
-
-        $("#pagin li ").click(function () {
-            $("#pagin li").removeClass("active");
-            $(this).addClass("active");
-            showPage(parseInt($(this).text()))
-        });
-        $('.delete').bind('click', function () {
-            var comf = confirm('Deseja mesmo excluir?');
-            if (comf == true) {
-            } else {
-                event.preventDefault();
-            }
+        $('#easyPaginate').easyPaginate({
+            paginateElement: 'newtag',
+            elementsPerPage: 15,
+            firstButtonText: 'Primeira',
+            lastButtonText: 'Ultima',
+            prevButton: false,
+            nextButton: false
+            // effect: 'slide'
         });
     });
-
-
 </script>

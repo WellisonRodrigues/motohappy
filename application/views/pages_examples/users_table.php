@@ -11,7 +11,7 @@
 //    print_r($response);
 ?>
 
-<div class="container">
+<div class="col-md-8 mx-auto">
     <h2>Usuários</h2>
     <div class="row">
         <div class="col-md-12" align="right">
@@ -40,119 +40,71 @@
             </div>
         </div>
     </div>
-    <div class="row">
+    <div id="easyPaginate">
+        <!--        <div class="row">-->
         <?php foreach ($response as $row) { ?>
-            <div class="col-md-4 contem" style="margin-top: 20px;">
-                <div class="card" style="height: 180px">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-md-2">
-                                <?php if ($row['image']['url'] != null) { ?>
-                                    <img src="<?php echo $row['image']['url'] ?>"
-                                         class="rounded-circle" width="50px" height="50px">
-                                <?php } else { ?>
-                                    <img src="<?php echo base_url() ?>imgs/Elemento6.png"
-                                         class="rounded-circle" width="50px" height="50px">
+            <newtag>
+                <div class="col-md-4 contem" style="margin-top: 20px;">
+                    <div class="card" style="height: 180px">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <?php if ($row['image']['url'] != null) { ?>
+                                        <img src="<?php echo $row['image']['url'] ?>"
+                                             class="rounded-circle" width="50px" height="50px">
+                                    <?php } else { ?>
+                                        <img src="<?php echo base_url() ?>imgs/Elemento6.png"
+                                             class="rounded-circle" width="50px" height="50px">
 
-                                <?php } ?>
-                            </div>
-                            <div class="col-md-7">
-                                <b class="card-title h-25"><?php echo @$row['name'] ?></b>
-                                <p class="h-25" style="font-size: 10pt;margin-bottom: 0;"><?php echo @$row['email'] ?></p>
-                                    <div class="h-25 text-left" style="font-size: 10pt;padding-top: 10px"><?php
+                                    <?php } ?>
+                                </div>
+                                <div class="col-md-7">
+                                    <b class="card-title h-25"><?php echo @$row['name'] ?></b>
+                                    <p class="h-25"
+                                       style="font-size: 10pt;margin-bottom: 0;"><?php echo @$row['email'] ?></p>
+                                    <div class="h-25" style="font-size: 10pt;padding-top: 10px"><?php
                                         $phpdate = strtotime($row['birthday']);
                                         $data = date('d/m/Y', $phpdate);
-                                        echo @$data ?> &nbsp;&nbsp;&nbsp;<?php echo @$row['phone'] ?></div>
-                                    <div class="h-25 text-left" style="font-size: 10pt">  <?php echo @$row['address'] ?>
+                                        echo @$data ?>, &nbsp;&nbsp;&nbsp;<?php echo @$row['phone'] ?></div>
+                                    <div class="h-25"
+                                         style="font-size: 10pt">  <?php echo @$row['address'] ?>,
                                         <?php echo @$row['city'] ?></div>
+                                </div>
+                                <div class="col-md-1">
+                                    <a href="<?php echo base_url() ?>Users/new_user/<?php echo $row['id'] ?>"><i
+                                                class="fas fa-pencil-alt"
+                                                style="color: gray"></i></a>
+                                </div>
+                                <div class="col-md-1">
+                                    <a class="delete"
+                                       href="<?php echo base_url() ?>Users/delete/<?php echo $row['id'] ?>">
+                                        <i
+                                                class="fas fa-times" style="color: gray"></i>
+                                    </a></div>
                             </div>
-                            <div class="col-md-1">
-                                <a href="<?php echo base_url() ?>Users/new_user/<?php echo $row['id'] ?>"><i
-                                            class="fas fa-pencil-alt"
-                                            style="color: gray"></i></a>
-                            </div>
-                            <div class="col-md-1">
-                                <a class="delete" href="<?php echo base_url() ?>Users/delete/<?php echo $row['id'] ?>">
-                                    <i
-                                            class="fas fa-times" style="color: gray"></i>
-                                </a></div>
-                        </div>
-                        <!--
+                            <!--
 
-                        <!--                    <a href="#" class="btn btn-primary">Go somewhere</a>-->
+                            <!--                    <a href="#" class="btn btn-primary">Go somewhere</a>-->
+                        </div>
                     </div>
                 </div>
-            </div>
+            </newtag>
         <?php } ?>
+        <!--        </div>-->
     </div>
     <br>
     <!--    <nav aria-label="Page navigation example">-->
-    <div class="row">
-        <div class="col-md-12">
-            <ul id="pagin" class="pagination justify-content-center">
-            </ul>
-        </div>
-    </div>
 </div>
 <script>
     $(document).ready(function () {
-        $('.contem').show();
-        $('#search').click(function () {
-            $('.contem').hide();
-            var txt = $('#search-criteria').val();
-            // $('.contem:contains("' + txt + '")').show();
-            $('.contem').each(function () {
-                if ($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1) {
-                    $(this).show();
-                }
-            });
-
-        });
-        pageSize = 12;
-
-        var pageCount = $(".contem").length / pageSize;
-
-
-        if (pageCount > 4) {
-            var contagem = 4;
-
-        } else {
-            contagem = pageCount;
-        }
-
-        $("#pagin").append('<li class="page-item"><a class="page-link" href="#">Anterior</a></li> ');
-        for (var i = 0; i < contagem; i++) {
-
-
-            $("#pagin").append('<li class="page-item"><a class="page-link" href="#">' + (i + 1) + '</a></li> ');
-
-        }
-        $("#pagin").append('<li class="page-item"><a class="page-link" href="#">Proxima</a></li> ');
-        $("#pagin li").eq(1).addClass("active");
-
-        showPage = function (page) {
-            $(".contem").hide();
-            $(".contem").each(function (n) {
-                if (n >= pageSize * (page - 1) && n < pageSize * page)
-                    $(this).show();
-            });
-        }
-
-        showPage(1);
-
-        $("#pagin li ").click(function () {
-            $("#pagin li").removeClass("active");
-            $(this).addClass("active");
-            showPage(parseInt($(this).text()))
-        });
-        $('.delete').bind('click', function () {
-            var comf = confirm('Deseja mesmo excluir?');
-            if (comf == true) {
-            } else {
-                event.preventDefault();
-            }
+        $('#easyPaginate').easyPaginate({
+            paginateElement: 'newtag',
+            elementsPerPage: 9,
+            firstButtonText: 'Primeira',
+            lastButtonText: 'Ultima',
+            prevButton: false,
+            nextButton: false
+            // effect: 'slide'
         });
     });
-
-
 </script>

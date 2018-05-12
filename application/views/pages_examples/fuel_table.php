@@ -89,3 +89,16 @@
     </div>
     <br>
 </div>
+<script>
+    $(document).ready(function () {
+        $('#easyPaginate').easyPaginate({
+            paginateElement: 'newtag',
+            elementsPerPage: 14,
+            firstButtonText: 'Primeira',
+            lastButtonText: 'Ultima',
+            prevButton: false,
+            nextButton: false
+            // effect: 'slide'
+        });
+    });
+</script>
