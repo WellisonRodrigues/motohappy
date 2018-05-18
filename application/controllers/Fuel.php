@@ -46,18 +46,18 @@ class Fuel extends CI_Controller
 
                 "title" => $this->input->post('title'),
                 "measure" => $this->input->post('measure'),
-                "money_atual" => substr(str_replace(",", ".", $this->input->post('money_atual')), 1),
-                "debit_atual" => substr(str_replace(",", ".", $this->input->post('debit_atual')),1),
-                "credit_atual" => substr(str_replace(",", ".", $this->input->post('credit_atual')),1),
-                "credit_before" => substr(str_replace(",", ".", $this->input->post('credit_before')),1),
-                "money_before" => substr(str_replace(",", ".", $this->input->post('money_before')),1),
-                "debit_before" => substr(str_replace(",", ".", $this->input->post('debit_before')),1),
+                "money_atual" => str_replace("$", "", str_replace(",", ".", $this->input->post('money_atual'))),
+                "debit_atual" => str_replace("$", "", str_replace(",", ".", $this->input->post('debit_atual'))),
+                "credit_atual" => str_replace("$", "", str_replace(",", ".", $this->input->post('credit_atual'))),
+                "credit_before" => str_replace("$", "", str_replace(",", ".", $this->input->post('credit_before'))),
+                "money_before" => str_replace("$", "", str_replace(",", ".", $this->input->post('money_before'))),
+                "debit_before" => str_replace("$", "", str_replace(",", ".", $this->input->post('debit_before'))),
                 "establishment_id" => $this->input->post('establishment_id'),
 
             );
             $response = $this->restfull->cUrl($params, $endpoint, $metodo);
 //            echo '<pre>';
-//            print_r($response);
+//            print_r(json_encode($params));
 //            die;
             $data['response'] = $response ['response'];
             $data['message'] = $response ['response'];
@@ -70,12 +70,12 @@ class Fuel extends CI_Controller
             $params = array(
                 "title" => $this->input->post('title'),
                 "measure" => $this->input->post('measure'),
-                "money_atual" => substr(str_replace(",", ".", $this->input->post('money_atual')), 1),
-                "debit_atual" => substr(str_replace(",", ".", $this->input->post('debit_atual')),1),
-                "credit_atual" => substr(str_replace(",", ".", $this->input->post('credit_atual')),1),
-                "credit_before" => substr(str_replace(",", ".", $this->input->post('credit_before')),1),
-                "money_before" => substr(str_replace(",", ".", $this->input->post('money_before')),1),
-                "debit_before" => substr(str_replace(",", ".", $this->input->post('debit_before')),1),
+                "money_atual" => str_replace("$", "", str_replace(",", ".", $this->input->post('money_atual'))),
+                "debit_atual" => str_replace("$", "", str_replace(",", ".", $this->input->post('debit_atual'))),
+                "credit_atual" => str_replace("$", "", str_replace(",", ".", $this->input->post('credit_atual'))),
+                "credit_before" => str_replace("$", "", str_replace(",", ".", $this->input->post('credit_before'))),
+                "money_before" => str_replace("$", "", str_replace(",", ".", $this->input->post('money_before'))),
+                "debit_before" => str_replace("$", "", str_replace(",", ".", $this->input->post('debit_before'))),
                 "establishment_id" => $this->input->post('establishment_id'),
 
             );
