@@ -36,6 +36,7 @@ class Combos extends CI_Controller
 
     public function new_user($id = null)
     {
+        $remove = array('R','$');
         if ($this->input->post('salvar') and $id != null) {
 
             $this->load->library('Restfull');
@@ -46,10 +47,11 @@ class Combos extends CI_Controller
 
                 "description" => $this->input->post('description'),
                 "establishment_id" => $this->input->post('establishment_id'),
-                "value" => $this->input->post('valor'),
-                "value_before" => $this->input->post('value_before'),
+                "value" => str_replace($remove, "", str_replace(",", ".", $this->input->post('valor'))),
+                "value_before" => str_replace($remove, "", str_replace(",", ".", $this->input->post('value_before'))),
 
             );
+
             $response = $this->restfull->cUrl($params, $endpoint, $metodo);
             $data['response'] = $response ['response'];
             $data['message'] = $response ['response'];
@@ -63,8 +65,8 @@ class Combos extends CI_Controller
 
                 "description" => $this->input->post('description'),
                 "establishment_id" => $this->input->post('establishment_id'),
-                "value" => $this->input->post('valor'),
-                "value_before" => $this->input->post('value_before'),
+                "value" => str_replace($remove, "", str_replace(",", ".", $this->input->post('valor'))),
+                "value_before" => str_replace($remove, "", str_replace(",", ".", $this->input->post('value_before'))),
             );
             $response = $this->restfull->cUrl($params, $endpoint, $metodo);
             $data['response'] = $response ['response'];
@@ -80,6 +82,7 @@ class Combos extends CI_Controller
             $data['id'] = $id;
 
         }
+
         $params2 = '';
         $endpoint2 = 'api/v1/admin/establishments';
         $metodo2 = 'GET';

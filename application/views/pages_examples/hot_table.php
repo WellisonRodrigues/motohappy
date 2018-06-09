@@ -9,6 +9,7 @@
 //print_r($this->session->userdata("user"));
 //echo '<pre>';
 //print_r($response);
+print_r($this->session->userdata('user'));
 ?>
 
 <div class="container">

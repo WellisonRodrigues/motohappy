@@ -22,7 +22,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="card">
-                            <a href="<?php echo base_url()?>Users" style=" color: inherit; text-decoration: inherit;">
+                            <a href="<?php echo base_url() ?>Users" style=" color: inherit; text-decoration: inherit;">
                                 <div class="card-body" style="padding:0">
                                     <div class="row">
                                         <div class="col-md-3">
@@ -48,7 +48,8 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="card">
-                            <a href="<?php echo base_url()?>Establishments" style=" color: inherit; text-decoration: inherit;">
+                            <a href="<?php echo base_url() ?>Establishments"
+                               style=" color: inherit; text-decoration: inherit;">
                                 <div class="card-body" style="padding:0">
                                     <div class="row">
                                         <div class="col-md-3">
@@ -76,7 +77,8 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="card">
-                            <a href="<?php echo base_url()?>Partners" style=" color: inherit; text-decoration: inherit;">
+                            <a href="<?php echo base_url() ?>Partners"
+                               style=" color: inherit; text-decoration: inherit;">
                                 <div class="card-body" style="padding:0">
                                     <div class="row">
                                         <div class="col-md-3">
@@ -105,34 +107,59 @@
                     <div class="card-body">
                         Ultimos 07 dias
                         <hr style="margin-top:20px">
-                        <a href="<?php echo base_url()?>Users" style=" color: inherit; text-decoration: inherit;"><img
+                        <a href="<?php echo base_url() ?>Users" style=" color: inherit; text-decoration: inherit;"><img
                                     src="<?php echo base_url() ?>imgs\icon1.png" width="25px" height="25px"
                                     class="img-responsive"> Usuarios
                             cadastrados <?php echo @$response['last_seven_days'][0]['users_count'] ?>
                         </a>
                         <hr style="margin-top:20px">
-                        <a href="<?php echo base_url()?>Establishments" style=" color: inherit; text-decoration: inherit;">
+                        <a href="<?php echo base_url() ?>Establishments"
+                           style=" color: inherit; text-decoration: inherit;">
                             <img src="<?php echo base_url() ?>imgs\icon2.png" width="25px" height="25px"
                                  class="img-responsive">Estabelecimento
                             cadastrados <?php echo @$response['last_seven_days'][0]['establishments_count'] ?>
                         </a>
                         <hr style="margin-top:20px">
-                        <a href="<?php echo base_url()?>Partners" style=" color: inherit; text-decoration: inherit;">
+                        <a href="<?php echo base_url() ?>Partners" style=" color: inherit; text-decoration: inherit;">
                             <img src="<?php echo base_url() ?>imgs\icon3.png" width="25px" height="25px"
                                  class="img-responsive">Parceiros
                             cadastrados <?php echo @$response['last_seven_days'][0]['partners_count'] ?>
                         </a>
                         <hr style="margin-top:20px">
-                        <a href="<?php echo base_url()?>Hot" style=" color: inherit; text-decoration: inherit;">
+                        <a href="<?php echo base_url() ?>Hot" style=" color: inherit; text-decoration: inherit;">
                             <img src="<?php echo base_url() ?>imgs\icon4.png" width="25px" height="25px"
                                  class="img-responsive">Hot
                             cadastrados <?php echo @$response['last_seven_days'][0]['combos_count'] ?>
                         </a>
                         <hr style="margin-top:20px">
-                        <a href="<?php echo base_url()?>Combos" style=" color: inherit; text-decoration: inherit;">
+                        <a href="<?php echo base_url() ?>Combos" style=" color: inherit; text-decoration: inherit;">
                             <img src="<?php echo base_url() ?>imgs\icon5.png" width="25px" height="25px"
                                  class="img-responsive">Combos
                             cadastrados <?php echo @$response['last_seven_days'][0]['hots_count'] ?>
+                        </a>
+                        <hr style="margin-top:20px">
+                        <a href="<?php echo base_url() ?>fuel" style=" color: inherit; text-decoration: inherit;">
+                            <img src="<?php echo base_url() ?>imgs\icon5.png" width="25px" height="25px"
+                                 class="img-responsive">Combustiveis
+                            cadastrados <?php echo @$response['last_seven_days'][0]['fuels_count'] ?>
+                        </a>
+                        <hr style="margin-top:20px;">
+                        <a href="<?php echo base_url() ?>Hot" style=" color: inherit; text-decoration: inherit;">
+                            <img src="<?php echo base_url() ?>imgs\icon5.png" width="25px" height="25px"
+                                 class="img-responsive">Hots
+                            comprados <?php echo @$response['last_seven_days'][0]['purchase_hots'] ?>
+                        </a>
+                        <hr style="margin-top:20px;">
+                        <a href="<?php echo base_url() ?>Combos" style=" color: inherit; text-decoration: inherit;">
+                            <img src="<?php echo base_url() ?>imgs\icon5.png" width="25px" height="25px"
+                                 class="img-responsive">Combos
+                            comprados <?php echo @$response['last_seven_days'][0]['purchase_combos'] ?>
+                        </a>
+                        <hr style="margin-top:20px;">
+                        <a href="<?php echo base_url() ?>Fuel" style=" color: inherit; text-decoration: inherit;">
+                            <img src="<?php echo base_url() ?>imgs\icon5.png" width="25px" height="25px"
+                                 class="img-responsive">Combustiveis
+                            comprados <?php echo @$response['last_seven_days'][0]['purchase_fuel'] ?>
                         </a>
                         <hr style="margin-top:20px;">
                         <div class="text-center">

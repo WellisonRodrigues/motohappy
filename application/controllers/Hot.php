@@ -35,6 +35,7 @@ class Hot extends CI_Controller
 
     public function new_user($id = null)
     {
+        $remove = array('R','$');
         $this->load->library('Restfull');
         if ($this->input->post('salvar') and $id == null) {
 
@@ -43,8 +44,8 @@ class Hot extends CI_Controller
             $metodo = 'POST';
             $params = array(
                 'description' => $this->input->post('description'),
-                'value' => str_replace(",", ".", $this->input->post('value')),
-                'value_before' => str_replace(",", ".", $this->input->post('value_before')),
+                "value" => str_replace($remove, "", str_replace(",", ".", $this->input->post('value'))),
+                "value_before" => str_replace($remove, "", str_replace(",", ".", $this->input->post('value_before'))),
                 'establishment_id' => $this->input->post('establishment_id'),
                 'title' => $this->input->post('title'),
                 'duration' => $this->input->post('duration'),
@@ -77,8 +78,8 @@ class Hot extends CI_Controller
             if ($this->input->post('image')) {
                 $params = array(
                     'description' => $this->input->post('description'),
-                    'value' => str_replace(",", ".", $this->input->post('value')),
-                    'value_before' => str_replace(",", ".", $this->input->post('value_before')),
+                    "value" => str_replace($remove, "", str_replace(",", ".", $this->input->post('value'))),
+                    "value_before" => str_replace($remove, "", str_replace(",", ".", $this->input->post('value_before'))),
                     'establishment_id' => $this->input->post('establishment_id'),
                     'image' => $this->input->post('image'),
                     'title' => $this->input->post('title'),

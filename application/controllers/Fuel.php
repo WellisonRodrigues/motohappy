@@ -36,6 +36,7 @@ class Fuel extends CI_Controller
 
     public function new_user($id = null)
     {
+        $remove = array('R','$');
         if ($this->input->post('salvar') and $id != null) {
 
             $this->load->library('Restfull');
@@ -43,15 +44,14 @@ class Fuel extends CI_Controller
             $metodo = 'PATCH';
             $params = array(
 
-
                 "title" => $this->input->post('title'),
                 "measure" => $this->input->post('measure'),
-                "money_atual" => str_replace("$", "", str_replace(",", ".", $this->input->post('money_atual'))),
-                "debit_atual" => str_replace("$", "", str_replace(",", ".", $this->input->post('debit_atual'))),
-                "credit_atual" => str_replace("$", "", str_replace(",", ".", $this->input->post('credit_atual'))),
-                "credit_before" => str_replace("$", "", str_replace(",", ".", $this->input->post('credit_before'))),
-                "money_before" => str_replace("$", "", str_replace(",", ".", $this->input->post('money_before'))),
-                "debit_before" => str_replace("$", "", str_replace(",", ".", $this->input->post('debit_before'))),
+                "money_atual" => str_replace($remove, "", str_replace(",", ".", $this->input->post('money_atual'))),
+                "debit_atual" => str_replace($remove, "", str_replace(",", ".", $this->input->post('debit_atual'))),
+                "credit_atual" => str_replace($remove, "", str_replace(",", ".", $this->input->post('credit_atual'))),
+                "credit_before" => str_replace($remove, "", str_replace(",", ".", $this->input->post('credit_before'))),
+                "money_before" => str_replace($remove, "", str_replace(",", ".", $this->input->post('money_before'))),
+                "debit_before" => str_replace($remove, "", str_replace(",", ".", $this->input->post('debit_before'))),
                 "establishment_id" => $this->input->post('establishment_id'),
 
             );
@@ -70,14 +70,13 @@ class Fuel extends CI_Controller
             $params = array(
                 "title" => $this->input->post('title'),
                 "measure" => $this->input->post('measure'),
-                "money_atual" => str_replace("$", "", str_replace(",", ".", $this->input->post('money_atual'))),
-                "debit_atual" => str_replace("$", "", str_replace(",", ".", $this->input->post('debit_atual'))),
-                "credit_atual" => str_replace("$", "", str_replace(",", ".", $this->input->post('credit_atual'))),
-                "credit_before" => str_replace("$", "", str_replace(",", ".", $this->input->post('credit_before'))),
-                "money_before" => str_replace("$", "", str_replace(",", ".", $this->input->post('money_before'))),
-                "debit_before" => str_replace("$", "", str_replace(",", ".", $this->input->post('debit_before'))),
+                "money_atual" => str_replace($remove, "", str_replace(",", ".", $this->input->post('money_atual'))),
+                "debit_atual" => str_replace($remove, "", str_replace(",", ".", $this->input->post('debit_atual'))),
+                "credit_atual" => str_replace($remove, "", str_replace(",", ".", $this->input->post('credit_atual'))),
+                "credit_before" => str_replace($remove, "", str_replace(",", ".", $this->input->post('credit_before'))),
+                "money_before" => str_replace($remove, "", str_replace(",", ".", $this->input->post('money_before'))),
+                "debit_before" => str_replace($remove, "", str_replace(",", ".", $this->input->post('debit_before'))),
                 "establishment_id" => $this->input->post('establishment_id'),
-
             );
 
             $response = $this->restfull->cUrl($params, $endpoint, $metodo);

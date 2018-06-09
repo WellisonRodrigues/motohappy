@@ -54,7 +54,7 @@
                                             <b class="card-title"><?php echo @$row['establishments']['name'] ?></b>
                                             <p class="card-text">
                                                 <?php echo $row['description'] ?><br>
-                                                &nbsp;<b style="color: #FF5D00">R$ <?php echo $row['value'] ?></b>
+                                                <b style="color: #FF5D00"><?php echo $row['value'] ?></b>
 
                                             </p>
                                         </div>
