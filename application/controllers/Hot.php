@@ -65,7 +65,7 @@ class Hot extends CI_Controller
                     "credit_before" => str_replace($remove, "", str_replace(",", ".", $this->input->post('credit_before'))),
                     "value_before" => str_replace($remove, "", str_replace(",", ".", $this->input->post('money_before'))),
                     "debit_before" => str_replace($remove, "", str_replace(",", ".", $this->input->post('debit_before'))),
-                    'establishment_id' => $this->input->post('establishment_id'),
+                    'establishment_id' => $this->input->post('establishment_id_fuel'),
                     'title' => $this->input->post('title'),
                     'duration' => $datalocal,
                     'image' => $this->input->post('image'),
@@ -167,7 +167,7 @@ class Hot extends CI_Controller
             $data['message'] = $response['response'];
             $data['response'] = $response['response'];
         }
-//        print_r($response);
+//        print_r(json_encode($params));
 //        die;
         $params2 = '';
         $endpoint2 = 'api/v1/admin/establishments';
