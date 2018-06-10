@@ -75,8 +75,8 @@
 
                                         <div class="col-md-9">
                                             <b class="card-title"><?php echo @$row['title'] ?> </b><b
-                                                    style="color: #FF5D00"> R$<?php echo @$row['value'] ?>
-                                            </b>/litro<br>
+                                                    style="color: #FF5D00"><?php echo @$row['value'] ?>
+                                            </b><br>
                                             <p class="card-text">
                                                 <?php echo @$row['description'] ?><br>
                                             </p>

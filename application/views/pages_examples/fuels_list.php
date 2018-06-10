@@ -58,7 +58,7 @@
                                         <b class="card-title"><?php echo @$row['establishments']['name'] ?></b>
                                         <p class="card-text">
                                             <?php echo $row['title'] ?>
-                                            &nbsp;&nbsp;R$ <?php echo $row['money_atual'] ?>/Litro
+                                            &nbsp; <?php echo $row['money_atual'] ?>
 
                                         </p>
                                     </div>

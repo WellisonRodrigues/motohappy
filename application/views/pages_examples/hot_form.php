@@ -44,6 +44,24 @@
         echo form_open('Hot/new_user', ['role' => 'form']);
     } ?>
     <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <label for="name">Tipo:</label>
+                <?php
+                $array_tipo [''] = ' - - - Escolha um tipo  - - - ';
+                $array_tipo ['fuel'] = 'Combustivel ';
+                $array_tipo ['combo'] = ' Combos';
+                echo form_dropdown('type', $array_tipo,
+                    set_value('type', @$response['hot']['category']), ' class="form-control"
+                id="type" ');
+                ?>
+                <!--                <select name="type" id="type" class="form-control">-->
+                <!--                    <option value="fuel"> Combustivel</option>-->
+                <!--                    <option value="combo"> Combo</option>-->
+                <!--                </select>-->
+            </div>
+        </div>
+
         <!-- Default input -->
         <div class="col-md-12">
             <div class="form-group">
@@ -76,42 +94,120 @@
                        id="duration">
             </div>
         </div>
-
-        <div class="col-md-6">
-            <!-- Default input -->
-            <div class="form-group">
-                <label for="nickname">Value:</label>
-                <input type="text" class="form-control" name="value" required
-                       value="<?php echo str_replace(".", ",", @$response['hot']['value']) ?>"
-                       id="nickname">
+        <div class="col-md-12 row" id="fuel">
+            <div class="col-md-2">
+                <div class="form-group">
+                    <label for="name">Dinheiro: <b> Original </b> </label>
+                    <input type="text" name="money_before" class="form-control"
+                           value="<?php echo str_replace(".", ",", @$response['hot']['value_before']) ?>"
+                           id="valor">
+                </div>
             </div>
-        </div>
-        <div class="col-md-6">
-            <!-- Default input -->
-            <div class="form-group">
-                <label for="nickname">Value Before :</label>
-                <input type="text" class="form-control" name="value_before" required
-                       value="<?php echo str_replace(".", ",", @$response['hot']['value_before']) ?>"
-                       id="nickname">
+            <div class="col-md-2">
+                <div class="form-group">
+                    <label for="name">Debito: <b> Original </b> </label>
+                    <input type="text" name="debit_before" class="form-control"
+                           value="<?php echo str_replace(".", ",", @$response['hot']['debit_before']) ?>"
+                           id="debit">
+                </div>
             </div>
-        </div>
-        <div class="col-md-6">
-            <!-- Default input -->
-            <div class="form-group">
-                <label for="">Estabelecimento:</label>
-                <?php
-                $array_tiposprodutos [''] = ' - - - Escolha um estabelecimento  - - - ';
-                foreach ($estabelecimentos['establishments'] as $newline) {
-                    foreach ($newline['category'] as $categoria) {
-                        if ($categoria == 'combustivel') {
-                            $array_tiposprodutos[$newline['id']] = $newline['name'];
+            <div class="col-md-2">
+                <div class="form-group">
+                    <label for="name">Credito: <b> Original </b> </label>
+                    <input type="text" name="credit_before" class="form-control"
+                           value="<?php echo str_replace(".", ",", @$response['hot']['credit_before']) ?>"
+                           id="credit">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="form-group">
+                    <label for="name">Medida(Litros) :</label>
+                    <input type="text" name="measure" class="form-control"
+                           value="<?php echo @$response['hot']['measure'] ?>"
+                           id="measure">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="">Estabelecimento:</label>
+                    <?php
+                    $array_tiposprodutos [''] = ' - - - Escolha um estabelecimento  - - - ';
+                    foreach ($estabelecimentos['establishments'] as $newline) {
+                        foreach ($newline['category'] as $categoria) {
+                            if ($categoria == 'combustivel') {
+                                $array_tiposprodutos[$newline['id']] = $newline['name'];
+                            }
                         }
                     }
-                }
-                echo form_dropdown('establishment_id', $array_tiposprodutos,
-                    set_value('establishment_id', @$response['hot']['establishment_id']), ' class="form-control"
-                id="establishment_id" required="" ');
-                ?>
+                    echo form_dropdown('establishment_id_fuel', $array_tiposprodutos,
+                        set_value('establishment_id_fuel', @$response['hot']['establishment_id']), ' class="form-control"
+                id="establishment_id_fuel"');
+                    ?>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="form-group">
+                    <label for="name"><b class="h-25" style="font-size: 10pt">Dinheiro c/ MotoHappy:</b></label>
+                    <input type="text" name="money_atual" class="form-control"
+                           value="<?php echo str_replace(".", ",", @$response['hot']['value']) ?>"
+                           id="valor">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="form-group">
+                    <label for="name"><b class="h-25" style="font-size: 10pt">Debito c/ MotoHappy:</b></label>
+                    <input type="text" name="debit_atual" class="form-control"
+                           value="<?php echo str_replace(".", ",", @$response['hot']['debit_atual']) ?>"
+                           id="debit">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="form-group">
+                    <label for="name"><b class="h-25" style="font-size: 10pt">Credito c/ MotoHappy:</b></label>
+                    <input type="text" name="credit_atual" class="form-control"
+                           value="<?php echo str_replace(".", ",", @$response['hot']['credit_atual']) ?>"
+                           id="credit">
+                </div>
+            </div>
+
+        </div>
+        <div id="combos" class="col-md-12 row">
+            <div class="col-md-4">
+                <!-- Default input -->
+                <div class="form-group">
+                    <label for="nickname">Value:</label>
+                    <input type="text" class="form-control" name="value"
+                           value="<?php echo str_replace(".", ",", @$response['hot']['value']) ?>"
+                           id="nickname">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <!-- Default input -->
+                <div class="form-group">
+                    <label for="nickname">Value Before :</label>
+                    <input type="text" class="form-control" name="value_before"
+                           value="<?php echo str_replace(".", ",", @$response['hot']['value_before']) ?>"
+                           id="nickname">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <!-- Default input -->
+                <div class="form-group">
+                    <label for="">Estabelecimento:</label>
+                    <?php
+                    $array_tiposprodutos [''] = ' - - - Escolha um estabelecimento  - - - ';
+                    foreach ($estabelecimentos['establishments'] as $newline) {
+                        foreach ($newline['category'] as $categoria) {
+                            if ($categoria != 'combustivel') {
+                                $array_tiposprodutos[$newline['id']] = $newline['name'];
+                            }
+                        }
+                    }
+                    echo form_dropdown('establishment_id', $array_tiposprodutos,
+                        set_value('establishment_id', @$response['hot']['establishment_id']), ' class="form-control"
+                id="establishment_id" ');
+                    ?>
+                </div>
             </div>
         </div>
         <div class="col-md-12">
@@ -137,6 +233,35 @@
         </form>
     </div>
     <script>
+        $(function () {
+            var a = $('#type').val();
+            if (a === 'fuel') {
+                $('#fuel').show();
+                $('#combos').hide();
+            } else {
+                $('#fuel').hide(); // hide the first one
+                $('#combos').show();
+            }
+            $('#type').change(function () {
+                var i = $('#type').val();
+                if (i === "fuel") // equal to a selection option
+                {
+                    $('#fuel').show();
+                    $('#combos').hide(); // show the other one
+                } else if (i === "combo") {
+                    $('#fuel').hide(); // hide the first one
+                    $('#combos').show(); // show the other one
+
+                } else if (i === "") {
+                    $('#fuel').hide();
+                    $('#combos').hide();
+                }
+
+            });
+
+        });
+
+
         $(function () {
             $("#duration").datepicker();
         });
